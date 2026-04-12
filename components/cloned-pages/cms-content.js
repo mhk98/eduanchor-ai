@@ -1,77 +1,6 @@
-<!DOCTYPE html>
-    <html lang="en">
+import { normalizeCloneHtml } from "@/lib/clone-html";
 
-<head>
-    
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" type="image/png" sizes="32x32" href="https://www.eductrl.com/assets/images/favicon.png">
-    <meta name="csrf-token" content="Of8RdBbIDXqsArfxE8DOBq4YEAkU5cwN9XiPyi0V">
-        <title>EduCtrl: Blog</title>
-    <meta name="description" content="">
-    
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-M85SFMLP');</script>
-<!-- End Google Tag Manager -->
-
-    
-    <!-- Bootstrap Core CSS -->
-    <link href="https://www.eductrl.com/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link href="https://www.eductrl.com/assets/plugins/select2/dist/css/select2.min.css" rel="stylesheet" type="text/css" />
-
-
-    <link href="https://www.eductrl.com/css/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <!-- <link href="https://www.eductrl.com/css/remixicon/remixicon.css" rel="stylesheet"> -->
-    <link href="https://www.eductrl.com/css/boxicons/css/boxicons.min.css" rel="stylesheet">
-
-    <link href="https://www.eductrl.com/css/ckeditor-frontend.css?v=1.1" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://www.eductrl.com/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="https://www.eductrl.com/css/animate.css" />
-    <link rel="stylesheet" href="https://www.eductrl.com/css/icofonts.css" />
-    <link rel="stylesheet" href="https://www.eductrl.com/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://www.eductrl.com/css/owlcarousel.min.css" />
-    <link rel="stylesheet" href="https://www.eductrl.com/css/magnific-popup.css" />
-    <link rel="stylesheet" href="https://www.eductrl.com/css/style.css?v=4">
-    <link rel="stylesheet" href="https://www.eductrl.com/css/responsive.css?v=4">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-            <![endif]-->
-
-    <style>
-    .pagination{
-        justify-content: center;
-    }
-    .pagination li{
-        margin-left: 5px !important;
-    }
-    .pagination li a{
-        line-height: 20px !important;
-        border-radius: 0px !important;
-        height: 36.5px !important;
-        width: 120px !important;
-        border-radius: 5px !important;
-        border-color: rgb(220, 220, 219);
-    }
-    .ck-content .image img{
-        height: auto !important;
-    }
-
-</style>
-
-</head>
-
-<body>
+const rawHtml = String.raw`
 
     <div id="main-wrapper">
 
@@ -193,7 +122,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                        <p>Share your details to access Software Demo</p>
                                               <form id="enquiry-form" class="contact-form" method="POST" action="#"
                            onsubmit="return false;">
-                           <input type="hidden" name="_token" value="Of8RdBbIDXqsArfxE8DOBq4YEAkU5cwN9XiPyi0V">                           <div class="error-container"></div>
+                           <input type="hidden" name="_token" value="8C54pnL7qTk6b9g1Uo6f9yLPPmUut8xJT7iVjJom">                           <div class="error-container"></div>
                            <div class="row">
                                <div class="col-lg-6">
                                    <div class="form-group">
@@ -691,187 +620,732 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </style>
 </header>
 
-        <div id="banner-area" class="banner-area" style="background-image:url(https://www.eductrl.com/images/banner/banner5.jpg)">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="banner-heading">
-                    <h1 class="banner-title text-white">Blog</h1>
-                    
+        
+    <!-- Start HomePage -->
+
+    <section class="wrapper bg-soft-primary" >
+        <div class="container pt-10 pb-15 pt-md-14 pb-md-20 text-center">
+            <div class="row">
+                <div class="col-md-10 col-lg-8 col-xl-8 col-xxl-6 mx-auto mb-13" data-cues="slideInDown"
+                    data-group="page-title">
+                    <h1 class="display-1 mb-4 wow fadeInUp" data-wow-duration="0.9s" data-wow-delay=".2s">A professional
+                        website for
+                        Overseas Education consultants</h1>
+                    <p class="lead fs-lg px-xl-12 px-xxl-6 mb-7">Get a powerful website today to grow your business &
+                        increase your reach</p><br>
                 </div>
+                <!-- /column -->
             </div>
-            <!-- Col end -->
+            <!-- /.row -->
         </div>
-        <!-- Row end -->
+        <!-- /.container -->
+        <!-- /.row -->
+    </section>
+    <div class="container pb-14 pb-md-16 mb-lg-21 mb-xl-23">
+        <div class="row gx-0 mb-16 mb-mb-20">
+            <div class="col-9 col-sm-10 col-lg-9 mx-auto mt-n15 mt-md-n20" data-cues data-group="images"
+                data-delay="1500">
+                <img class="img-fluid mx-auto rounded shadow-lg wow slideInUp" data-wow-duration="0.9s" data-wow-delay=".2s"
+                    src="https://www.eductrl.com/images/homepage1.jpg" srcset="https://www.eductrl.com/images/homepage1.jpg 2x"
+                    alt="" />
+                <img class="position-absolute rounded shadow-lg wow slideInRight" data-wow-duration="0.9s" data-wow-delay=".2s"
+                    src="https://www.eductrl.com/images/mobileview.jpg" srcset="https://www.eductrl.com/images/mobileview.jpg 2x"
+                    style="top: 20%; right:-5%; max-width:25%; height: auto;" alt="" />
+            </div>
+            <!-- /column -->
+        </div>
     </div>
-    <!-- Container end -->
-</div>
+    <!-- End HomePage -->
 
-<section id="main-container" class="main-container" style="padding-top:0;margin-bottom:100px;">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="row">
-                    <div class="col-md-9 mt-5">
-                        <div class="container-fluid m-t-10">
-                                                        <div class="row mt-5">
-                                <div class="col-12">
-                                    <h3><a href="https://www.eductrl.com/blog/managing-multi-country-offices-challenges-and-solutions">Managing Multi-Country Offices: Challenges and Solutions</a></h3>
+    <!--  Features section -->
+    <section class="wrapper bg-light">
+        <div class="container pt-14 pt-md-16">
+            <div class="row text-center">
+                <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+                    <h2 class="fs-16 text-uppercase text-muted mb-3">Build more than a website</h2>
+                    <h3 class="display-4 mb-10 px-xl-10">Powerful features of EduCtrl CMS</h3>
+                    <span class="animate-border ml-auto mr-auto tw-mt-20"></span>
+                </div>
+                <!-- /column -->
+            </div>
+            <!-- /.row -->
+            <section id="tw-service" class="tw-service" style="padding-bottom: 0px;">
+                <div class="container">
+                    <!-- Title Row End -->
+                    <div class="row">
+                        <div class="col-md-3 text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
+                            <div class="tw-service-box features-box" style="padding: 32px 30px 62px;margin-bottom:22px;">
+                                <div class="service-icon service-icon-bg-1 d-table">
+                                    <div class="service-icon-inner d-table-cell">
+                                        <img src="https://www.eductrl.com/img/Icon/landing-page.png" alt="" class="img-fluid"
+                                            style="width: 35%; height: auto;">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="row eductrl-editor-content ck-content" style="padding:15px;">
-                                                                <img src="https://www.eductrl.com/storage/cms/Managing Multi-Country Offices_ Challenges and Solutions_._1773826629.jpg" class="img-fluid" />
-                                                                
-                                <p class=""><p>Managing offices across multiple countries can feel like juggling flaming torches—exciting but fraught with potential pitfalls. As businesses expand globally, leaders often face a myriad of challenges that can impact productivity and cohesion.</p><p>Operating in different countries means navigating various cultures, regulations, and communication styles. For example, a company with offices in both Germany and Brazil may struggle with time zone differences and varying approaches to teamwork.</p><p>Key challenges include:</p><ol><li data-list="bullet"><strong>Cultural Misunderstandings</strong>: Different work ethics and communication styles can lead to friction.</li><li data-list="bullet"><strong>Regulatory Compliance</strong>: Each country has its own labor laws, which can complicate HR practices.</li><li data-list="bullet"><strong>Technology Integration</strong>: Ensuring that all offices use compatible systems is crucial for seamless operations.</li></ol><p>To thrive, organizations must adopt strategic solutions tailored to their unique circumstances. Pro tip: Regularly conduct cross-cultural training sessions to enhance team dynamics and foster mutual understanding. By addressing these challenges head-on, companies can create a harmonious and productive multi-country environment.</p></p>
-                                <div style="margin-bottom:30px">
-                                    <a class="btn btn-primary" href="https://www.eductrl.com/blog/managing-multi-country-offices-challenges-and-solutions" role="button">Read More</a>
+                                <!-- Service icon end -->
+                                <div class="service-content">
+                                    <h3>Pages</h3>
+                                    <p>Publish any number of pages. Add your content using WYSIWYG editor.</p>
+                                    <!--   <a href="#" class="tw-readmore">Read More
+                                                <i class="fa fa-angle-right"></i>
+                                              </a> -->
                                 </div>
+                                <!-- Service Content end -->
                             </div>
-                                                        <div class="row mt-5">
-                                <div class="col-12">
-                                    <h3><a href="https://www.eductrl.com/blog/should-you-niche-down-benefits-of-specializing-in-specific-destinations-or-courses">Should You Niche Down? Benefits of Specializing in Specific Destinations or Courses</a></h3>
-                                </div>
-                            </div>
-                            <div class="row eductrl-editor-content ck-content" style="padding:15px;">
-                                                                <img src="https://www.eductrl.com/storage/cms/Should You Niche Down Benefits of Specializing in Specific Destinations or Courses_1773731064.png" class="img-fluid" />
-                                                                
-                                <p class=""><p>In a world overflowing with options, standing out can feel overwhelming. But what if, instead of trying to appeal to everyone, you focused on a niche that truly excites you?</p><p>Specializing in specific destinations or courses can transform your business from one of many to a preferred choice. This strategy enables you to cater to distinct audiences and foster deeper connections. For instance, a travel agency that specializes in eco-tourism in Costa Rica may attract environmentally conscious travelers, while an online course platform focusing exclusively on graphic design can build a loyal following among aspiring designers.</p><p><strong>Benefits of niching down include:</strong></p><ol><li data-list="bullet"><strong>Increased authority</strong> in your field.</li><li data-list="bullet"><strong>Targeted marketing efforts</strong> that resonate.</li><li data-list="bullet"><strong>Stronger brand identity</strong> and recognition.</li></ol><p>Pro tip: Research your competition and identify gaps in the market to carve out your niche effectively. By honing in on a specific area, you not only simplify your offerings but also amplify your impact. As you read on, you’ll discover how focusing your efforts can lead to greater success and satisfaction.</p></p>
-                                <div style="margin-bottom:30px">
-                                    <a class="btn btn-primary" href="https://www.eductrl.com/blog/should-you-niche-down-benefits-of-specializing-in-specific-destinations-or-courses" role="button">Read More</a>
-                                </div>
-                            </div>
-                                                        <div class="row mt-5">
-                                <div class="col-12">
-                                    <h3><a href="https://www.eductrl.com/blog/why-youtube-is-a-game-changer-for-study-abroad-marketing-here-s-how-to-start">Why YouTube Is a Game-Changer for Study Abroad Marketing – Here&#039;s How to Start</a></h3>
-                                </div>
-                            </div>
-                            <div class="row eductrl-editor-content ck-content" style="padding:15px;">
-                                                                <img src="https://www.eductrl.com/storage/cms/Why YouTube Is a Game-Changer for Study Abroad Marketing – Here&#039;s How to Start_. (1)_1773120372.jpg" class="img-fluid" />
-                                                                
-                                <p class=""><p>In a world where visual storytelling reigns supreme, YouTube stands out as a platform that can transform how educational institutions promote study abroad programs. With over <strong>2 billion monthly active users</strong>, it’s a treasure trove for reaching a global audience eager for authentic experiences.</p><p>Educational marketing has evolved, and students today crave real-life insights into potential study abroad destinations. This is where YouTube shines, allowing universities to showcase:</p><ol><li data-list="bullet"><strong>Student testimonials</strong>: Real stories resonate more than traditional marketing.</li><li data-list="bullet"><strong>Campus tours</strong>: Virtual sightseeing can spark interest instantly.</li><li data-list="bullet"><strong>Cultural immersion</strong>: Highlighting local customs and traditions enriches the experience.</li></ol><p>For instance, a university's video featuring students sharing their transformative journeys abroad garnered <strong>50,000 views</strong> in a month. The comments section buzzed with excitement and inquiries, proving the power of relatable content.</p><p>To harness YouTube effectively, focus on creating engaging, high-quality videos that answer potential students' questions and highlight unique program features. Consider leveraging keywords and descriptions to enhance discoverability, as <strong>SEO strategies</strong> can significantly boost your reach.</p></p>
-                                <div style="margin-bottom:30px">
-                                    <a class="btn btn-primary" href="https://www.eductrl.com/blog/why-youtube-is-a-game-changer-for-study-abroad-marketing-here-s-how-to-start" role="button">Read More</a>
-                                </div>
-                            </div>
-                                                        <div class="row mt-5">
-                                <div class="col-12">
-                                    <h3><a href="https://www.eductrl.com/blog/study-abroad-marketing-campaigns-essential-do-s-and-don-ts-for-success">Study Abroad Marketing Campaigns: Essential Do’s and Don’ts for Success</a></h3>
-                                </div>
-                            </div>
-                            <div class="row eductrl-editor-content ck-content" style="padding:15px;">
-                                                                <img src="https://www.eductrl.com/storage/cms/Study Abroad Marketing Campaigns Essential Do’s and Don’ts for Success_1772785179.png" class="img-fluid" />
-                                                                
-                                <p class=""><p>In an increasingly globalized world, the allure of studying abroad continues to capture the imagination of students everywhere. With more options than ever, educational institutions must craft compelling marketing campaigns to stand out in a crowded marketplace.</p><p>Effective study abroad marketing goes beyond traditional methods. It requires a strategic approach that resonates with students’ aspirations and addresses their concerns. For instance, a campaign that highlights <a href="https://www.eductrl.com/blog/case-studies-successful-social-media-campaigns-by-study-abroad-agencies"><strong>real student experiences</strong></a> can foster genuine connections and inspire action.</p><p>Consider the successful campaign launched by the University of California, which featured video testimonials from recent alumni. This approach not only showcased the benefits of studying abroad but also built trust through authentic storytelling.</p><p>As you navigate the complexities of promoting an international education program, keep these essential do’s and don’ts in mind to maximize your impact:</p><ol><li data-list="bullet"><strong>Do</strong> leverage social media to engage potential students.</li><li data-list="bullet"><strong>Don’t</strong> rely solely on print brochures—consider digital formats that appeal to tech-savvy audiences.</li></ol><p>By incorporating these strategies, you can create a marketing campaign that not only attracts attention but also drives results.</p></p>
-                                <div style="margin-bottom:30px">
-                                    <a class="btn btn-primary" href="https://www.eductrl.com/blog/study-abroad-marketing-campaigns-essential-do-s-and-don-ts-for-success" role="button">Read More</a>
-                                </div>
-                            </div>
-                                                        <div class="row mt-5">
-                                <div class="col-12">
-                                    <h3><a href="https://www.eductrl.com/blog/why-conversational-marketing-is-a-game-changer-for-study-abroad-agencies">Why Conversational Marketing is a Game-Changer for Study Abroad Agencies</a></h3>
-                                </div>
-                            </div>
-                            <div class="row eductrl-editor-content ck-content" style="padding:15px;">
-                                                                <img src="https://www.eductrl.com/storage/cms/Why Conversational Marketing is a Game-Changer for Study Abroad Agencies_1772623155.png" class="img-fluid" />
-                                                                
-                                <p class=""><p>In a world where instant communication is the norm, traditional marketing methods can feel outdated. <i>Conversational marketing</i> is changing the landscape, offering a more interactive approach that resonates with today's prospective students.</p><p>As study abroad agencies compete for attention in a crowded market, harnessing the power of conversations can be a game-changer. why:</p><ol><li data-list="bullet"><strong>Personalization</strong>: Prospects crave tailored experiences. Conversational marketing allows agencies to engage students with personalized interactions based on their interests and goals.</li><li data-list="bullet"><strong>Real-time Engagement</strong>: Immediate responses can help alleviate concerns and answer questions, making the decision-making process smoother.</li><li data-list="bullet"><strong>Building Trust</strong>: Authentic conversations foster relationships and trust, crucial for agencies aiming to guide students in their journeys abroad.</li></ol><p>For instance, a recent case study revealed that a <a href="https://www.eductrl.com/study-abroad/what-do-study-abroad-agencies-charge-for-their-services"><strong>study abroad agency</strong></a> that integrated chatbots on their website saw a 40% increase in inquiries within the first month.</p><p><strong>Pro Tip</strong>: Utilize tools like live chat or social media messaging to create seamless communication channels. By embracing this innovative marketing strategy, agencies can significantly enhance their outreach and support for students.</p></p>
-                                <div style="margin-bottom:30px">
-                                    <a class="btn btn-primary" href="https://www.eductrl.com/blog/why-conversational-marketing-is-a-game-changer-for-study-abroad-agencies" role="button">Read More</a>
-                                </div>
-                            </div>
-                                                        <div class="row mt-5">
-                                <div class="col-12">
-                                    <h3><a href="https://www.eductrl.com/blog/franchise-vs-independent-what-model-works-best-for-study-abroad-consulting">Franchise vs. Independent: What Model Works Best for Study Abroad Consulting?</a></h3>
-                                </div>
-                            </div>
-                            <div class="row eductrl-editor-content ck-content" style="padding:15px;">
-                                                                <img src="https://www.eductrl.com/storage/cms/Franchise vs. Independent What Model Works Best for Study Abroad Consulting_1772535807.png" class="img-fluid" />
-                                                                
-                                <p class=""><p>Choosing between a franchise and an independent model can be a pivotal decision for those venturing into study abroad consulting. With the global education market booming—projected to reach over $340 billion by 2025—understanding the nuances of each option is crucial for success.</p><p>Franchise opportunities often come with established branding, training programs, and a built-in customer base. This can lead to quicker profitability, as seen in franchises like &nbsp;Agency/consultancy, which reported 30% growth in their first two years.</p></p>
-                                <div style="margin-bottom:30px">
-                                    <a class="btn btn-primary" href="https://www.eductrl.com/blog/franchise-vs-independent-what-model-works-best-for-study-abroad-consulting" role="button">Read More</a>
-                                </div>
-                            </div>
-                                            
-                            <div class="row ">
-                                <div class="col-sm-12 ">
-                                    <nav>
-        <ul class="pagination">
-            
-                            <li class="page-item disabled" aria-disabled="true">
-                    <span class="page-link">&laquo; Previous</span>
-                </li>
-            
-            
-                            <li class="page-item">
-                    <a class="page-link" href="https://www.eductrl.com/blog?page=2" rel="next">Next &raquo;</a>
-                </li>
-                    </ul>
-    </nav>
+                            <!-- Service box end -->
+                        </div>
+                        <!-- Col End -->
 
+                        <div class="col-md-3 text-center wow fadeInUp" data-wow-duration="2s" data-wow-delay=".1s">
+                            <div class="tw-service-box features-box" style="padding: 32px 44px 60px;">
+                                <div class="service-icon service-icon-bg-6 d-table">
+                                    <div class="service-icon-inner d-table-cell">
+                                        <img src="https://www.eductrl.com/img/Icon/customer-review.png" alt=""
+                                            class="img-fluid" style="width: 45%; height: auto;">
+                                    </div>
                                 </div>
+                                <!-- Service Icon end-->
+                                <div class="service-content">
+                                    <h3>Services</h3>
+                                    <p>Add the services that you provide to students interested in overseas.</p>
+                                    <!--   <a href="#" class="tw-readmore">Read More
+                                                <i class="fa fa-angle-right"></i>
+                                              </a> -->
+                                </div>
+                                <!-- Service Content end -->
                             </div>
+                            <!-- Service box end-->
+                        </div>
+                        <!-- Col end -->
+
+                        <div class="col-md-3 text-center wow fadeInUp" data-wow-duration="1.4s" data-wow-delay=".1s">
+                            <div class="tw-service-box features-box" style="padding: 32px 30px 62px;margin-bottom:22px;">
+                                <div class="service-icon service-icon-bg-3 d-table">
+                                    <div class="service-icon-inner d-table-cell">
+                                        <img src="https://www.eductrl.com/img/Icon/recruitment.png" alt="" class="img-fluid"
+                                            style="width: 35%; height: auto;">
+                                    </div>
+                                </div>
+                                <!-- Service Icon End -->
+                                <div class="service-content">
+                                    <h3>Lead Capture</h3>
+                                    <p>Free Counselling form, Call Back form & Pop-up window to collect student info.</p>
+                                </div>
+                                <!-- Service content end -->
+                            </div>
+                            <!-- Service box End -->
+                        </div>
+                        <!-- Col end -->
+
+                        <div class="col-md-3 text-center wow fadeInUp" data-wow-duration="2.2s" data-wow-delay=".1s">
+                            <div class="tw-service-box features-box" style="padding: 32px 30px 62px;margin-bottom:22px;">
+                                <div class="service-icon service-icon-bg-1 d-table">
+                                    <div class="service-icon-inner d-table-cell">
+                                        <img src="https://www.eductrl.com/img/Icon/delegation.png" alt="" class="img-fluid"
+                                            style="width: 35%; height: auto;">
+                                    </div>
+                                </div>
+                                <!-- Service icon end -->
+                                <div class="service-content">
+                                    <h3>Lead Management</h3>
+                                    <p>Manage all your leads from admin panel. Add follow-up notes, track leads till closed.
+                                    </p>
+                                    <!--   <a href="#" class="tw-readmore">Read More
+                                                <i class="fa fa-angle-right"></i>
+                                              </a> -->
+                                </div>
+                                <!-- Service Content end -->
+                            </div>
+                            <!-- Service box end -->
+                        </div>
+                        <!-- Col End -->
+
+                        <div class="col-md-3 text-center wow fadeInUp" data-wow-duration="2.2s" data-wow-delay=".1s">
+                            <div class="tw-service-box features-box" style="padding: 32px 30px 62px;margin-bottom:22px;">
+                                <div class="service-icon service-icon-bg-1 d-table">
+                                    <div class="service-icon-inner d-table-cell">
+                                        <img src="https://www.eductrl.com/img/Icon/blog.png" alt="" class="img-fluid"
+                                            style="width: 35%; height: auto;">
+                                    </div>
+                                </div>
+                                <!-- Service icon end -->
+                                <div class="service-content">
+                                    <h3>Blog</h3>
+                                    <p>Post blog items on your portal. Optimize to get more hits from Search engines.</p>
+                                    </p>
+                                    <!--   <a href="#" class="tw-readmore">Read More
+                                                <i class="fa fa-angle-right"></i>
+                                              </a> -->
+                                </div>
+                                <!-- Service Content end -->
+                            </div>
+                            <!-- Service box end -->
+                        </div>
+                        <!-- Col End -->
+
+                        <div class="col-md-3 text-center wow fadeInUp" data-wow-duration="2.2s" data-wow-delay=".1s">
+                            <div class="tw-service-box features-box" style="padding: 32px 30px 62px;margin-bottom:22px;">
+                                <div class="service-icon service-icon-bg-1 d-table">
+                                    <div class="service-icon-inner d-table-cell">
+                                        <img src="https://www.eductrl.com/img/Icon/seo.png" alt="" class="img-fluid"
+                                            style="width: 35%; height: auto;">
+                                    </div>
+                                </div>
+                                <!-- Service icon end -->
+                                <div class="service-content">
+                                    <h3>SEO</h3>
+                                    <p>Meta title, meta description, Schema.org markup for all pages to help in SEO.</p>
+                                    <!--   <a href="#" class="tw-readmore">Read More
+                                                <i class="fa fa-angle-right"></i>
+                                              </a> -->
+                                </div>
+                                <!-- Service Content end -->
+                            </div>
+                            <!-- Service box end -->
+                        </div>
+                        <!-- Col End -->
+
+                        <div class="col-md-3 text-center wow fadeInUp" data-wow-duration="2.2s" data-wow-delay=".1s">
+                            <div class="tw-service-box features-box" style="padding: 32px 30px 62px;margin-bottom:22px;">
+                                <div class="service-icon service-icon-bg-1 d-table">
+                                    <div class="service-icon-inner d-table-cell">
+                                        <img src="https://www.eductrl.com/img/Icon/application.png" alt=""
+                                            class="img-fluid" style="width: 35%; height: auto;">
+                                    </div>
+                                </div>
+                                <!-- Service icon end -->
+                                <div class="service-content">
+                                    <h3>Mobile Friendly</h3>
+                                    <p>EduCtrl CMS generates all the content as responsive, for best user experience.</p>
+                                    <!--   <a href="#" class="tw-readmore">Read More
+                                                <i class="fa fa-angle-right"></i>
+                                              </a> -->
+                                </div>
+                                <!-- Service Content end -->
+                            </div>
+                            <!-- Service box end -->
+                        </div>
+                        <!-- Col End -->
+
+                        <div class="col-md-3 text-center wow fadeInUp" data-wow-duration="2.2s" data-wow-delay=".1s">
+                            <div class="tw-service-box features-box" style="padding: 32px 30px 62px;margin-bottom:22px;">
+                                <div class="service-icon service-icon-bg-1 d-table">
+                                    <div class="service-icon-inner d-table-cell">
+                                        <img src="https://www.eductrl.com/img/Icon/content-writing.png" alt=""
+                                            class="img-fluid" style="width: 35%; height: auto;">
+                                    </div>
+                                </div>
+                                <!-- Service icon end -->
+                                <div class="service-content">
+                                    <h3>Content</h3>
+                                    <p>Add News, Events, Top Countries, Universities, Courses, Testimonials, FAQs.</p>
+                                    <!--   <a href="#" class="tw-readmore">Read More
+                                                <i class="fa fa-angle-right"></i>
+                                              </a> -->
+                                </div>
+                                <!-- Service Content end -->
+                            </div>
+                            <!-- Service box end -->
+                        </div>
+                        <!-- Col End -->
+
+                    </div>
+                    <!-- container -->
+            </section>
+            <!-- Tw Service End -->
+    </section>
+    <!-- /section -->
+    <!--feature promo end-->
+
+    <!-- Recent Projects Start -->
+    <!-- //#f2f2f2 -->
+    <div class="overflow-hidden" style="background: #f2f2f2; padding: 30px; padding-bottom: 50px;">
+        <div class="container pb-9 pb-md-14 wow fadeInUp" data-wow-duration="0.9s" data-wow-delay=".2s">
+            <div class="row">
+                <div class="col-lg-9 col-xl-8 col-xxl-7 mx-auto text-center">
+                    <h3 class="display-4 mb-8">EduCtrl CMS Screenshots</h3>
+                    <span class="animate-border ml-auto mr-auto tw-mt-20"></span><br><br>
+                </div>
+                <!-- /column -->
+            </div>
+            <!-- /.row -->
+            <div id="carouselControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <img src="https://www.eductrl.com/images/carousel/homepage1.jpg" class="d-block w-50"
+                                style="margin-right: 20px;">
+                            <img src="https://www.eductrl.com/images/carousel/9.jpg" class="d-none d-md-block d-block w-50">
                         </div>
                     </div>
-                    
-                    <div class="col-md-3 mt-5 rounded" style="background-color: rgb(247,249,248);">
-                        <h3 class="mt-3">Also Read</h3>
-                        <span class="animate-border tw-mb-40 tw-mt-20"></span>
-                                                <div class="row mt-4">
-                            <div class="col-12">
-                                
-                                <h6><a href="https://www.eductrl.com/blog/boosting-student-enrollment-how-to-maximize-conversion-opportunities" class="text-dark"><i class="bi bi-arrow-right text-dark"></i> Boosting Student Enrollment: How to Maximize Conversion Opportunities</a></h6>
-                            </div>
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <img src="https://www.eductrl.com/images/carousel/1.jpg" class="d-block w-50"
+                                style="margin-right: 20px;">
+                            <img src="https://www.eductrl.com/images/carousel/2.jpg" class="d-none d-md-block d-block w-50">
                         </div>
-                                                <div class="row mt-4">
-                            <div class="col-12">
-                                
-                                <h6><a href="https://www.eductrl.com/blog/5-essential-questions-to-ask-students-while-advising-courses" class="text-dark"><i class="bi bi-arrow-right text-dark"></i> 5 Essential Questions to Ask Students While Advising Courses</a></h6>
-                            </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <img src="https://www.eductrl.com/images/carousel/8.jpg" class="d-block w-50"
+                                style="margin-right: 20px;">
+                            <img src="https://www.eductrl.com/images/carousel/3.jpg" class="d-none d-md-block d-block w-50">
                         </div>
-                                                <div class="row mt-4">
-                            <div class="col-12">
-                                
-                                <h6><a href="https://www.eductrl.com/blog/how-a-higher-education-crm-can-boost-enrollments-in-the-uae" class="text-dark"><i class="bi bi-arrow-right text-dark"></i> How a Higher Education CRM Can Boost Enrollments in the UAE</a></h6>
-                            </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <img src="https://www.eductrl.com/images/carousel/10.jpg" class="d-block w-50"
+                                style="margin-right: 20px;">
+                            <img src="https://www.eductrl.com/images/carousel/4.jpg" class="d-none d-md-block d-block w-50">
                         </div>
-                                                <div class="row mt-4">
-                            <div class="col-12">
-                                
-                                <h6><a href="https://www.eductrl.com/blog/higher-education-crm-vs-manual-processes" class="text-dark"><i class="bi bi-arrow-right text-dark"></i> Higher Education CRM vs. Manual Processes: Why Automation is the Key to Successful International Student Recruitment</a></h6>
-                            </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <img src="https://www.eductrl.com/images/carousel/11.jpg" class="d-block w-50"
+                                style="margin-right: 20px;">
+                            <img src="https://www.eductrl.com/images/carousel/51.jpg" class="d-none d-md-block d-block w-50">
                         </div>
-                                                <div class="row mt-4">
-                            <div class="col-12">
-                                
-                                <h6><a href="https://www.eductrl.com/blog/how-to-launch-a-high-converting-lead-magnet-for-study-abroad-leads" class="text-dark"><i class="bi bi-arrow-right text-dark"></i> How to Launch a High-Converting Lead Magnet for Study Abroad Leads</a></h6>
-                            </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <img src="https://www.eductrl.com/images/carousel/13.jpg" class="d-block w-50"
+                                style="margin-right: 20px;">
+                            <img src="https://www.eductrl.com/images/carousel/7.jpg" class="d-none d-md-block d-block w-50">
                         </div>
-                                                <div class="row mt-4">
-                            <div class="col-12">
-                                
-                                <h6><a href="https://www.eductrl.com/blog/how-admission-software-is-improving-efficiency-and-accessibility-in-higher-education" class="text-dark"><i class="bi bi-arrow-right text-dark"></i> How Admission Software is Improving Efficiency and Accessibility in Higher Education</a></h6>
-                            </div>
-                        </div>
-                                                <div class="row mt-4">
-                            <div class="col-12">
-                                
-                                <h6><a href="https://www.eductrl.com/blog/why-edtech-crms-are-essential-for-learning-businesses" class="text-dark"><i class="bi bi-arrow-right text-dark"></i> Why EdTech CRMs Are Essential for Learning Businesses</a></h6>
-                            </div>
-                        </div>
-                                                <div class="row mt-4">
-                            <div class="col-12">
-                                
-                                <h6><a href="https://www.eductrl.com/blog/how-personalized-video-content-can-boost-your-student-recruitment-efforts" class="text-dark"><i class="bi bi-arrow-right text-dark"></i> How Personalized Video Content Can Boost Your Student Recruitment Efforts</a></h6>
-                            </div>
-                        </div>
-                                            </div>
+                    </div>
                 </div>
+                <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            <div id="carouselControls-1" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <img src="https://www.eductrl.com/images/carousel/homepage1.jpg" style="margin-right: 20px;">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <img src="https://www.eductrl.com/images/carousel/9.jpg">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <img src="https://www.eductrl.com/images/carousel/1.jpg" style="margin-right: 20px;">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <img src="https://www.eductrl.com/images/carousel/2.jpg">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <img src="https://www.eductrl.com/images/carousel/8.jpg" style="margin-right: 20px;">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <img src="https://www.eductrl.com/images/carousel/3.jpg">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <img src="https://www.eductrl.com/images/carousel/10.jpg" style="margin-right: 20px;">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <img src="https://www.eductrl.com/images/carousel/4.jpg">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <img src="https://www.eductrl.com/images/carousel/11.jpg" style="margin-right: 20px;">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <img src="https://www.eductrl.com/images/carousel/51.jpg">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <img src="https://www.eductrl.com/images/carousel/13.jpg" style="margin-right: 20px;">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <img src="https://www.eductrl.com/images/carousel/7.jpg">
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselControls-1" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselControls-1" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
         </div>
     </div>
-</section>
+    <!-- Pricing Start -->
+    <div class="overflow-hidden" style="margin-top: 50px;">
+        <div class="container mt-10 pb-14">
+            <div class="row" style="padding-bottom: 35px;">
+                <div class="col-md-12 mx-auto text-center">
+                    <h3 class="display-4 mb-8">Pricing</h3>
+                    <span class="animate-border ml-auto mr-auto tw-mt-20"></span><br><br>
+                </div>
+                <div class="col-sm-12 col-md-4 d-flex align-items-center justify-content-cente ">
+                    <div>
+                        <h2 class="display-4 mb-3">Best Pricing</h2>
+                        <p class="text-muted mb-3" style="font-size: 18px">Our pricing is unbeatable.</p>
+                    </div>
+                </div>
+                <!--/column -->
+                <div class="col-sm-12 col-md-4">
+                    <div class="tw-price-box " style="box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);">
+                        <div class="pricing-feaures" style="margin-top: 0px !important">
+                            <h3 class="pb-3 mx-auto"
+                                style="text-align:center; border-bottom: 1px solid rgb(207, 207, 207); width: 90%;">Hosted
+                                Solution</h3>
+                            <div class="pricing-price">
+                                <span class="usDollarAmount"><sup class="currencySymbol">$</sup><strong
+                                        id="currencyOne">299</strong><br></span>
+                                <span>One-time</span> <br>
+                                plus <span class="usDollarAmount"><span class="currencySymbol"
+                                        style="font-size: 18px;">$</span><strong id=""
+                                        style="font-size: 18px;">89 </strong>yearly recurring</span>
+                            </div>
+                            <ul style=" margin: 0px 20px;">
+                                <li><i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+                                    <strong style="color: #646464">Fast Cloud Server</strong>
+                                </li>
+                                <li><i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+                                    <span style="color: #646464">5GB Disk Space</span>
+                                </li>
+                                <li><i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+                                    <span style="color: #646464">3 Email Accounts</span>
+                                </li>
+                                <li><i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+                                    <span style="color: #646464">Free Support</span>
+                                </li>
+                            </ul>
+                        </div>
 
+                        <div style="text-align:center;padding:12px 15px 0 15px;">
+                            <a href="https://www.eductrl.com/contact" class="btn btn-outline"
+                                style="margin-top:20px;margin-bottom:4px;">Contact</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-4">
+                    <div class="tw-price-box" style="box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);">
+                        <div class="pricing-feaures" style="margin-top: 0px !important">
+                            <h3 class="pb-3 mx-auto"
+                                style="text-align:center; border-bottom: 1px solid rgb(207, 207, 207); width: 90%;">
+                                Self-Hosted</h3>
+                            <div class="pricing-price">
+                                <span class="usDollarAmount"><sup class="currencySymbol">$</sup><strong
+                                        id="currencyOne">399</strong><br></span>
+                                <span>One-time</span> <br><br>
+                            </div>
+                            <ul style=" margin: 0px 20px;">
+                                <li><i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+                                    <strong style="color: #646464">Hosted on your server</strong>
+                                </li>
+                                <li><i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+                                    <span style="color: #646464">6 Months Free Support & <br> $59 per year
+                                        afterwards</span>
+                                </li>
+                                <li><span>&nbsp;</span></li>
+                            </ul>
+                        </div>
+
+                        <div style="text-align:center;padding:12px 15px 0 15px;">
+                            <a href="https://www.eductrl.com/contact" class="btn btn-outline"
+                                style="margin-top:20px;margin-bottom:4px;">Contact</a>
+                        </div>
+                    </div>
+                </div>
+                <!--/column -->
+            </div>
+            <!--/.row -->
+        </div>
+        <!-- /.container -->
+    </div>
+    </div>
+    </div>
+
+    <!-- Pricing End -->
+
+    <!-- Contact Start -->
+    <div class="overflow-hidden" style="margin-top: 50px;">
+        <div class="container pt-10 pb-7 wow fadeInUp mt-1" data-wow-duration="0.9s" data-wow-delay=".2s">
+            <div class="card bg-soft-primary mb-8">
+                <div class="card-body p-12" style="padding-bottom: 0px;">
+                    <div class="row gx-md-8 gx-xl-12 gy-10">
+                        <div class="col-lg-6"><br><br><br>
+                            <h2 class="display-4 mb-3 pe-lg-10" style="color: #007eff">Interested in EduCtrl CMS? </h2>
+                            <p class="lead pe-lg-12 mb-0 mb-3" style="color: #fcfcfc">Get in touch with us for a free
+                                demo.</p>
+                            <p class="lead pe-lg-12 mb-0 mb-3" style="color: #fcfcfc; font-weight: 600;">CALL:
+                                +91-924-213-7092</p>
+                            <div class="hero_social">
+                                <a href="tel:+919242137092"><img src="https://www.eductrl.com/images/icon/phone-call.png"
+                                        alt="" class="img-fluid" style="width: 25px; height: auto;"></a>
+                                <a
+                                    href="https://api.whatsapp.com/send?phone=919242137092&text=Hi,%20I%20am%20Interested%20in%20EduCtrl%20CMS"><img
+                                        src="https://www.eductrl.com/images/icon/whatsapp.png" alt="" class="img-fluid"
+                                        style="width: 25px; height: auto;"></a>
+                            </div>
+                        </div>
+                        <!-- /column -->
+                        <div class="col-lg-6">
+                            <form class="contact-form needs-validation" id="eductrl-form" novalidate>
+                                <div class="messages"></div>
+                                <div class="row gx-4">
+                                    <div class="col-md-6">
+                                        <div class="form-floating mb-2">
+                                            <label for="form_name" style="color: #fcfcfc">Name *</label>
+                                            <input id="form_name" type="text" name="name"
+                                                class="form-control border-0" required="required"
+                                                data-error="First Name is required.">
+                                            <div class="valid-feedback"> Looks good! </div>
+                                            <div class="invalid-feedback"> Please enter your name. </div>
+                                        </div>
+                                    </div>
+                                    <!-- /column -->
+                                    <div class="col-md-6">
+                                        <div class="form-floating mb-2">
+                                            <label for="form_email" style="color: #fcfcfc">Email *</label>
+                                            <input id="form_email" type="email" name="email"
+                                                class="form-control border-0" required="required"
+                                                data-error="Valid email is required.">
+                                            <div class="valid-feedback"> Looks good! </div>
+                                            <div class="invalid-feedback"> Please provide a valid email address. </div>
+                                        </div>
+                                    </div>
+                                    <!-- /column -->
+                                    <div class="col-md-12">
+                                        <div class="form-floating mb-2">
+                                            <label for="form_phone" style="color: #fcfcfc">Phone No *</label>
+                                            <input id="form_phone" type="tel" name="phone"
+                                                class="form-control border-0" required="required"
+                                                data-error="Valid number is required.">
+                                            <div class="valid-feedback"> Looks good! </div>
+                                            <div class="invalid-feedback"> Please provide a valid phone number. </div>
+                                        </div>
+                                    </div>
+                                    <!-- /column -->
+                                    <div class="col-12">
+                                        <div class="form-floating mb-4">
+                                            <label for="form_message" style="color: #fcfcfc">Message *</label>
+                                            <textarea id="form_message" name="message" class="form-control border-0" style="height: 60px" required></textarea>
+                                            <div class="valid-feedback"> Looks good! </div>
+                                            <div class="invalid-feedback"> Please enter your messsage. </div>
+                                        </div>
+                                    </div>
+                                    <!-- /column -->
+                                    <div class="col-12">
+                                        <input type="button" id="eductrl-cms-form-btn"
+                                            class="btn btn-outline-primary rounded-pill btn-send mb-3"
+                                            value="Send Message">
+                                        <div id="returnmessage1" class="text-center" style="padding-top:15px;"></div>
+                                    </div>
+                                    <!-- /column -->
+                                </div>
+                                <!-- /.row -->
+                            </form>
+                            <!-- /form -->
+                        </div>
+                        <!-- /column -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!--/.card-body -->
+            </div>
+            <!--/.card -->
+        </div>
+        <!-- /.container -->
+    </div>
+    <!-- Contact End -->
+
+    <!-- Customer Services -->
+    <section class="wrapper bg-light">
+        <div class="container pt-14 pt-md-16">
+            <div class="row text-center">
+                <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+                    <h2 class="fs-16 text-uppercase text-muted mb-3">Customer Services</h2>
+                    <h3 class="display-4 mb-10 px-xl-10">Our Services</h3>
+                    <span class="animate-border ml-auto mr-auto tw-mt-20"></span>
+                </div>
+                <!-- /column -->
+            </div>
+            <!-- /.row -->
+            <section id="tw-service" class="tw-service">
+                <div class="container">
+                    <!-- Title Row End -->
+                    <div class="row">
+                        <div class="col-md-4 text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
+                            <div class="tw-service-box features-box" style="padding: 32px 30px 62px;margin-bottom:22px;">
+                                <div class="service-icon d-table">
+                                    <div class="service-icon-inner d-table-cell">
+                                        <img src="https://www.eductrl.com/img/Icon/theme.png" alt="" class="img-fluid"
+                                            style="width: 70px; height: auto;">
+                                    </div>
+                                </div>
+                                <!-- Service icon end -->
+                                <div class="service-content">
+                                    <h3>Theme Customization</h3>
+                                    <p>Our team can customize the color scheme of the website or we can integrate a new html
+                                        theme</p>
+                                    <!--   <a href="#" class="tw-readmore">Read More
+                                                <i class="fa fa-angle-right"></i>
+                                              </a> -->
+                                </div>
+                                <!-- Service Content end -->
+                            </div>
+                            <!-- Service box end -->
+                        </div>
+                        <!-- Col End -->
+
+                        <div class="col-md-4 text-center wow fadeInUp" data-wow-duration="2s" data-wow-delay=".1s">
+                            <div class="tw-service-box features-box" style="padding: 32px 44px 60px;">
+                                <div class="service-icon d-table">
+                                    <div class="service-icon-inner d-table-cell">
+                                        <img src="https://www.eductrl.com/img/Icon/online-content.png" alt=""
+                                            class="img-fluid" style="width: 80px; height: auto;">
+                                    </div>
+                                </div>
+                                <!-- Service Icon end-->
+                                <div class="service-content">
+                                    <h3>Copy Writing</h3>
+                                    <p>We can write content for your website that is unique, plagiarism free and optimized
+                                        for SEO</p>
+                                    <!--   <a href="#" class="tw-readmore">Read More
+                                                <i class="fa fa-angle-right"></i>
+                                              </a> -->
+                                </div>
+                                <!-- Service Content end -->
+                            </div>
+                            <!-- Service box end-->
+                        </div>
+                        <!-- Col end -->
+
+                        <div class="col-md-4 text-center wow fadeInUp" data-wow-duration="1.4s" data-wow-delay=".1s">
+                            <div class="tw-service-box features-box" style="padding: 32px 30px 62px;margin-bottom:22px;">
+                                <div class="service-icon d-table">
+                                    <div class="service-icon-inner d-table-cell">
+                                        <img src="https://www.eductrl.com/img/Icon/blogging.png" alt="" class="img-fluid"
+                                            style="width: 70px; height: auto;">
+                                    </div>
+                                </div>
+                                <!-- Service Icon End -->
+                                <div class="service-content">
+                                    <h3>Blog Posts</h3>
+                                    <p>Our team can write & publish blog articles to your website that helps drive more
+                                        traffic from Google</p>
+                                    <!--   <a href="#" class="tw-readmore">Read More
+                                                <i class="fa fa-angle-right"></i>
+                                              </a> -->
+                                </div>
+                                <!-- Service content end -->
+                            </div>
+                            <!-- Service box End -->
+                        </div>
+                        <!-- Col end -->
+
+                        <div class="col-md-4 text-center wow fadeInUp" data-wow-duration="2.2s" data-wow-delay=".1s">
+                            <div class="tw-service-box features-box" style="padding: 32px 30px 62px;margin-bottom:22px;">
+                                <div class="service-icon d-table">
+                                    <div class="service-icon-inner d-table-cell">
+                                        <img src="https://www.eductrl.com/img/Icon/seo-64.png" alt="" class="img-fluid"
+                                            style="width: 80px; height: auto;">
+                                    </div>
+                                </div>
+                                <!-- Service icon end -->
+                                <div class="service-content">
+                                    <h3>SEO Services</h3>
+                                    <p>SEO optimization that includes: Keyword research, content optimization, local seo,
+                                        blog posts.</p>
+                                    <!--   <a href="#" class="tw-readmore">Read More
+                                                <i class="fa fa-angle-right"></i>
+                                              </a> -->
+                                </div>
+                                <!-- Service Content end -->
+                            </div>
+                            <!-- Service box end -->
+                        </div>
+                        <!-- Col End -->
+
+                        <div class="col-md-4 text-center wow fadeInUp" data-wow-duration="2.2s" data-wow-delay=".1s">
+                            <div class="tw-service-box features-box" style="padding: 32px 30px 62px;margin-bottom:22px;">
+                                <div class="service-icon d-table">
+                                    <div class="service-icon-inner d-table-cell">
+                                        <img src="https://www.eductrl.com/img/Icon/logo1.png" alt="" class="img-fluid"
+                                            style="width: 80px; height: auto;">
+                                    </div>
+                                </div>
+                                <!-- Service icon end -->
+                                <div class="service-content">
+                                    <h3>Logo Design</h3>
+                                    <p>Need a professional logo for your business? We can design a logo and brand identity
+                                        for you</p>
+                                    <!--   <a href="#" class="tw-readmore">Read More
+                                                <i class="fa fa-angle-right"></i>
+                                              </a> -->
+                                </div>
+                                <!-- Service Content end -->
+                            </div>
+                            <!-- Service box end -->
+                        </div>
+                        <!-- Col End -->
+
+                        <div class="col-md-4 text-center wow fadeInUp" data-wow-duration="2.2s" data-wow-delay=".1s">
+                            <div class="tw-service-box features-box" style="padding: 32px 30px 62px;margin-bottom:22px;">
+                                <div class="service-icon d-table">
+                                    <div class="service-icon-inner d-table-cell">
+                                        <img src="https://www.eductrl.com/img/Icon/data-migration.png" alt=""
+                                            class="img-fluid" style="width: 80px; height: auto;">
+                                    </div>
+                                </div>
+                                <!-- Service icon end -->
+                                <div class="service-content">
+                                    <h3>Migration</h3>
+                                    <p>Have an existing website and want to move it to EduCtrl CMS? Our team can do the data
+                                        migration.</p>
+                                    <!--   <a href="#" class="tw-readmore">Read More
+                                                <i class="fa fa-angle-right"></i>
+                                              </a> -->
+                                </div>
+                                <!-- Service Content end -->
+                            </div>
+                            <!-- Service box end -->
+                        </div>
+                        <!-- Col End -->
+                    </div>
+                    <!-- container -->
+            </section>
+            <!-- Tw Service End -->
+            <div class="container mb-5">
+                <div class="row justify-content-center">
+                    <div class="col-auto">
+                        <a href="https://www.eductrl.com/contact" class="btn btn-dark"
+                            style="margin-bottom: 20px;">Contact us for a Quote</a>
+                    </div>
+                </div>
+            </div>
+    </section>
         <a href="https://wa.me/919242137092?text=Hi, I'm Interested in EduCtrl"
             className="fixed-bottomRight  whatsappIcon" >
             <img src="https://www.eductrl.com/images/whatsapp.png" alt="icon" class="fixed-bottomRight whatsappIcon" loading="lazy">
@@ -1111,7 +1585,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             c_message: message,
                             source: 'contact form',
                             captcha_token: token,
-                            _token: "Of8RdBbIDXqsArfxE8DOBq4YEAkU5cwN9XiPyi0V"
+                            _token: "8C54pnL7qTk6b9g1Uo6f9yLPPmUut8xJT7iVjJom"
                         }, function(data) {
                             $("#contact-form-btn").attr("disabled", false);
                             $("#contact-form-btn").val('SEND');
@@ -1154,7 +1628,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             form_message: message,
                             source: 'eductrl_cms_form',
                             captcha_token: token,
-                            _token: "Of8RdBbIDXqsArfxE8DOBq4YEAkU5cwN9XiPyi0V"
+                            _token: "8C54pnL7qTk6b9g1Uo6f9yLPPmUut8xJT7iVjJom"
                         }, function(data) {
                             $("#eductrl-cms-form-btn").attr("disabled", false);
                             $("#eductrl-cms-form-btn").val('Send Message');
@@ -1209,7 +1683,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             c_message: message,
                             source: 'enquiry form',
                             captcha_token: token,
-                            _token: "Of8RdBbIDXqsArfxE8DOBq4YEAkU5cwN9XiPyi0V",
+                            _token: "8C54pnL7qTk6b9g1Uo6f9yLPPmUut8xJT7iVjJom",
                         }, function(data) {
                             if (data == '1') {
                                 $("#enquiry-form").trigger("reset"); // To reset form fields on success.
@@ -1252,7 +1726,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             c_email: email,
                             source: 'newsletter form',
                             captcha_token: token,
-                            _token: "Of8RdBbIDXqsArfxE8DOBq4YEAkU5cwN9XiPyi0V"
+                            _token: "8C54pnL7qTk6b9g1Uo6f9yLPPmUut8xJT7iVjJom"
                         }, function(data) {
                             if (data == '1') {
                                 $("#newsletter-form").trigger("reset");
@@ -1279,26 +1753,173 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     })();
 </script>
 
-    <style>
-    .pagination{
-        justify-content: center;
-    }
-    .pagination li{
-        margin-left: 5px !important;
-    }
-    .pagination li a{
-        line-height: 20px !important;
-        border-radius: 0px !important;
-        height: 36.5px !important;
-        width: 120px !important;
-        border-radius: 5px !important;
-        border-color: rgb(220, 220, 219);
-    }
-    .ck-content .image img{
-        height: auto !important;
-    }
+        <style>
+        .bg-soft-primary {
+            background-color: #e5f1ff;
+        }
 
-</style>
+        /* Page Title styles */
+        .display-1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #343f52;
+        }
+
+        /* Features section styles */
+        .fs-16 {
+            font-size: 1rem;
+        }
+
+        .display-4 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #000;
+        }
+
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+
+        /* Contact section styles */
+        .card.bg-soft-primary {
+            background-color: #0b163f;
+        }
+
+        .btn-send {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .position-absolute {
+            position: absolute !important;
+        }
+
+        /* Recent Project styles */
+
+        .carousel-item img {
+            height: auto;
+            max-height: 70vh;
+        }
+
+        .carousel-item .d-flex {
+            align-items: center;
+        }
+
+        .carousel-item img {
+            margin: 0;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            opacity: 0.2;
+            background-color: #007bff;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .carousel-control-prev:hover,
+        .carousel-control-next:hover {
+            background-color: #0056b3;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            color: white;
+        }
+
+        .tw-service {
+            padding-bottom: 0px;
+        }
+
+        .hero_social {
+            display: flex;
+            column-gap: 20px;
+        }
+
+        .hero_social a {
+            font-size: 22px;
+            display: inline-flex;
+            width: 40px;
+            height: 40px;
+            align-items: center;
+            justify-content: center;
+            background-color: #eee;
+            color: #333;
+            transition: .3s;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+        }
+
+        .hero_social a:hover {
+
+            box-shadow: 0 0 10px blue;
+        }
+
+        /* @media (max-width: 767px) {
+            .carousel-item .d-block.w-50 {
+              display: none !important;
+            }
+            .carousel-item .d-none.d-md-block.d-block.w-50 {
+              display: block !important;
+              width: 100% !important;
+            }
+          } */
+        @media (max-width: 767px) {
+            #carouselControls {
+                display: none !important;
+            }
+
+            #carouselControls-1 {
+                display: block !important;
+                width: 100% !important;
+            }
+        }
+
+        @media (min-width: 768px) {
+            #carouselControls-1 {
+                display: none !important;
+            }
+
+            #carouselControls {
+                display: block !important;
+                width: 100% !important;
+            }
+        }
+
+        #carouselControls-1 .carousel-item img{
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .wrapper.bg-soft-primary {
+            padding-bottom: 200px;
+            margin-bottom: -215px;
+        }
+/* 
+        @media  only (min-width: 476px) and (max-width: 768px) {
+            .wrapper.bg-soft-primary {
+                padding-bottom: 120px;
+                margin-bottom: -140px;
+            }
+        } */
+
+        @media  only screen and (max-width: 520px) {
+            .wrapper.bg-soft-primary {
+                padding-bottom: 155px;
+                margin-bottom: -130px;
+            }
+
+        }
+    </style>
         <!-- Google Tag Manager (noscript) -->
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M85SFMLP"
 	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -1358,6 +1979,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 	
-</body>
+`;
 
-</html>
+export function CmsCloneContent() {
+  return <div className="eductrl-clone-page" dangerouslySetInnerHTML={{ __html: normalizeCloneHtml(rawHtml) }} />;
+}

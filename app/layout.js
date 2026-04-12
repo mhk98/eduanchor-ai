@@ -1,4 +1,5 @@
 import { Space_Grotesk, Manrope } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { SiteShell } from "@/components/site-shell";
 
@@ -17,6 +18,10 @@ export const metadata = {
   description:
     "Modern multi-page Next.js website for study abroad consultancy CRM, coaching CRM, and website builder services."
 };
+
+const trackingBaseUrl =
+  process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:5000";
+const fbPixelId = process.env.NEXT_PUBLIC_FB_PIXEL_ID;
 
 export default function RootLayout({ children }) {
   return (
@@ -39,6 +44,37 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" href="https://www.eductrl.com/css/responsive.css?v=4" />
       </head>
       <body className={`${headingFont.variable} ${bodyFont.variable}`}>
+        <Script
+          src={`${trackingBaseUrl}/api/v1/tracking/script.js`}
+          strategy="afterInteractive"
+        />
+        {fbPixelId ? (
+          <>
+            <Script id="meta-pixel-base" strategy="afterInteractive">
+              {`
+                !function(f,b,e,v,n,t,s)
+                {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+                n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+                if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+                n.queue=[];t=b.createElement(e);t.async=!0;
+                t.src=v;s=b.getElementsByTagName(e)[0];
+                s.parentNode.insertBefore(t,s)}(window, document,'script',
+                'https://connect.facebook.net/en_US/fbevents.js');
+                fbq('init', '${fbPixelId}');
+                fbq('track', 'PageView');
+              `}
+            </Script>
+            <noscript>
+              <img
+                height="1"
+                width="1"
+                style={{ display: "none" }}
+                alt=""
+                src={`https://www.facebook.com/tr?id=${fbPixelId}&ev=PageView&noscript=1`}
+              />
+            </noscript>
+          </>
+        ) : null}
         <SiteShell>{children}</SiteShell>
       </body>
     </html>

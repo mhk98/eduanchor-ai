@@ -1,77 +1,6 @@
-<!DOCTYPE html>
-    <html lang="en">
+import { normalizeCloneHtml } from "@/lib/clone-html";
 
-<head>
-    
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" type="image/png" sizes="32x32" href="https://www.eductrl.com/assets/images/favicon.png">
-    <meta name="csrf-token" content="Of8RdBbIDXqsArfxE8DOBq4YEAkU5cwN9XiPyi0V">
-        <title>EduCtrl: Blog</title>
-    <meta name="description" content="">
-    
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-M85SFMLP');</script>
-<!-- End Google Tag Manager -->
-
-    
-    <!-- Bootstrap Core CSS -->
-    <link href="https://www.eductrl.com/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link href="https://www.eductrl.com/assets/plugins/select2/dist/css/select2.min.css" rel="stylesheet" type="text/css" />
-
-
-    <link href="https://www.eductrl.com/css/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <!-- <link href="https://www.eductrl.com/css/remixicon/remixicon.css" rel="stylesheet"> -->
-    <link href="https://www.eductrl.com/css/boxicons/css/boxicons.min.css" rel="stylesheet">
-
-    <link href="https://www.eductrl.com/css/ckeditor-frontend.css?v=1.1" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://www.eductrl.com/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="https://www.eductrl.com/css/animate.css" />
-    <link rel="stylesheet" href="https://www.eductrl.com/css/icofonts.css" />
-    <link rel="stylesheet" href="https://www.eductrl.com/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://www.eductrl.com/css/owlcarousel.min.css" />
-    <link rel="stylesheet" href="https://www.eductrl.com/css/magnific-popup.css" />
-    <link rel="stylesheet" href="https://www.eductrl.com/css/style.css?v=4">
-    <link rel="stylesheet" href="https://www.eductrl.com/css/responsive.css?v=4">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-            <![endif]-->
-
-    <style>
-    .pagination{
-        justify-content: center;
-    }
-    .pagination li{
-        margin-left: 5px !important;
-    }
-    .pagination li a{
-        line-height: 20px !important;
-        border-radius: 0px !important;
-        height: 36.5px !important;
-        width: 120px !important;
-        border-radius: 5px !important;
-        border-color: rgb(220, 220, 219);
-    }
-    .ck-content .image img{
-        height: auto !important;
-    }
-
-</style>
-
-</head>
-
-<body>
+const rawHtml = String.raw`
 
     <div id="main-wrapper">
 
@@ -193,7 +122,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                        <p>Share your details to access Software Demo</p>
                                               <form id="enquiry-form" class="contact-form" method="POST" action="#"
                            onsubmit="return false;">
-                           <input type="hidden" name="_token" value="Of8RdBbIDXqsArfxE8DOBq4YEAkU5cwN9XiPyi0V">                           <div class="error-container"></div>
+                           <input type="hidden" name="_token" value="5qQ0k5JJHbeOJ9ut5goLbOnRyzRikGMyV8ArSqHn">                           <div class="error-container"></div>
                            <div class="row">
                                <div class="col-lg-6">
                                    <div class="form-group">
@@ -691,186 +620,329 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </style>
 </header>
 
-        <div id="banner-area" class="banner-area" style="background-image:url(https://www.eductrl.com/images/banner/banner5.jpg)">
+        
+<!-- Start hero section -->
+<div class="tw-hero-slider">
+    <div class="consultancy-slider-2">
+        <div class="slider-wrapper d-table">
+            <div class="slider-inner d-table-cell">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <div class="slider-content">
+                                <h1 class="text-white"><span style="font-size:1.3em;">EduCtrl Coaching CRM</span><br />Management Software for
+                                    Coaching Institutes</h1>
+                                <p class="text-white">
+                                    EduCtrl Coaching is a revolutionary CRM software that helps you manage your coaching business more efficiently. With EduCtrl, Lead conversions are likely to increase, and more student coaching enrolments can be managed in less time.
+                                </p>
+                                <a href="#" class="btn btn-outline request-demo" data-toggle="modal" data-target="#enquiryModal">Request Demo</a>
+                            </div>
+                        </div>
+                        <!-- Col end -->
+                        <div class="col-md-4">
+                            <img src="https://www.eductrl.com/images/banner/coaching-banner2.png" alt="" class="img-fluid slider-img" fetchpriority="high" width="480" height="400">
+                        </div>
+                        <!-- col end -->
+                    </div>
+                    <!-- Row End -->
+                </div>
+                <!-- Container End -->
+            </div>
+            <!-- Slider Inner End -->
+        </div>
+        <!-- Slider Wrapper End -->
+    </div>
+    <!-- Slider 2 end -->
+</div>
+<!-- End hero section -->
+
+<!--  new section -->
+<section class="promo-section" style="padding-top:80px;">
     <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="banner-heading">
-                    <h1 class="banner-title text-white">Blog</h1>
-                    
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+                <div class="mb-3 text-center">
+                    <h2>Get your team to perform at their best by optimizing your Coaching process</h2>
                 </div>
             </div>
-            <!-- Col end -->
+            <div class="col-md-12">
+                <div class="mb-5 text-center">
+                    <p>
+                    EduCtrl Coaching Software will help you get more done, faster, and with less stress. Boost your team's performance and get the results you want.
+                    </p>
+                </div>
+            </div>
         </div>
-        <!-- Row end -->
-    </div>
-    <!-- Container end -->
-</div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="card promo-single position-relative text-center bg-white custom-shadow rounded-custom mb-4">
+                    <div class="promo-icon mb-2">
+                        <img src="https://www.eductrl.com/images/we/lead.jpg" alt="" class="lead-img">
+                    </div>
+                    <div class="promo-info">
+                        <h3 class="h5">Never miss a Lead</h3>
+                        <p class="mb-0">Track leads by setting up next followup date and time, and receive reminders
+                            on the scheduled followup time. Quickly update status, assign lead to staff.</p>
+                    </div>
+                    <!--pattern start-->
 
-<section id="main-container" class="main-container" style="padding-top:0;margin-bottom:100px;">
+                    <!--pattern end-->
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card promo-single position-relative text-center bg-white custom-shadow rounded-custom mb-4">
+                    <div class="promo-icon mb-2">
+                        <img src="https://www.eductrl.com/images/we/student.jpg" style="padding-bottom:13px;" alt="" class="student-img">
+                    </div>
+                    <div class="promo-info">
+                        <h3 class="h5">Manage Coaching Batches</h3>
+                        <p class="mb-0">
+                            Create batches, configure start date, course, start date, batch time, total duration etc.
+                            Enroll students to batch, track batch progress with ease.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class=" card promo-single position-relative text-center bg-white custom-shadow rounded-custom mb-4">
+                    <div class="promo-icon mb-2">
+                        <img src="https://www.eductrl.com/images/we/upload.png" alt="" class="upload-img">
+                    </div>
+                    <div class="promo-info">
+                        <h3 class="h5">Track Attendance</h3>
+                        <p class="mb-0">
+                            Track student attendance. Take student reviews about the trainer. Automatic reminders to students & staff on absence.
+                        </p>
+                    </div>
+                    <!--pattern start-->
+
+                    <!--pattern end-->
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="card promo-single position-relative text-center bg-white custom-shadow rounded-custom mb-4">
+                    <div class="promo-icon mb-2">
+                        <img src="https://www.eductrl.com/images/we/update.jpg" alt="" class="update-img">
+                    </div>
+                    <div class="promo-info">
+                        <h3 class="h5">Conduct Exams</h3>
+                        <p class="mb-0">
+                            Define question & answers for course & configure the exam date for the batch. Students will be able to take the exam on the exam date & view score.
+                        </p>
+                    </div>
+                    <!--pattern start-->
+
+                    <!--pattern end-->
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card promo-single position-relative text-center bg-white custom-shadow rounded-custom mb-4">
+                    <div class="promo-icon mb-2">
+
+                        <img src="https://www.eductrl.com/images/we/course.jpg" alt="" class="course-img">
+                    </div>
+                    <div class="promo-info">
+                        <h3 class="h5">Manage Fees</h3>
+                        <p class="mb-0">
+                            Track student fees for the course, track all due amounts. Generate invoice for the student payments & share the invoice.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class=" card promo-single position-relative text-center bg-white custom-shadow rounded-custom mb-4">
+                    <div class="promo-icon mb-2">
+
+                        <img src="https://www.eductrl.com/images/we/agent.jpg" alt="" class="agent-img">
+                        <!-- <i class="fas fa-bezier-curve text-danger fa-3x"></i> -->
+                    </div>
+                    <div class="promo-info">
+                        <h3 class="h5">Online Courses</h3>
+                        <p class="mb-0">
+                            You can sell recorded courses to students or associate recorded courses with batch & students can access those course videos.
+                        </p>
+                    </div>
+                    <!--pattern start-->
+
+                    <!--pattern end-->
+                </div>
+            </div>
+        </div>        
+    </div>
+</section>
+<!--feature promo end-->
+
+<section class="feature-tab-section bg-light">
     <div class="container">
+        <div class="row justify-content-center align-content-center">
+            <div class="col-lg-6 col-md-10">
+                <div class="mb-3 text-center">
+                    <h4 class="h5 text-primary">Features</h4>
+                    <h2>Powerful Advanced Features</h2>
+                    <p>EduCtrl Coaching Management Software includes The <strong>Admin Panel</strong>, <strong>Student Panel</strong> & <strong>Trainer Panel</strong>.</p>
+                </div>
+            </div>
+        </div>
         <div class="row">
             <div class="col-12">
-                <div class="row">
-                    <div class="col-md-9 mt-5">
-                        <div class="container-fluid m-t-10">
-                                                        <div class="row mt-5">
-                                <div class="col-12">
-                                    <h3><a href="https://www.eductrl.com/blog/managing-multi-country-offices-challenges-and-solutions">Managing Multi-Country Offices: Challenges and Solutions</a></h3>
-                                </div>
-                            </div>
-                            <div class="row eductrl-editor-content ck-content" style="padding:15px;">
-                                                                <img src="https://www.eductrl.com/storage/cms/Managing Multi-Country Offices_ Challenges and Solutions_._1773826629.jpg" class="img-fluid" />
-                                                                
-                                <p class=""><p>Managing offices across multiple countries can feel like juggling flaming torches—exciting but fraught with potential pitfalls. As businesses expand globally, leaders often face a myriad of challenges that can impact productivity and cohesion.</p><p>Operating in different countries means navigating various cultures, regulations, and communication styles. For example, a company with offices in both Germany and Brazil may struggle with time zone differences and varying approaches to teamwork.</p><p>Key challenges include:</p><ol><li data-list="bullet"><strong>Cultural Misunderstandings</strong>: Different work ethics and communication styles can lead to friction.</li><li data-list="bullet"><strong>Regulatory Compliance</strong>: Each country has its own labor laws, which can complicate HR practices.</li><li data-list="bullet"><strong>Technology Integration</strong>: Ensuring that all offices use compatible systems is crucial for seamless operations.</li></ol><p>To thrive, organizations must adopt strategic solutions tailored to their unique circumstances. Pro tip: Regularly conduct cross-cultural training sessions to enhance team dynamics and foster mutual understanding. By addressing these challenges head-on, companies can create a harmonious and productive multi-country environment.</p></p>
-                                <div style="margin-bottom:30px">
-                                    <a class="btn btn-primary" href="https://www.eductrl.com/blog/managing-multi-country-offices-challenges-and-solutions" role="button">Read More</a>
-                                </div>
-                            </div>
-                                                        <div class="row mt-5">
-                                <div class="col-12">
-                                    <h3><a href="https://www.eductrl.com/blog/should-you-niche-down-benefits-of-specializing-in-specific-destinations-or-courses">Should You Niche Down? Benefits of Specializing in Specific Destinations or Courses</a></h3>
-                                </div>
-                            </div>
-                            <div class="row eductrl-editor-content ck-content" style="padding:15px;">
-                                                                <img src="https://www.eductrl.com/storage/cms/Should You Niche Down Benefits of Specializing in Specific Destinations or Courses_1773731064.png" class="img-fluid" />
-                                                                
-                                <p class=""><p>In a world overflowing with options, standing out can feel overwhelming. But what if, instead of trying to appeal to everyone, you focused on a niche that truly excites you?</p><p>Specializing in specific destinations or courses can transform your business from one of many to a preferred choice. This strategy enables you to cater to distinct audiences and foster deeper connections. For instance, a travel agency that specializes in eco-tourism in Costa Rica may attract environmentally conscious travelers, while an online course platform focusing exclusively on graphic design can build a loyal following among aspiring designers.</p><p><strong>Benefits of niching down include:</strong></p><ol><li data-list="bullet"><strong>Increased authority</strong> in your field.</li><li data-list="bullet"><strong>Targeted marketing efforts</strong> that resonate.</li><li data-list="bullet"><strong>Stronger brand identity</strong> and recognition.</li></ol><p>Pro tip: Research your competition and identify gaps in the market to carve out your niche effectively. By honing in on a specific area, you not only simplify your offerings but also amplify your impact. As you read on, you’ll discover how focusing your efforts can lead to greater success and satisfaction.</p></p>
-                                <div style="margin-bottom:30px">
-                                    <a class="btn btn-primary" href="https://www.eductrl.com/blog/should-you-niche-down-benefits-of-specializing-in-specific-destinations-or-courses" role="button">Read More</a>
-                                </div>
-                            </div>
-                                                        <div class="row mt-5">
-                                <div class="col-12">
-                                    <h3><a href="https://www.eductrl.com/blog/why-youtube-is-a-game-changer-for-study-abroad-marketing-here-s-how-to-start">Why YouTube Is a Game-Changer for Study Abroad Marketing – Here&#039;s How to Start</a></h3>
-                                </div>
-                            </div>
-                            <div class="row eductrl-editor-content ck-content" style="padding:15px;">
-                                                                <img src="https://www.eductrl.com/storage/cms/Why YouTube Is a Game-Changer for Study Abroad Marketing – Here&#039;s How to Start_. (1)_1773120372.jpg" class="img-fluid" />
-                                                                
-                                <p class=""><p>In a world where visual storytelling reigns supreme, YouTube stands out as a platform that can transform how educational institutions promote study abroad programs. With over <strong>2 billion monthly active users</strong>, it’s a treasure trove for reaching a global audience eager for authentic experiences.</p><p>Educational marketing has evolved, and students today crave real-life insights into potential study abroad destinations. This is where YouTube shines, allowing universities to showcase:</p><ol><li data-list="bullet"><strong>Student testimonials</strong>: Real stories resonate more than traditional marketing.</li><li data-list="bullet"><strong>Campus tours</strong>: Virtual sightseeing can spark interest instantly.</li><li data-list="bullet"><strong>Cultural immersion</strong>: Highlighting local customs and traditions enriches the experience.</li></ol><p>For instance, a university's video featuring students sharing their transformative journeys abroad garnered <strong>50,000 views</strong> in a month. The comments section buzzed with excitement and inquiries, proving the power of relatable content.</p><p>To harness YouTube effectively, focus on creating engaging, high-quality videos that answer potential students' questions and highlight unique program features. Consider leveraging keywords and descriptions to enhance discoverability, as <strong>SEO strategies</strong> can significantly boost your reach.</p></p>
-                                <div style="margin-bottom:30px">
-                                    <a class="btn btn-primary" href="https://www.eductrl.com/blog/why-youtube-is-a-game-changer-for-study-abroad-marketing-here-s-how-to-start" role="button">Read More</a>
-                                </div>
-                            </div>
-                                                        <div class="row mt-5">
-                                <div class="col-12">
-                                    <h3><a href="https://www.eductrl.com/blog/study-abroad-marketing-campaigns-essential-do-s-and-don-ts-for-success">Study Abroad Marketing Campaigns: Essential Do’s and Don’ts for Success</a></h3>
-                                </div>
-                            </div>
-                            <div class="row eductrl-editor-content ck-content" style="padding:15px;">
-                                                                <img src="https://www.eductrl.com/storage/cms/Study Abroad Marketing Campaigns Essential Do’s and Don’ts for Success_1772785179.png" class="img-fluid" />
-                                                                
-                                <p class=""><p>In an increasingly globalized world, the allure of studying abroad continues to capture the imagination of students everywhere. With more options than ever, educational institutions must craft compelling marketing campaigns to stand out in a crowded marketplace.</p><p>Effective study abroad marketing goes beyond traditional methods. It requires a strategic approach that resonates with students’ aspirations and addresses their concerns. For instance, a campaign that highlights <a href="https://www.eductrl.com/blog/case-studies-successful-social-media-campaigns-by-study-abroad-agencies"><strong>real student experiences</strong></a> can foster genuine connections and inspire action.</p><p>Consider the successful campaign launched by the University of California, which featured video testimonials from recent alumni. This approach not only showcased the benefits of studying abroad but also built trust through authentic storytelling.</p><p>As you navigate the complexities of promoting an international education program, keep these essential do’s and don’ts in mind to maximize your impact:</p><ol><li data-list="bullet"><strong>Do</strong> leverage social media to engage potential students.</li><li data-list="bullet"><strong>Don’t</strong> rely solely on print brochures—consider digital formats that appeal to tech-savvy audiences.</li></ol><p>By incorporating these strategies, you can create a marketing campaign that not only attracts attention but also drives results.</p></p>
-                                <div style="margin-bottom:30px">
-                                    <a class="btn btn-primary" href="https://www.eductrl.com/blog/study-abroad-marketing-campaigns-essential-do-s-and-don-ts-for-success" role="button">Read More</a>
-                                </div>
-                            </div>
-                                                        <div class="row mt-5">
-                                <div class="col-12">
-                                    <h3><a href="https://www.eductrl.com/blog/why-conversational-marketing-is-a-game-changer-for-study-abroad-agencies">Why Conversational Marketing is a Game-Changer for Study Abroad Agencies</a></h3>
-                                </div>
-                            </div>
-                            <div class="row eductrl-editor-content ck-content" style="padding:15px;">
-                                                                <img src="https://www.eductrl.com/storage/cms/Why Conversational Marketing is a Game-Changer for Study Abroad Agencies_1772623155.png" class="img-fluid" />
-                                                                
-                                <p class=""><p>In a world where instant communication is the norm, traditional marketing methods can feel outdated. <i>Conversational marketing</i> is changing the landscape, offering a more interactive approach that resonates with today's prospective students.</p><p>As study abroad agencies compete for attention in a crowded market, harnessing the power of conversations can be a game-changer. why:</p><ol><li data-list="bullet"><strong>Personalization</strong>: Prospects crave tailored experiences. Conversational marketing allows agencies to engage students with personalized interactions based on their interests and goals.</li><li data-list="bullet"><strong>Real-time Engagement</strong>: Immediate responses can help alleviate concerns and answer questions, making the decision-making process smoother.</li><li data-list="bullet"><strong>Building Trust</strong>: Authentic conversations foster relationships and trust, crucial for agencies aiming to guide students in their journeys abroad.</li></ol><p>For instance, a recent case study revealed that a <a href="https://www.eductrl.com/study-abroad/what-do-study-abroad-agencies-charge-for-their-services"><strong>study abroad agency</strong></a> that integrated chatbots on their website saw a 40% increase in inquiries within the first month.</p><p><strong>Pro Tip</strong>: Utilize tools like live chat or social media messaging to create seamless communication channels. By embracing this innovative marketing strategy, agencies can significantly enhance their outreach and support for students.</p></p>
-                                <div style="margin-bottom:30px">
-                                    <a class="btn btn-primary" href="https://www.eductrl.com/blog/why-conversational-marketing-is-a-game-changer-for-study-abroad-agencies" role="button">Read More</a>
-                                </div>
-                            </div>
-                                                        <div class="row mt-5">
-                                <div class="col-12">
-                                    <h3><a href="https://www.eductrl.com/blog/franchise-vs-independent-what-model-works-best-for-study-abroad-consulting">Franchise vs. Independent: What Model Works Best for Study Abroad Consulting?</a></h3>
-                                </div>
-                            </div>
-                            <div class="row eductrl-editor-content ck-content" style="padding:15px;">
-                                                                <img src="https://www.eductrl.com/storage/cms/Franchise vs. Independent What Model Works Best for Study Abroad Consulting_1772535807.png" class="img-fluid" />
-                                                                
-                                <p class=""><p>Choosing between a franchise and an independent model can be a pivotal decision for those venturing into study abroad consulting. With the global education market booming—projected to reach over $340 billion by 2025—understanding the nuances of each option is crucial for success.</p><p>Franchise opportunities often come with established branding, training programs, and a built-in customer base. This can lead to quicker profitability, as seen in franchises like &nbsp;Agency/consultancy, which reported 30% growth in their first two years.</p></p>
-                                <div style="margin-bottom:30px">
-                                    <a class="btn btn-primary" href="https://www.eductrl.com/blog/franchise-vs-independent-what-model-works-best-for-study-abroad-consulting" role="button">Read More</a>
-                                </div>
-                            </div>
-                                            
-                            <div class="row ">
-                                <div class="col-sm-12 ">
-                                    <nav>
-        <ul class="pagination">
-            
-                            <li class="page-item disabled" aria-disabled="true">
-                    <span class="page-link">&laquo; Previous</span>
-                </li>
-            
-            
-                            <li class="page-item">
-                    <a class="page-link" href="https://www.eductrl.com/blog?page=2" rel="next">Next &raquo;</a>
-                </li>
-                    </ul>
-    </nav>
+                <nav class="text-center">
+                    <div class="nav justify-content-center feature-tab-list-2 mb-0" id="nav-tab" role="tablist">
+                        <a class="nav-link active" id="" data-toggle="tab" href="#tab-1" role="tab" aria-controls="nav-tab-1" aria-selected="true"> Admin Panel</a>
+                        <a class="nav-link" id="" data-toggle="tab" href="#tab-2" role="tab" aria-controls="nav-tab-2" aria-selected="false"> Student Panel</a>
+                        <a class="nav-link" id="" data-toggle="tab" href="#tab-3" role="tab" aria-controls="nav-tab-3" aria-selected="false"> Trainer Panel</a>
+                    </div>
+                </nav>
 
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="pt-60 tab-pane fade show active" id="tab-1" role="tabpanel">
+                        <div class="row justify-content-center align-items-center justify-content-around">
+                            <div class="col-lg-5">
+                                <div class="feature-tab-info">
+                                    <h3>Administration Panel</h3>
+                                    <p>
+                                        EduCtrl comes with a admin panel where your staff, managers, and administrators can login and handle various aspects of coaching business. EduCtrl includes roles and permission features where you can restrict access to features based on the staff member role.</p>
+                                    <p>Admin panel gives the ability to manage leads, students, coaching batches, attendance, exams, trainers, send broadcast messages by email, SMS, and WhatsApp.</p>
+                                    <p>It also includes various settings to configure your website, courses, online courses, lead status, lead sources, web to lead forms, certificate, email/sms/whatsapp templates, manage branch and many more.
+                                    </p>
+                                    <a href="https://www.eductrl.com/coaching/admin-features" class="read-more-link text-decoration-none mt-4 btn btn-info">Know More
+                                        <i class="fa fa-arrow-right ms-2"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <img src="https://www.eductrl.com/images/screenshots/coachingadminpanel.png" alt="" class="img-fluid image-styling mt-4 mt-lg-0 mt-xl-0">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade pt-60" id="tab-2" role="tabpanel">
+                        <div class="row justify-content-center align-items-center justify-content-around">
+                            <div class="col-lg-6">
+                                <img src="https://www.eductrl.com/images/screenshots/coachingstudentpanel.png" alt="" class="img-fluid image-styling mt-4 mt-lg-0 mt-xl-0">
+                            </div>
+                            <div class="col-lg-5">
+                                <div class="feature-tab-info">
+                                    <h3>Student Panel</h3>
+                                    <p>
+                                        Students can access their course batch details, view course progress, join class online, chat with trainer, review trainer, take online exam, view scores, take mockup exams.</p>
+                                    <p>Students can also watch online recorded course videos.
+                                    </p>
+                                    <a href="https://www.eductrl.com/coaching/student-features" class="read-more-link text-decoration-none mt-4 btn btn-info">Know More
+                                        <i class="fa fa-arrow-right ms-2"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="col-md-3 mt-5 rounded" style="background-color: rgb(247,249,248);">
-                        <h3 class="mt-3">Also Read</h3>
-                        <span class="animate-border tw-mb-40 tw-mt-20"></span>
-                                                <div class="row mt-4">
-                            <div class="col-12">
-                                
-                                <h6><a href="https://www.eductrl.com/blog/boosting-student-enrollment-how-to-maximize-conversion-opportunities" class="text-dark"><i class="bi bi-arrow-right text-dark"></i> Boosting Student Enrollment: How to Maximize Conversion Opportunities</a></h6>
+                    <div class="tab-pane fade pt-60" id="tab-3" role="tabpanel">
+                        <div class="row justify-content-center align-items-center justify-content-around">
+                            <div class="col-lg-5">
+                                <div class="feature-tab-info">
+                                    <h3>Trainer Panel</h3>
+                                    <p>
+                                        Trainer panel allows your trainers to login to the portal & manage their batches.
+                                    </p>
+                                    <p>
+                                        Trainers can update course progress, update student attendance, group message students of the batch or chat with individual student, clarify doubts.
+                                    </p>
+                                    <p>
+                                        Trainers can view student exams taken, scores, evaluate student exam answers for essay type questions & update the scores.
+                                    </p>
+                                    <a href="https://www.eductrl.com/coaching/trainer-features" class="read-more-link text-decoration-none mt-4 btn btn-info">Know More
+                                        <i class="fa fa-arrow-right ms-2"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <img src="https://www.eductrl.com/images/screenshots/trainerpanel.png" alt="" class="img-fluid image-styling mt-4 mt-lg-0 mt-xl-0">
                             </div>
                         </div>
-                                                <div class="row mt-4">
-                            <div class="col-12">
-                                
-                                <h6><a href="https://www.eductrl.com/blog/5-essential-questions-to-ask-students-while-advising-courses" class="text-dark"><i class="bi bi-arrow-right text-dark"></i> 5 Essential Questions to Ask Students While Advising Courses</a></h6>
-                            </div>
-                        </div>
-                                                <div class="row mt-4">
-                            <div class="col-12">
-                                
-                                <h6><a href="https://www.eductrl.com/blog/how-a-higher-education-crm-can-boost-enrollments-in-the-uae" class="text-dark"><i class="bi bi-arrow-right text-dark"></i> How a Higher Education CRM Can Boost Enrollments in the UAE</a></h6>
-                            </div>
-                        </div>
-                                                <div class="row mt-4">
-                            <div class="col-12">
-                                
-                                <h6><a href="https://www.eductrl.com/blog/higher-education-crm-vs-manual-processes" class="text-dark"><i class="bi bi-arrow-right text-dark"></i> Higher Education CRM vs. Manual Processes: Why Automation is the Key to Successful International Student Recruitment</a></h6>
-                            </div>
-                        </div>
-                                                <div class="row mt-4">
-                            <div class="col-12">
-                                
-                                <h6><a href="https://www.eductrl.com/blog/how-to-launch-a-high-converting-lead-magnet-for-study-abroad-leads" class="text-dark"><i class="bi bi-arrow-right text-dark"></i> How to Launch a High-Converting Lead Magnet for Study Abroad Leads</a></h6>
-                            </div>
-                        </div>
-                                                <div class="row mt-4">
-                            <div class="col-12">
-                                
-                                <h6><a href="https://www.eductrl.com/blog/how-admission-software-is-improving-efficiency-and-accessibility-in-higher-education" class="text-dark"><i class="bi bi-arrow-right text-dark"></i> How Admission Software is Improving Efficiency and Accessibility in Higher Education</a></h6>
-                            </div>
-                        </div>
-                                                <div class="row mt-4">
-                            <div class="col-12">
-                                
-                                <h6><a href="https://www.eductrl.com/blog/why-edtech-crms-are-essential-for-learning-businesses" class="text-dark"><i class="bi bi-arrow-right text-dark"></i> Why EdTech CRMs Are Essential for Learning Businesses</a></h6>
-                            </div>
-                        </div>
-                                                <div class="row mt-4">
-                            <div class="col-12">
-                                
-                                <h6><a href="https://www.eductrl.com/blog/how-personalized-video-content-can-boost-your-student-recruitment-efforts" class="text-dark"><i class="bi bi-arrow-right text-dark"></i> How Personalized Video Content Can Boost Your Student Recruitment Efforts</a></h6>
-                            </div>
-                        </div>
-                                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> <!--feature tab section end-->
+
+
+
+<section>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-4 wow fadeInUp" data-wow-duration="1.1s" data-wow-delay=".3s" style="visibility: visible; animation-duration: 1.1s; animation-delay: 0.3s; animation-name: fadeInUp;">
+                <h2 class="column-title" style="font-weight: 600;font-size: 31px;">Features List</h2>
+                <div class="text-center">
+                    <span class="animate-border tw-mb-40 tw-mt-20"></span>
+                </div>
+                <ul style="list-style: none;padding-left:0;">
+                    <li class="py-1"><i class="fa fa-check-circle me-2 text-primary px-3"></i>Lead Management</li>
+                    <li class="py-1"><i class="fa fa-check-circle me-2 text-primary px-3"></i>Counselling Management</li>
+                    <li class="py-1"><i class="fa fa-check-circle me-2 text-primary px-3"></i>Student Management</li>
+                    <li class="py-1"><i class="fa fa-check-circle me-2 text-primary px-3"></i>Coaching Batch Management</li>
+                    <li class="py-1"><i class="fa fa-check-circle me-2 text-primary px-3"></i>Coaching Course Management</li>
+                    <li class="py-1"><i class="fa fa-check-circle me-2 text-primary px-3"></i>Online Course Management</li>
+                    <li class="py-1"><i class="fa fa-check-circle me-2 text-primary px-3"></i>Attendance Management</li>
+                    <li class="py-1"><i class="fa fa-check-circle me-2 text-primary px-3"></i>Student Feedback</li>
+                    <li class="py-1"><i class="fa fa-check-circle me-2 text-primary px-3"></i>Student Exam scores</li>
+                    <li class="py-1"><i class="fa fa-check-circle me-2 text-primary px-3"></i>Trainer Management</li>
+                    <li class="py-1"><i class="fa fa-check-circle me-2 text-primary px-3"></i>Broadcast Email/sms/Whatsapp</li>
+                    <li class="py-1"><i class="fa fa-check-circle me-2 text-primary px-3"></i>Student Fees</li>
+                    <li class="py-1"><i class="fa fa-check-circle me-2 text-primary px-3"></i>Support Tickets</li>
+                    <li class="py-1"><i class="fa fa-check-circle me-2 text-primary px-3"></i>Webinar/Events</li>
+                    <li class="py-1"><i class="fa fa-check-circle me-2 text-primary px-3"></i>Analytics/Reports</li>
+                    <li class="py-1"><i class="fa fa-check-circle me-2 text-primary px-3"></i>File Sharing</li>
+                    <li class="py-1"><i class="fa fa-check-circle me-2 text-primary px-3"></i>Web to Lead, Email to Lead, CSV, FB</li>
+                    <li class="py-1"><i class="fa fa-check-circle me-2 text-primary px-3"></i>Import leads, students</li>
+                    <li class="py-1"><i class="fa fa-check-circle me-2 text-primary px-3"></i>Templates (Email, sms, Whatsapp)</li>
+                    <li class="py-1"><i class="fa fa-check-circle me-2 text-primary px-3"></i>Products/Shopping Cart, Orders</li>
+                    <li class="py-1"><i class="fa fa-check-circle me-2 text-primary px-3"></i>Staff Management, Staff Roles, Permissions</li>
+                    <li class="py-1"><i class="fa fa-check-circle me-2 text-primary px-3"></i>Branch office Management</li>
+                    <li class="py-1"><i class="fa fa-check-circle me-2 text-primary px-3"></i>Content Management (CMS)</li>
+                </ul>
+            </div>
+            <!-- About Bin End -->
+        </div>
+        <!-- Col End -->
+    </div>
+</section>
+
+<section class="work-process bg-light" style="padding:20px 0px;">
+    <div class="container marquee-images">
+        <marquee width="100%" direction="left">
+            <div class="d-flex">
+                <img src="https://www.eductrl.com/images/sm/gmail.png" alt="email" class="img-fluid">
+                <img src="https://www.eductrl.com/images/sm/sms.png" alt="sms" class="img-fluid">
+                <img src="https://www.eductrl.com/images/sm/watsapp.jpg" alt="whatsapp" class="img-fluid">
+                <img src="https://www.eductrl.com/images/sm/csv.png" alt="csv" class="img-fluid">
+                <img src="https://www.eductrl.com/images/sm/facebook.png" alt="facebook" class="img-fluid">
+                <img src="https://www.eductrl.com/images/sm/twilio.jpg" alt="twilio" class="img-fluid">
+                <img src="https://www.eductrl.com/images/sm/paypal.png" alt="paypal" class="img-fluid">
+                <img src="https://www.eductrl.com/images/sm/stripe.png" alt="stripe" class="img-fluid">
+                <img src="https://www.eductrl.com/images/sm/razorpay.png" alt="razorpay" class="img-fluid">
+            </div>
+        </marquee>
+    </div>
+</section>
+
+<!-- call to action -->
+<section class="cta-subscribe bg-dark text-white position-relative overflow-hidden" style="padding-top:80px;padding-bottom:120px">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-7 col-md-8">
+                <div class="subscribe-info-wrap text-center position-relative z-2">
+                    <div class="position-relative z-5">
+                        <h4 class="text-white" style="font-size:1.5em;">Start using EduCtrl Coaching CRM Today</h4>
+                        <h5 class="text-white">Starts at $12/mth only (1500 Students /year)</h5>
+                        <a href="#" class="btn btn-dark mt-4" data-toggle="modal" data-target="#enquiryModal">Get Started Now</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<!-- call to action end -->
+
+
 
         <a href="https://wa.me/919242137092?text=Hi, I'm Interested in EduCtrl"
             className="fixed-bottomRight  whatsappIcon" >
@@ -1111,7 +1183,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             c_message: message,
                             source: 'contact form',
                             captcha_token: token,
-                            _token: "Of8RdBbIDXqsArfxE8DOBq4YEAkU5cwN9XiPyi0V"
+                            _token: "5qQ0k5JJHbeOJ9ut5goLbOnRyzRikGMyV8ArSqHn"
                         }, function(data) {
                             $("#contact-form-btn").attr("disabled", false);
                             $("#contact-form-btn").val('SEND');
@@ -1154,7 +1226,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             form_message: message,
                             source: 'eductrl_cms_form',
                             captcha_token: token,
-                            _token: "Of8RdBbIDXqsArfxE8DOBq4YEAkU5cwN9XiPyi0V"
+                            _token: "5qQ0k5JJHbeOJ9ut5goLbOnRyzRikGMyV8ArSqHn"
                         }, function(data) {
                             $("#eductrl-cms-form-btn").attr("disabled", false);
                             $("#eductrl-cms-form-btn").val('Send Message');
@@ -1209,7 +1281,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             c_message: message,
                             source: 'enquiry form',
                             captcha_token: token,
-                            _token: "Of8RdBbIDXqsArfxE8DOBq4YEAkU5cwN9XiPyi0V",
+                            _token: "5qQ0k5JJHbeOJ9ut5goLbOnRyzRikGMyV8ArSqHn",
                         }, function(data) {
                             if (data == '1') {
                                 $("#enquiry-form").trigger("reset"); // To reset form fields on success.
@@ -1252,7 +1324,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             c_email: email,
                             source: 'newsletter form',
                             captcha_token: token,
-                            _token: "Of8RdBbIDXqsArfxE8DOBq4YEAkU5cwN9XiPyi0V"
+                            _token: "5qQ0k5JJHbeOJ9ut5goLbOnRyzRikGMyV8ArSqHn"
                         }, function(data) {
                             if (data == '1') {
                                 $("#newsletter-form").trigger("reset");
@@ -1279,27 +1351,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     })();
 </script>
 
-    <style>
-    .pagination{
-        justify-content: center;
-    }
-    .pagination li{
-        margin-left: 5px !important;
-    }
-    .pagination li a{
-        line-height: 20px !important;
-        border-radius: 0px !important;
-        height: 36.5px !important;
-        width: 120px !important;
-        border-radius: 5px !important;
-        border-color: rgb(220, 220, 219);
-    }
-    .ck-content .image img{
-        height: auto !important;
-    }
-
-</style>
-        <!-- Google Tag Manager (noscript) -->
+            <!-- Google Tag Manager (noscript) -->
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M85SFMLP"
 	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
@@ -1358,6 +1410,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 	
-</body>
+`;
 
-</html>
+export function CoachingCloneContent() {
+  return <div className="eductrl-clone-page" dangerouslySetInnerHTML={{ __html: normalizeCloneHtml(rawHtml) }} />;
+}

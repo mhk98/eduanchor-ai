@@ -1,30 +1,18 @@
 import Script from "next/script";
-import { getClonedBodyHtml } from "@/lib/clone-page";
+import { PricingCloneContent } from "@/components/cloned-pages/pricing-content";
+import { CloneScripts } from "@/components/clone-scripts";
 
 export const metadata = {
   title: "Pricing | EduCtrl Clone"
 };
 
 export default function PricingPage() {
-  const clonedHtml = getClonedBodyHtml("eductrl-pricing.html");
-
   return (
     <>
-      <div
-        className="eductrl-clone-page"
-        dangerouslySetInnerHTML={{ __html: clonedHtml }}
-      />
-
-      <Script src="https://www.eductrl.com/assets/plugins/jquery/jquery.min.js" strategy="afterInteractive" />
-      <Script src="https://www.eductrl.com/assets/plugins/bootstrap/js/popper.min.js" strategy="afterInteractive" />
-      <Script src="https://www.eductrl.com/assets/plugins/bootstrap/js/bootstrap.min.js" strategy="afterInteractive" />
+      <PricingCloneContent />
       <Script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" strategy="afterInteractive" />
       <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" strategy="afterInteractive" />
-      <Script src="https://www.eductrl.com/js/owl-carousel.2.3.0.min.js" strategy="afterInteractive" />
-      <Script src="https://www.eductrl.com/js/jquery.magnific.popup.js" strategy="afterInteractive" />
-      <Script src="https://www.eductrl.com/js/wow.min.js" strategy="afterInteractive" />
-      <Script src="https://www.eductrl.com/js/smoothscroll.js" strategy="afterInteractive" />
-      <Script src="https://www.eductrl.com/js/main.js" strategy="afterInteractive" />
+      <CloneScripts />
       <Script id="pricing-interactions" strategy="afterInteractive">{`
         (function initPricingInteractions() {
           function setupTooltips() {

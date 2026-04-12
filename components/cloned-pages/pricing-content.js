@@ -1,0 +1,2413 @@
+import { normalizeCloneHtml } from "@/lib/clone-html";
+
+const rawHtml = String.raw`
+
+    <div id="main-wrapper">
+
+
+
+        <div class="offcanvas-menu">
+       <div class="offcanvas-menu-overlay"></div>
+       <div class="container">
+           <div class="row" style="margin-top:-1px;">
+               <div class="col-md-12">
+                   <div class="offcanvas-wrapper">
+                       <div class="offcanvas-inner">
+                           <a href="https://www.eductrl.com" class="logo">
+                               <img src="https://www.eductrl.com/images/eductrl-logo.png" alt="EduCtrl" style="width: 60%;">
+                           </a>
+                           <p style="color:#000;margin-bottom: 0px;">EduCtrl is a feature-rich cloud-based software to
+                               manage all aspects of Overseas Education Consultancy Business, Training/Coaching
+                               Institutions.</p>
+                           <div class="row">
+                               <div class="col-md-12">
+                                   <div class="contact-us">
+                                       <div class="contact-icon">
+                                           <i class="icon icon-phone3"></i>
+                                       </div>
+                                       <!-- End contact Icon -->
+                                       <div class="contact-info">
+                                           <h3>+91-924-213-7092</h3>
+                                           <p style="color:#000;">Give us a call</p>
+                                       </div>
+                                       <!-- End Contact Info -->
+                                   </div>
+                                   <!-- End Contact Us -->
+                               </div>
+                               <!-- End Col -->
+                               <div class="col-md-12">
+                                   <div class="contact-us">
+                                       <div class="contact-icon">
+                                           <i class="icon icon-envelope3"></i>
+                                       </div>
+                                       <!-- End contact Icon -->
+                                       <div class="contact-info">
+                                           <h3>info@eductrl.com</h3>
+                                           <p style="color:#000;">Drop us email</p>
+                                       </div>
+                                       <!-- End Contact Info -->
+                                   </div>
+                                   <!-- End Contact Us -->
+                               </div>
+                               <!-- End Col -->
+                           </div>
+                           <!-- End Contact Row -->
+                           <div class="footer-social-link">
+                               <ul>
+                                   <li><a target="_blank" href="https://fb.me/eductrlcrm"><i
+                                               class="fa fa-facebook"></i></a></li>
+                                   <li><a target="_blank" href="https://x.com/eductrlcrm" aria-label="X (Twitter)"><span class="x-logo-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="1em" height="1em"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></span></a></li>
+                                   <li><a target="_blank" href="https://www.linkedin.com/company/eductrl/"><i
+                                               class="fa fa-linkedin"></i></a></li>
+                     <li><a href="https://www.instagram.com/eductrlcrm"><i class="fa fa-instagram"></i></a></li>
+
+                                   <!-- <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                           <li><a href="#"><i class="fa fa-instagram"></i></a></li> -->
+                               </ul>
+                           </div>
+
+                       </div>
+                       <!-- Offcanvas inner end -->
+                       <button class="menu-close-btn"><i class="fa fa-close" style="color:#000;"></i></button>
+                   </div>
+                   <!-- Offcanvas wrapper end -->
+               </div>
+               <!-- Col End -->
+           </div>
+           <!-- Row End -->
+       </div>
+       <!-- Container End -->
+   </div>
+
+
+   <div class="modal fade" id="enquiryModal" tabindex="-1" role="dialog" aria-labelledby="enquiryModalLabel"
+       aria-hidden="true">
+       <div class="modal-dialog" role="document">
+           <div class="modal-content">
+               <div class="modal-header">
+                   <h5 class="modal-title" id="enquiryModalLabel" style="font-weight:500;">Request Demo</h5>
+                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                       <span aria-hidden="true">&times;</span>
+                   </button>
+               </div>
+               <div class="modal-body">
+                   <div id="thankYouDiv" style="border-radius: 8px; display:none;">
+
+                       <div class=" text-center">
+                           <h2 class="modal-title w-100 mb-0"
+                               style="font-family: 'Poppins', sans-serif; font-weight: 600; color: #333;">Thank You!
+                           </h2>
+                       </div>
+
+                       <div class="p-4 text-center">
+                           <p class="lead mb-4" style="font-size: 1.1rem; color: #555;">
+                               Our team will be in touch shortly to arrange your personalized demo. In the meantime,
+                               feel free to
+                               explore our live software demo:
+                           </p>
+                           <a href="https://demo.eductrl.com/cn4" class="text-primary font-weight-bold" target="_blank"
+                               style="font-size: 1rem;">https://demo.eductrl.com/cn4</a>
+                           <div class="mt-4 text-start mx-auto" style="max-width: 400px;">
+                               <p class="mb-2" style="font-size: 0.95rem;"><strong>Admin Login:</strong>
+                                   admin@demo.com / 123456
+                               </p>
+                               <p class="mb-2" style="font-size: 0.95rem;"><strong>Student Login:</strong>
+                                   student@demo.com /
+                                   123456</p>
+                               <p style="font-size: 0.95rem;"><strong>Staff Login:</strong> staff@demo.com / 123456</p>
+                           </div>
+                       </div>
+                   </div>
+                   <div id="formDiv">
+                       <p>Share your details to access Software Demo</p>
+                                              <form id="enquiry-form" class="contact-form" method="POST" action="#"
+                           onsubmit="return false;">
+                           <input type="hidden" name="_token" value="uIEfUaYmUr2jPEXzA39gA4gVEOjTrkZKMBty4zVc">                           <div class="error-container"></div>
+                           <div class="row">
+                               <div class="col-lg-6">
+                                   <div class="form-group">
+                                       <input class="form-control" name="name" id="name" placeholder="Your Name *"
+                                           type="text" required="">
+                                   </div>
+                               </div>
+                               <div class="col-lg-6">
+                                   <div class="form-group">
+                                       <input class="form-control" name="business" id="business"
+                                           placeholder="Business Name *" type="text" required="">
+                                   </div>
+                               </div>
+                               <!-- Col end -->
+                               <div class="col-lg-6">
+                                   <div class="form-group">
+                                       <input class="form-control form-email" name="email" id="email"
+                                           placeholder="Email *" type="email" required="">
+                                   </div>
+                               </div>
+                               <div class="col-lg-6">
+                                   <div class="form-group">
+                                       <input class="form-control form-phone" name="phone" id="phone"
+                                           placeholder="Phone *" type="phone" required="">
+                                   </div>
+                               </div>
+                               <!-- Col end -->
+                               <div class="col-lg-6">
+                                   <div class="form-group">
+                                       <input class="form-control" name="city" id="city"
+                                           placeholder="City *" type="text" required="">
+                                   </div>
+                               </div>
+                               <div class="col-lg-6">
+                                   <div class="form-group">
+                                       <select class="form-control form-select" name="country" id="country" required="">
+                                           <option value="">Country *</option>
+                                                                                          <option value="Afghanistan">Afghanistan</option>
+                                                                                          <option value="Albania">Albania</option>
+                                                                                          <option value="Algeria">Algeria</option>
+                                                                                          <option value="American Samoa">American Samoa</option>
+                                                                                          <option value="Andorra">Andorra</option>
+                                                                                          <option value="Angola">Angola</option>
+                                                                                          <option value="Anguilla">Anguilla</option>
+                                                                                          <option value="Antigua And Barbuda">Antigua And Barbuda</option>
+                                                                                          <option value="Argentina">Argentina</option>
+                                                                                          <option value="Armenia">Armenia</option>
+                                                                                          <option value="Aruba">Aruba</option>
+                                                                                          <option value="Australia">Australia</option>
+                                                                                          <option value="Austria">Austria</option>
+                                                                                          <option value="Azerbaijan">Azerbaijan</option>
+                                                                                          <option value="Bahamas The">Bahamas The</option>
+                                                                                          <option value="Bahrain">Bahrain</option>
+                                                                                          <option value="Bangladesh">Bangladesh</option>
+                                                                                          <option value="Barbados">Barbados</option>
+                                                                                          <option value="Belarus">Belarus</option>
+                                                                                          <option value="Belgium">Belgium</option>
+                                                                                          <option value="Belize">Belize</option>
+                                                                                          <option value="Benin">Benin</option>
+                                                                                          <option value="Bermuda">Bermuda</option>
+                                                                                          <option value="Bhutan">Bhutan</option>
+                                                                                          <option value="Bolivia">Bolivia</option>
+                                                                                          <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                                                                                          <option value="Botswana">Botswana</option>
+                                                                                          <option value="Brazil">Brazil</option>
+                                                                                          <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+                                                                                          <option value="Brunei">Brunei</option>
+                                                                                          <option value="Bulgaria">Bulgaria</option>
+                                                                                          <option value="Burkina Faso">Burkina Faso</option>
+                                                                                          <option value="Burundi">Burundi</option>
+                                                                                          <option value="Cambodia">Cambodia</option>
+                                                                                          <option value="Cameroon">Cameroon</option>
+                                                                                          <option value="Canada">Canada</option>
+                                                                                          <option value="Cape Verde">Cape Verde</option>
+                                                                                          <option value="Cayman Islands">Cayman Islands</option>
+                                                                                          <option value="Central African Republic">Central African Republic</option>
+                                                                                          <option value="Chad">Chad</option>
+                                                                                          <option value="Chile">Chile</option>
+                                                                                          <option value="China">China</option>
+                                                                                          <option value="Christmas Island">Christmas Island</option>
+                                                                                          <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+                                                                                          <option value="Colombia">Colombia</option>
+                                                                                          <option value="Comoros">Comoros</option>
+                                                                                          <option value="Cook Islands">Cook Islands</option>
+                                                                                          <option value="Costa Rica">Costa Rica</option>
+                                                                                          <option value="Cote D&#039;Ivoire (Ivory Coast)">Cote D&#039;Ivoire (Ivory Coast)</option>
+                                                                                          <option value="Croatia (Hrvatska)">Croatia (Hrvatska)</option>
+                                                                                          <option value="Cuba">Cuba</option>
+                                                                                          <option value="Cyprus">Cyprus</option>
+                                                                                          <option value="Czech Republic">Czech Republic</option>
+                                                                                          <option value="Democratic Republic Of The Congo">Democratic Republic Of The Congo</option>
+                                                                                          <option value="Denmark">Denmark</option>
+                                                                                          <option value="Djibouti">Djibouti</option>
+                                                                                          <option value="Dominica">Dominica</option>
+                                                                                          <option value="Dominican Republic">Dominican Republic</option>
+                                                                                          <option value="East Timor">East Timor</option>
+                                                                                          <option value="Ecuador">Ecuador</option>
+                                                                                          <option value="Egypt">Egypt</option>
+                                                                                          <option value="El Salvador">El Salvador</option>
+                                                                                          <option value="Equatorial Guinea">Equatorial Guinea</option>
+                                                                                          <option value="Eritrea">Eritrea</option>
+                                                                                          <option value="Estonia">Estonia</option>
+                                                                                          <option value="Ethiopia">Ethiopia</option>
+                                                                                          <option value="External Territories of Australia">External Territories of Australia</option>
+                                                                                          <option value="Falkland Islands">Falkland Islands</option>
+                                                                                          <option value="Faroe Islands">Faroe Islands</option>
+                                                                                          <option value="Fiji Islands">Fiji Islands</option>
+                                                                                          <option value="Finland">Finland</option>
+                                                                                          <option value="France">France</option>
+                                                                                          <option value="French Guiana">French Guiana</option>
+                                                                                          <option value="French Polynesia">French Polynesia</option>
+                                                                                          <option value="Gabon">Gabon</option>
+                                                                                          <option value="Gambia The">Gambia The</option>
+                                                                                          <option value="Georgia">Georgia</option>
+                                                                                          <option value="Germany">Germany</option>
+                                                                                          <option value="Ghana">Ghana</option>
+                                                                                          <option value="Gibraltar">Gibraltar</option>
+                                                                                          <option value="Greece">Greece</option>
+                                                                                          <option value="Greenland">Greenland</option>
+                                                                                          <option value="Grenada">Grenada</option>
+                                                                                          <option value="Guadeloupe">Guadeloupe</option>
+                                                                                          <option value="Guam">Guam</option>
+                                                                                          <option value="Guatemala">Guatemala</option>
+                                                                                          <option value="Guernsey and Alderney">Guernsey and Alderney</option>
+                                                                                          <option value="Guinea">Guinea</option>
+                                                                                          <option value="Guinea-Bissau">Guinea-Bissau</option>
+                                                                                          <option value="Guyana">Guyana</option>
+                                                                                          <option value="Haiti">Haiti</option>
+                                                                                          <option value="Honduras">Honduras</option>
+                                                                                          <option value="Hong Kong S.A.R.">Hong Kong S.A.R.</option>
+                                                                                          <option value="Hungary">Hungary</option>
+                                                                                          <option value="Iceland">Iceland</option>
+                                                                                          <option value="India">India</option>
+                                                                                          <option value="Indonesia">Indonesia</option>
+                                                                                          <option value="Iran">Iran</option>
+                                                                                          <option value="Iraq">Iraq</option>
+                                                                                          <option value="Ireland">Ireland</option>
+                                                                                          <option value="Israel">Israel</option>
+                                                                                          <option value="Italy">Italy</option>
+                                                                                          <option value="Jamaica">Jamaica</option>
+                                                                                          <option value="Japan">Japan</option>
+                                                                                          <option value="Jersey">Jersey</option>
+                                                                                          <option value="Jordan">Jordan</option>
+                                                                                          <option value="Kazakhstan">Kazakhstan</option>
+                                                                                          <option value="Kenya">Kenya</option>
+                                                                                          <option value="Kiribati">Kiribati</option>
+                                                                                          <option value="Korea North">Korea North</option>
+                                                                                          <option value="Korea South">Korea South</option>
+                                                                                          <option value="Kuwait">Kuwait</option>
+                                                                                          <option value="Kyrgyzstan">Kyrgyzstan</option>
+                                                                                          <option value="Laos">Laos</option>
+                                                                                          <option value="Latvia">Latvia</option>
+                                                                                          <option value="Lebanon">Lebanon</option>
+                                                                                          <option value="Lesotho">Lesotho</option>
+                                                                                          <option value="Liberia">Liberia</option>
+                                                                                          <option value="Libya">Libya</option>
+                                                                                          <option value="Liechtenstein">Liechtenstein</option>
+                                                                                          <option value="Lithuania">Lithuania</option>
+                                                                                          <option value="Luxembourg">Luxembourg</option>
+                                                                                          <option value="Macau S.A.R.">Macau S.A.R.</option>
+                                                                                          <option value="Macedonia">Macedonia</option>
+                                                                                          <option value="Madagascar">Madagascar</option>
+                                                                                          <option value="Malawi">Malawi</option>
+                                                                                          <option value="Malaysia">Malaysia</option>
+                                                                                          <option value="Maldives">Maldives</option>
+                                                                                          <option value="Mali">Mali</option>
+                                                                                          <option value="Malta">Malta</option>
+                                                                                          <option value="Man (Isle of)">Man (Isle of)</option>
+                                                                                          <option value="Marshall Islands">Marshall Islands</option>
+                                                                                          <option value="Martinique">Martinique</option>
+                                                                                          <option value="Mauritania">Mauritania</option>
+                                                                                          <option value="Mauritius">Mauritius</option>
+                                                                                          <option value="Mayotte">Mayotte</option>
+                                                                                          <option value="Mexico">Mexico</option>
+                                                                                          <option value="Micronesia">Micronesia</option>
+                                                                                          <option value="Moldova">Moldova</option>
+                                                                                          <option value="Monaco">Monaco</option>
+                                                                                          <option value="Mongolia">Mongolia</option>
+                                                                                          <option value="Montserrat">Montserrat</option>
+                                                                                          <option value="Morocco">Morocco</option>
+                                                                                          <option value="Mozambique">Mozambique</option>
+                                                                                          <option value="Myanmar">Myanmar</option>
+                                                                                          <option value="Namibia">Namibia</option>
+                                                                                          <option value="Nauru">Nauru</option>
+                                                                                          <option value="Nepal">Nepal</option>
+                                                                                          <option value="Netherlands Antilles">Netherlands Antilles</option>
+                                                                                          <option value="Netherlands The">Netherlands The</option>
+                                                                                          <option value="New Caledonia">New Caledonia</option>
+                                                                                          <option value="New Zealand">New Zealand</option>
+                                                                                          <option value="Nicaragua">Nicaragua</option>
+                                                                                          <option value="Niger">Niger</option>
+                                                                                          <option value="Nigeria">Nigeria</option>
+                                                                                          <option value="Niue">Niue</option>
+                                                                                          <option value="Norfolk Island">Norfolk Island</option>
+                                                                                          <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+                                                                                          <option value="Norway">Norway</option>
+                                                                                          <option value="Oman">Oman</option>
+                                                                                          <option value="Pakistan">Pakistan</option>
+                                                                                          <option value="Palau">Palau</option>
+                                                                                          <option value="Palestinian Territory Occupied">Palestinian Territory Occupied</option>
+                                                                                          <option value="Panama">Panama</option>
+                                                                                          <option value="Papua new Guinea">Papua new Guinea</option>
+                                                                                          <option value="Paraguay">Paraguay</option>
+                                                                                          <option value="Peru">Peru</option>
+                                                                                          <option value="Philippines">Philippines</option>
+                                                                                          <option value="Poland">Poland</option>
+                                                                                          <option value="Portugal">Portugal</option>
+                                                                                          <option value="Puerto Rico">Puerto Rico</option>
+                                                                                          <option value="Qatar">Qatar</option>
+                                                                                          <option value="Republic Of The Congo">Republic Of The Congo</option>
+                                                                                          <option value="Reunion">Reunion</option>
+                                                                                          <option value="Romania">Romania</option>
+                                                                                          <option value="Russia">Russia</option>
+                                                                                          <option value="Rwanda">Rwanda</option>
+                                                                                          <option value="Saint Helena">Saint Helena</option>
+                                                                                          <option value="Saint Kitts And Nevis">Saint Kitts And Nevis</option>
+                                                                                          <option value="Saint Lucia">Saint Lucia</option>
+                                                                                          <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+                                                                                          <option value="Saint Vincent And The Grenadines">Saint Vincent And The Grenadines</option>
+                                                                                          <option value="Samoa">Samoa</option>
+                                                                                          <option value="San Marino">San Marino</option>
+                                                                                          <option value="Sao Tome and Principe">Sao Tome and Principe</option>
+                                                                                          <option value="Saudi Arabia">Saudi Arabia</option>
+                                                                                          <option value="Senegal">Senegal</option>
+                                                                                          <option value="Serbia">Serbia</option>
+                                                                                          <option value="Seychelles">Seychelles</option>
+                                                                                          <option value="Sierra Leone">Sierra Leone</option>
+                                                                                          <option value="Singapore">Singapore</option>
+                                                                                          <option value="Slovakia">Slovakia</option>
+                                                                                          <option value="Slovenia">Slovenia</option>
+                                                                                          <option value="Smaller Territories of the UK">Smaller Territories of the UK</option>
+                                                                                          <option value="Solomon Islands">Solomon Islands</option>
+                                                                                          <option value="Somalia">Somalia</option>
+                                                                                          <option value="South Africa">South Africa</option>
+                                                                                          <option value="South Sudan">South Sudan</option>
+                                                                                          <option value="Spain">Spain</option>
+                                                                                          <option value="Sri Lanka">Sri Lanka</option>
+                                                                                          <option value="Sudan">Sudan</option>
+                                                                                          <option value="Suriname">Suriname</option>
+                                                                                          <option value="Svalbard And Jan Mayen Islands">Svalbard And Jan Mayen Islands</option>
+                                                                                          <option value="Swaziland">Swaziland</option>
+                                                                                          <option value="Sweden">Sweden</option>
+                                                                                          <option value="Switzerland">Switzerland</option>
+                                                                                          <option value="Syria">Syria</option>
+                                                                                          <option value="Taiwan">Taiwan</option>
+                                                                                          <option value="Tajikistan">Tajikistan</option>
+                                                                                          <option value="Tanzania">Tanzania</option>
+                                                                                          <option value="Thailand">Thailand</option>
+                                                                                          <option value="Togo">Togo</option>
+                                                                                          <option value="Tokelau">Tokelau</option>
+                                                                                          <option value="Tonga">Tonga</option>
+                                                                                          <option value="Trinidad And Tobago">Trinidad And Tobago</option>
+                                                                                          <option value="Tunisia">Tunisia</option>
+                                                                                          <option value="Turkey">Turkey</option>
+                                                                                          <option value="Turkmenistan">Turkmenistan</option>
+                                                                                          <option value="Turks And Caicos Islands">Turks And Caicos Islands</option>
+                                                                                          <option value="Tuvalu">Tuvalu</option>
+                                                                                          <option value="Uganda">Uganda</option>
+                                                                                          <option value="Ukraine">Ukraine</option>
+                                                                                          <option value="United Arab Emirates">United Arab Emirates</option>
+                                                                                          <option value="United Kingdom">United Kingdom</option>
+                                                                                          <option value="United States">United States</option>
+                                                                                          <option value="Uruguay">Uruguay</option>
+                                                                                          <option value="Uzbekistan">Uzbekistan</option>
+                                                                                          <option value="Vanuatu">Vanuatu</option>
+                                                                                          <option value="Venezuela">Venezuela</option>
+                                                                                          <option value="Vietnam">Vietnam</option>
+                                                                                          <option value="Virgin Islands (British)">Virgin Islands (British)</option>
+                                                                                          <option value="Virgin Islands (US)">Virgin Islands (US)</option>
+                                                                                          <option value="Wallis And Futuna Islands">Wallis And Futuna Islands</option>
+                                                                                          <option value="Western Sahara">Western Sahara</option>
+                                                                                          <option value="Yemen">Yemen</option>
+                                                                                          <option value="Yugoslavia">Yugoslavia</option>
+                                                                                          <option value="Zambia">Zambia</option>
+                                                                                          <option value="Zimbabwe">Zimbabwe</option>
+                                                                                  </select>
+                                   </div>
+                               </div>
+                               <!-- Col end -->
+                               <div class="col-lg-12">
+                                   <div class="form-group">
+                                       <select class="form-control form-select" name="interested_in"
+                                           id="interested_in" required="">
+                                           <option value="">Interested In *</option>
+                                           <option value="Consultancy">Consultancy CRM</option>
+                                           <option value="Coaching">Coaching CRM</option>
+                                           
+                                       </select>
+                                   </div>
+                               </div>
+
+                               <div class="col-lg-12">
+                                   <div class="form-group">
+                                       <textarea class="form-control" name="message" id="message" placeholder="Enquiry or message" rows="3"></textarea>
+                                   </div>
+                               </div>
+                               <!-- Col 12 end -->
+
+                           </div>
+                           <!-- Form row end -->
+                           <div class="text-center">
+                               <button id="enquiry-form-submit" class="btn btn-dark tw-mt-10">Submit</button>
+                           </div>
+                       </form>
+                   </div>
+               </div>
+           </div>
+       </div>
+
+   </div>
+        <div class="tw-top-bar tw-top-bar-angle bg-offwhite mbv-none">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-8 text-left">
+               <div class="top-contact-info">                 
+                  <span><i class="icon icon-phone3"></i>+91-924-213-7092</span>
+                <span><i class="icon icon-envelope"></i>info@eductrl.com</span>
+               </div>
+            </div>
+            <!-- Col End -->
+            <div class="col-md-4 ml-auto text-right">
+               <div class="top-social-links">
+                  <span>Follow us:</span>
+                  <a target="_blank" href="https://fb.me/eductrlcrm"><i class="fa fa-facebook"></i></a>
+                  <a target="_blank" href="https://x.com/eductrlcrm" aria-label="X (Twitter)"><span class="x-logo-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="1em" height="1em"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></span></a>
+                  <a target="_blank" href="https://www.linkedin.com/company/eductrl/"><i class="fa fa-linkedin"></i></a>
+
+                  <!-- <a href="#"><i class="fa fa-google-plus"></i></a> -->
+                  <a href="https://www.instagram.com/eductrlcrm"><i class="fa fa-instagram"></i></a> 
+               </div>
+            </div>
+            <!-- Col End -->
+         </div>
+         <!-- Row End -->
+      </div>
+      <!-- Container End -->
+   </div>
+
+        <header>
+    
+
+    <div class="tw-header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-new-blue p-2">
+                <a class="navbar-brand tw-nav-brand header-size" href="https://www.eductrl.com">
+                    <img src="https://www.eductrl.com/images/eductrl-logo.png" alt="EduCtrl" class="header-logo-size">
+                </a>
+                <!-- End of Navbar Brand -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- End of Navbar toggler -->
+                <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link p-2" href="https://www.eductrl.com">Home</a></li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link p-2" href="#" data-toggle="dropdown">
+                                Products
+                                <span class="tw-indicator"><i class="fa fa-angle-down"></i></span>
+                            </a>
+                            <ul id="tw-megamenu" class="dropdown-menu tw-mega-menu p-4" style="min-width: 500px;">
+                                <div class="row justify-content-start p-2">
+                                    <div class="col-6 mb-3 hover-scale p-3">
+                                        <a href="https://www.eductrl.com/consultancy">
+                                            <p class="font-weight-bold m-0 p-0" style="font-size:15px;">Consultancy CRM</p>
+                                            <p class="text-muted p-0 m-0 mt-2">CRM software for study abroad consultancy</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-6 mb-3 hover-scale p-3">
+                                        <a href="https://www.eductrl.com/coaching">
+                                            <p class="font-weight-bold m-0 p-0" style="font-size:15px;">Coaching CRM</p>
+                                            <p class="text-muted p-0 m-0 mt-2">Coaching institute management software</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-6 hover-scale p-3">
+                                        <a href="https://www.eductrl.com/eductrl-cms">
+                                            <p class="font-weight-bold m-0 p-0" style="font-size:15px;">EduCtrl CMS</p>
+                                            <p class="text-muted p-0 m-0 mt-2">Website builder for study abroad agency</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link p-2" href="https://www.eductrl.com/pricing">Pricing</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link p-2" href="#" data-toggle="dropdown">
+                                Resources
+                                <span class="tw-indicator"><i class="fa fa-angle-down"></i></span>
+                            </a>
+                            <ul id="tw-megamenu" class="dropdown-menu tw-mega-menu p-4" style="min-width: 350px;">
+                                <div class="row justify-content-start p-2">
+                                    <div class="col-12 mb-3 hover-scale p-3">
+                                        <a href="https://www.eductrl.com/knowledgebase">
+                                            <p class="font-weight-bold m-0 p-0" style="font-size:15px;">Knowledgebase</p>
+                                            <p class="text-muted p-0 m-0 mt-2">
+                                                Help articles and guides to use EduCtrl CRM
+                                            </p>
+                                        </a>
+                                    </div>
+                                    <div class="col-12 mb-3 hover-scale p-3">
+                                        <a href="https://www.eductrl.com/blog">
+                                            <p class="font-weight-bold m-0 p-0" style="font-size:15px;">Blog</p>
+                                            <p class="text-muted p-0 m-0 mt-2">
+                                                Insights and updates on CRM and the education industry
+                                            </p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link p-2" href="https://www.eductrl.com/about">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link p-2" href="https://www.eductrl.com/contact">Contact</a></li>
+
+                        <li class="text-center mt-2 d-md-none d-sm-block">
+                            <button class="btn btn-dark" data-toggle="modal" data-target="#enquiryModal"
+                                style="padding: 10px 20px;margin-right: 25px;">Request Free Demo</button><br>
+                            <hr>
+                            <div class="d-flex flex-column align-items-center">
+                                <div class="contact-buttons justify-content-center mb-2 nav-link">
+                                    <a href="tel:+919242137092" class="mx-1 p-1 text-dark" title="Call">
+                                        <b class="fa fa-phone"></b> +91-9242137092
+                                    </a>
+                                    <a href="mailto:info@eductrl.com" class="text-dark p-1 mx-1" title="Email">
+                                        <b class="fa fa-envelope"></b> info@eductrl.com
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="tw-offcanvas-menu d-none d-md-block">
+                    <button class="btn btn-dark mobile-display-none" data-toggle="modal" data-target="#enquiryModal"
+                        style="padding: 10px 20px;margin-right: 25px;">Free Demo</button>
+                    <div class="tw-menu-bar inline-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <style>
+        .offer-bar {
+            background: linear-gradient(90deg, #7B2FF7, #7807f1ff);
+            font-weight: 600;
+            font-size: 0.95rem;
+            position: relative;
+            z-index: 1050;
+        }
+
+        .offer-btn {
+            background-color: #ffca2c;
+            border-radius: 25px;
+            padding: 4px 12px;
+            color: #000 !important;
+            text-decoration: none;
+            font-weight: 700;
+            margin-left: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .offer-btn:hover {
+            background-color: #ffd84a;
+            transform: scale(1.05);
+        }
+
+        .hover-scale {
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hover-scale:hover {
+            box-shadow: 0 2px 5px rgba(59, 58, 58, 0.2);
+            background-color: #f8f9fa;
+            border-left: 3px solid #525252;
+            border-radius: 5px;
+        }
+
+        #tw-megamenu {
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background: #fff;
+        }
+    </style>
+</header>
+
+        
+    <section id="tw-pricing-one" class="tw-pricing" style="margin-bottom:20px;border-top: 1px solid #E4E4E4;">
+        <div class="container">
+            <div class="pricing-tab">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a data-bs-toggle="tab" href="#consultancy" class="active">Consultancy CRM </a>
+                    </li>
+                    <li class="nav-item">
+                        <a data-bs-toggle="tab" href="#coaching">Coaching CRM</a>
+                    </li>
+
+                </ul>
+
+
+                <div class="tab-content tw-tab-content" style="margin-top: 40px !important;">
+                    <div class="row text-center">
+                        <div class="col section-heading" style="margin-bottom: 20px;">
+                            <h2>
+                                <small>Best Pricing</small>
+                                SaaS <span>Pricing Plans</span>
+                            </h2>
+                            <span class="animate-border ml-auto mr-auto tw-mt-20"></span>
+                        </div>
+                    </div>
+
+
+                    <div class="row text-right mb-5" id="currency-filter">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-9">
+                            <select name="currency-filter" id="currency" onchange="changeCurrency()">
+                                <option class="m-3" value="usd"><b>&#xFF04; USD</b></option>
+                                <option class="m-3" value="inr"><b>&#x20B9; INR</b></option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade show active" id="consultancy">
+                        <div class="col-md-6">
+                            <ul class="nav flex-nowrap p-2" style="background: #E5F1FF">
+                                
+                                <li class="nav-item">
+                                    <a class="nav-link pe-auto" data-bs-toggle="tab" onclick="durationClick('sixmonths')"
+                                        href="#sixmonths">6 Months</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active pe-auto" data-bs-toggle="tab"
+                                        onclick="durationClick('oneyear')" href="#oneyear">1 Year</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link pe-auto" data-bs-toggle="tab"
+                                        onclick="durationClick('twoyear')" href="#twoyear">2 Years</a>
+                                </li>                                
+                            </ul>
+                        </div>
+
+                        <div class="row justify-content-center m-4 ">
+                            <div class="col-sm-12 col-md-4 mt-2">
+                                <div class="tw-price-box h-100" style="box-shadow: 0 0 30px rgb(0 0 0 / 14%);">
+                                    <div class="pricing-feaures" style="margin-top: 0px !important">
+                                        <h3 class="pb-3 mx-auto"
+                                            style="text-align:center; border-bottom: 1px solid rgb(207, 207, 207); width: 90%;">
+                                            Growth</h3>
+                                        <div class="pricing-price">
+                                            <p class="p-2">Tailored for startups to streamline the process</p>
+                                            <span class="usDollarAmount"><sup class="currencySymbol">$</sup><strong
+                                                    id="usDollarAmountone">6</strong><br>
+                                                <span>per user/month</span><br>
+                                                <span><u data-bs-toggle="tooltip" data-bs-placement="top"
+                                                        data-bs-custom-class="usdgrowth-tooltip"
+                                                        data-bs-title="Total: $72 USD per user for 1 year">What is my
+                                                        total cost?</u></span></span>
+                                            <span class="inrAmount" style="display: none;"><strong>&#x20B9;</strong><strong
+                                                    id="inrAmountone">499</strong><br>
+                                                <span>per user/month</span> <br>
+                                                <span><u data-bs-toggle="tooltip" data-bs-placement="top"
+                                                        data-bs-custom-class="inrgrowth-tooltip"
+                                                        data-bs-title="Total: &#x20B9 5,988 INR per user for 1 year">What
+                                                        is my total
+                                                        cost?</u></span> </span>
+
+
+
+
+                                            <br>
+                                        </div>
+
+                                    </div>
+
+                                    <div style="text-align:center;padding:12px 15px 0 15px;">
+                                        <button class="btn btn-outline" style="margin-top:20px;margin-bottom:4px;"
+                                            onclick="window.location='contact'">Contact</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 col-md-4 mt-2 ">
+                                <div class="tw-price-box h-100" style="box-shadow: 0 0 30px rgb(0 0 0 / 14%);">
+                                    <div class="pricing-feaures" style="margin-top: 0px !important">
+                                        <h3 class="pb-3 mx-auto"
+                                            style="text-align:center; border-bottom: 1px solid rgb(207, 207, 207); width: 90%;">
+                                            Pro</h3>
+                                        <div class="pricing-price">
+                                            <p class="p-2">For growing business to improve the operations</p>
+                                            <span class="usDollarAmount"><sup class="currencySymbol">$</sup><strong
+                                                    id="usDollarAmounttwo">8.50</strong><br>
+                                                <span>per user/month</span> <br>
+                                                <span><u data-bs-toggle="tooltip" data-bs-placement="top"
+                                                        data-bs-custom-class="usdpro-tooltip"
+                                                        data-bs-title="Total: $102 USD per user for 1 year">What is my
+                                                        total
+                                                        cost?</u></span> <br></span>
+                                            <span class="inrAmount"
+                                                style="display: none;"><strong>&#x20B9;</strong><strong
+                                                    id="inrAmounttwo">699</strong><br>
+                                                <span>per user/month</span> <br>
+                                                <span><u data-bs-toggle="tooltip" data-bs-placement="top"
+                                                        data-bs-custom-class="inrpro-tooltip"
+                                                        data-bs-title="Total: &#x20B9 8,388 INR per user for 1 year">What
+                                                        is my total
+                                                        cost?</u></span> <br>
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div style="text-align:center;padding:12px 15px 0 15px;">
+                                        <button class="btn btn-outline" style="margin-top:20px;margin-bottom:4px;"
+                                            onclick="window.location='contact'">Contact</button>
+                                    </div>
+                             
+                                </div>
+
+                            </div>
+
+                            <div class="col-sm-12 col-md-4 mt-2">
+                                <div class="tw-price-box h-100" style="box-shadow: 0 0 30px rgb(0 0 0 / 14%);">
+                                    <div class="pricing-feaures" style="margin-top: 0px !important">
+                                        <h3 class="pb-3 mx-auto"
+                                            style="text-align:center; border-bottom: 1px solid rgb(207, 207, 207); width: 90%;">
+                                            Enterprise</h3>
+                                        <div class="pricing-price">
+                                            <p class="p-2">For businesses to take full potential of Education CRM</p>
+                                            <span class="usDollarAmount"><sup class="currencySymbol">$</sup><strong
+                                                    id="usDollarAmountthree">10.80</strong><br>
+                                                <span>per user/month</span> <br>
+
+                                                <span><u data-bs-toggle="tooltip" data-bs-placement="top"
+                                                        data-bs-custom-class="usdenterprise-tooltip"
+                                                        data-bs-title="Total: $129.60 USD per user for 1 years">What is my
+                                                        total
+                                                        cost?</u></span> <br>
+                                            </span>
+                                            <span class="inrAmount"
+                                                style="display: none;"><strong>&#x20B9;</strong><strong
+                                                    id="inrAmountthree">899</strong><br>
+                                                <span>per user/month</span> <br>
+                                                <span>
+                                                    <u data-bs-toggle="tooltip" data-bs-placement="top"
+                                                        data-bs-custom-class="inrenterprise-tooltip"
+                                                        data-bs-title="Total: &#x20B9 10,788 INR per user for 1 years">What
+                                                        is my total
+                                                        cost?</u>
+                                                </span><br></span>
+
+
+
+                                            
+
+                                        </div>
+
+                                    </div>
+
+                                    <div style="text-align:center;padding:12px 15px 0 15px;">
+                                        <button class="btn btn-outline" style="margin-top:20px;margin-bottom:4px;"
+                                            onclick="window.location='contact'">Contact</button>
+                                    </div>
+                           
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="row text-center mt-5 pt-5 mb-3">
+                            <div class="col section-heading" style="margin-bottom: 20px;">
+                                <h2 style="font-size: 30px !important">
+                                    Looking for a <span>On-premise</span> version?
+                                    <h3 style="font-size: 22px !important;" class="mr-4">Hosted on your server</h3>
+                                </h2>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="col-md-6">
+                                <ul class="nav flex-nowrap p-2" style="background: #E5F1FF">
+                                    <li class="nav-item">
+                                        <a class="nav-link active pe-auto" href="#" data-bs-toggle="tab"
+                                            onclick="usersClick('tenusers')">10 Users</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link pe-auto" href="#" data-bs-toggle="tab"
+                                            onclick="usersClick('twentyusers')">20
+                                            Users</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link pe-auto" href="#" data-bs-toggle="tab"
+                                            onclick="usersClick('thirtyusers')">30
+                                            Users</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                        <div class="row justify-content-center m-4 ">
+                            <div class="col-sm-12 col-md-4">
+                                <div class="tw-price-box " style="box-shadow: 0 0 30px rgb(0 0 0 / 14%);">
+                                    <div class="pricing-feaures" style="margin-top: 0px !important">
+                                        <h3 class="pb-3 mx-auto"
+                                            style="text-align:center; border-bottom: 1px solid rgb(207, 207, 207); width: 90%;">
+                                            Growth</h3>
+                                        <div class="pricing-price">
+                                            <p class="p-2">Tailored for startups to streamline the process</p>
+                                            <span class="usDollarAmount"><sup class="currencySymbol">$</sup><strong
+                                                    id="userDollarAmountone">479</strong><br></span>
+                                            <span class="inrAmount"
+                                                style="display: none;"><strong>&#x20B9;</strong><strong
+                                                    id="userinrAmountone">39,999</strong><br></span>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div style="text-align:center;padding:12px 15px 0 15px;">
+                                        <button class="btn btn-outline" style="margin-top:20px;margin-bottom:4px;"
+                                            onclick="window.location='contact'">Contact</button>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 col-md-4">
+                                <div class="tw-price-box" style="box-shadow: 0 0 30px rgb(0 0 0 / 14%);">
+                                    <div class="pricing-feaures" style="margin-top: 0px !important">
+                                        <h3 class="pb-3 mx-auto"
+                                            style="text-align:center; border-bottom: 1px solid rgb(207, 207, 207); width: 90%;">
+                                            Pro</h3>
+                                        <div class="pricing-price">
+                                            <p class="p-2">For growing business to improve the operations</p>
+                                            <span class="usDollarAmount"><sup class="currencySymbol">$</sup><strong
+                                                    id="userDollarAmounttwo">599</strong><br></span>
+                                            <span class="inrAmount"
+                                                style="display: none;"><strong>&#x20B9;</strong><strong
+                                                    id="userinrAmounttwo">49,999</strong><br></span>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div style="text-align:center;padding:12px 15px 0 15px;">
+                                        <button class="btn btn-outline" style="margin-top:20px;margin-bottom:4px;"
+                                            onclick="window.location='contact'">Contact</button>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-sm-12 col-md-4">
+                                <div class="tw-price-box " style="box-shadow: 0 0 30px rgb(0 0 0 / 14%);">
+                                    
+                                    <div class="pricing-feaures" style="margin-top: 0px !important">
+                                        <h3 class="pb-3 mx-auto"
+                                            style="text-align:center; border-bottom: 1px solid rgb(207, 207, 207); width: 90%;">
+                                            Enterprise</h3>
+                                        <div class="pricing-price">
+                                            <p class="p-2">For businesses to take full potential of Education CRM</p>
+
+                                            <span class="usDollarAmount"><sup class="currencySymbol">$</sup><strong
+                                                    id="userDollarAmountthree">719</strong><br></span>
+                                            <span class="inrAmount"
+                                                style="display: none;"><strong>&#x20B9;</strong><strong
+                                                    id="userinrAmountthree">59,999</strong><br></span>
+
+                                            
+
+                                        </div>
+
+                                    </div>
+
+                                    <div style="text-align:center;padding:12px 15px 0 15px;">
+                                        <button class="btn btn-outline" style="margin-top:20px;margin-bottom:4px;"
+                                            onclick="window.location='contact'">Contact</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row text-center mt-5 pt-5 mb-3">
+                            <div class="col section-heading" style="margin-bottom: 20px;">
+                                <h2 style="font-size: 30px !important">
+                                    Features
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center m-4 ">
+                            <div class="col-sm-12 col-md-4 mt-2">
+                                <div class="tw-price-box" style="box-shadow: 0 0 30px rgb(0 0 0 / 14%);">
+                                    <h3 class="pb-3 mx-auto"
+                                    style="text-align:center; border-bottom: 1px solid rgb(207, 207, 207); width: 90%;">
+                                    Growth</h3>
+                                    <h4 class="p-3 ">
+                                        Features</h4>
+                                    <ul style="list-style:none; margin: 0px 20px;">
+                                        <li><i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+                                            <span style="color: #646464">Leads</span>
+                                        </li>
+                                        <li><i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+                                            <span style="color: #646464">Students</span>
+                                        </li>
+                                        <li><i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+                                            <span style="color: #646464">University Applications</span>
+                                        </li>
+                                        <li><i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+                                            <span style="color: #646464">Course Finder</span>
+                                        </li>
+                                        <li><i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+                                            <span style="color: #646464">Student Invoices</span>
+                                        </li>
+                                        <li><i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+                                            <span style="color: #646464">Multiple Branch</span>
+                                        </li>
+                                        <li><i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+                                            <span style="color: #646464">Staff Notifications</span>
+                                        </li>
+                                        <li><i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+                                            <span style="color: #646464">Web to Lead</span>
+                                        </li>
+                                        <li><i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+                                            <span style="color: #646464">Reports</span>
+                                        </li>
+                                        <li><i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+                                            <span style="color: #646464">Student Panel</span>
+                                        </li>
+                                        <li><i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+                                            <span style="color: #646464">Broadcast</span>
+                                        </li>
+                                        <li><i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+                                            <span style="color: #646464">Custom Attributes</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 col-md-4 mt-2 ">
+                                <div class="tw-price-box h-100" style="box-shadow: 0 0 30px rgb(0 0 0 / 14%);">
+                                    <h3 class="pb-3 mx-auto"
+                                            style="text-align:center; border-bottom: 1px solid rgb(207, 207, 207); width: 90%;">
+                                            Pro</h3>
+                                    <h4 class="p-3 ">
+                                        Everything in Growth, and</h4>
+                                    <ul style="list-style:none; margin: 0px 20px;">
+                                        <li><i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+                                            <span style="color: #646464">Agents/Partners</span>
+                                        </li>
+                                        <li><i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+                                            <span style="color: #646464">Additional Services</span>
+                                        </li>
+                                        <li><i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+                                            <span style="color: #646464">Form Builder</span>
+                                        </li>
+                                        <li><i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+                                            <span style="color: #646464">Staff Attendance, Leaves</span>
+                                        </li>
+                                        <li><i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+                                            <span style="color: #646464">Student Referral</span>
+                                        </li>
+                                        <li><i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+                                            <span style="color: #646464">Chat <span class="badge rounded-pill bg-warning">Beta</span> (Staff, Students, Agents) <small>10+ Users plans only</small></span>
+                                        </li>                                        
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                            <div class="col-sm-12 col-md-4 mt-2">
+                                <div class="tw-price-box h-100" style="box-shadow: 0 0 30px rgb(0 0 0 / 14%);">
+                                    <h3 class="pb-3 mx-auto"
+                                            style="text-align:center; border-bottom: 1px solid rgb(207, 207, 207); width: 90%;">
+                                            Enterprise</h3>
+                                    <h4 class="p-3 ">
+                                        Everything in Pro, and</h4>
+                                    <ul style="list-style:none; margin: 0px 20px;">
+
+                                        <li><i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+                                            <span style="color: #646464">API (Zapier,Pabbly, API)</span>
+                                        </li>
+                                        <li><i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+                                            <span style="color: #646464">University Invoices</span>
+                                        </li>
+                                        <li><i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+                                            <span style="color: #646464">Email Sync</span>
+                                        </li>
+                                        <li><i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+                                            <span style="color: #646464">Marketing Automation</span>
+                                        </li>
+                                        <li><i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+                                            <span style="color: #646464">Multiple Business</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-11 mb-4 mt-5 mx-5">
+                            <h4>On-premise version notes:</h4>
+                            <ul class="">
+                                <li class="">
+                                    Prices are one time cost
+                                </li>
+                                <li class="">
+                                    Contact sales for 30+ user license
+                                </li>
+                                <li class="">
+                                    License is for single domain
+                                </li>
+                                <li class="">
+                                    Six month free support included $60(₹5,000) thereafter per year
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="row mt-5" style="box-shadow: 0 0 30px rgb(0 0 0 / 14%);">
+                            <div class="col-lg-12 col-md-12 p-5">
+                                <h4 class="text-2xl font-semibold mb-4">Add-Ons</h4>
+                                <div class="mt-4 flex flex-col md:flex-row gap-5">
+                                    <div class="w-full md:w-1/2">
+                                        <strong class="text-lg">University Course Data</strong> <br>
+                                        <span class="text-xl font-bold text-blue-600">$59 (&#x20B9;4,999)</span>
+                                        <p class="text-gray-500 text-sm mt-1">
+                                            90,000+ courses from 14 countries
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="coaching">
+    <div class="row justify-content-center">
+        <div class="col-sm-12 col-md-4">
+            <div class="tw-price-box " style="box-shadow: 0 0 30px rgb(0 0 0 / 14%);">
+                <div class="pricing-feaures" style="margin-top: 0px !important">
+                    <h3 class="pb-3 mx-auto"
+                        style="text-align:center; border-bottom: 1px solid rgb(207, 207, 207); width: 90%;">Basic</h3>
+                    <div class="pricing-price">
+                        <span class="usDollarAmount"><sup class="currencySymbol">$</sup><strong
+                                id="currencyOne">12</strong><br></span>
+                        <span class="inrAmount" style="display: none;"><sup class="currencySymbol">&#x20B9;</sup><strong
+                                id="currencyOne">999</strong><br></span>
+                        <span>/month, billed annually</span> <br>
+                        <span class="usDollarAmount"><span class="currencySymbol"
+                                style="font-size: 18px;">$</span><strong id="" style="font-size: 18px;">16
+                            </strong>/month, billed monthly</span>
+                        <span class="inrAmount" style="display: none;"><span class="currencySymbol"
+                                style="font-size: 18px;">&#x20B9;</span><strong id=""
+                                style="font-size: 18px;">1,299 </strong>/month, billed monthly</span>
+                    </div>
+                    <ul style=" margin: 0px 20px;">
+                        <li><i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+                            <strong style="color: #646464">10 Trainers</strong>
+                        </li>
+                        <li><i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+                            <strong style="color: #646464">5 Staff</strong>
+                        </li>                        
+                        <li><i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+                            <span style="color: #646464">1,500 students per year included</span>
+                        </li>
+                        <li><i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+                            <span style="color: #646464">
+                                <span class="usDollarAmount"><span class="currencySymbol">$</span>6 for every 100 extra
+                                    students</span>
+                                <span class="inrAmount" style="display: none;"><span
+                                        class="currencySymbol">&#x20B9;</span>499 for every 100 extra students</span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div style="text-align:center;padding:12px 15px 0 15px;">
+                    <button class="btn btn-outline" style="margin-top:20px;margin-bottom:4px;"
+                        onclick="window.location='contact'">Contact</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-12 col-md-4">
+            <div class="tw-price-box" style="box-shadow: 0 0 30px rgb(0 0 0 / 14%);">
+                <div class="pricing-feaures" style="margin-top: 0px !important">
+                    <h3 class="pb-3 mx-auto"
+                        style="text-align:center; border-bottom: 1px solid rgb(207, 207, 207); width: 90%;">Growth</h3>
+                    <div class="pricing-price">
+                        <span class="usDollarAmount"><sup class="currencySymbol">$</sup><strong
+                                id="currencyOne">24</strong><br></span>
+                        <span class="inrAmount" style="display: none;"><sup class="currencySymbol">&#x20B9;</sup><strong
+                                id="currencyOne">1,999</strong><br></span>
+                        <span>/month, billed annually</span> <br>
+                        <span class="usDollarAmount"><span class="currencySymbol"
+                                style="font-size: 18px;">$</span><strong id="" style="font-size: 18px;">32
+                            </strong>/month, billed monthly</span>
+                        <span class="inrAmount" style="display: none;"><span class="currencySymbol"
+                                style="font-size: 18px;">&#x20B9;</span><strong id=""
+                                style="font-size: 18px;">2,599 </strong>/month, billed monthly</span>
+                    </div>
+                    <ul style=" margin: 0px 20px;">
+                        <li><i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+                            <strong style="color: #646464">25 Trainers</strong>
+                        </li>
+                        <li><i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+                            <strong style="color: #646464">10 Staff</strong>
+                        </li>                        
+                        <li><i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+                            <span style="color: #646464">1,500 students per year included</span>
+                        </li>
+                        <li><i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+                            <span style="color: #646464">
+                                <span class="usDollarAmount"><span class="currencySymbol">$</span>6 for every 100 extra
+                                    students</span>
+                                <span class="inrAmount" style="display: none;"><span
+                                        class="currencySymbol">&#x20B9;</span>499 for every 100 extra students</span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div style="text-align:center;padding:12px 15px 0 15px;">
+                    <button class="btn btn-outline" style="margin-top:20px;margin-bottom:4px;"
+                        onclick="window.location='contact'">Contact</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-12 col-md-4">
+            <div class="tw-price-box " style="box-shadow: 0 0 30px rgb(0 0 0 / 14%);">
+                <div class="pricing-feaures" style="margin-top: 0px !important">
+                    <h3 class="pb-3 mx-auto"
+                        style="text-align:center; border-bottom: 1px solid rgb(207, 207, 207); width: 90%;">Pro</h3>
+                    <div class="pricing-price">
+                        <span class="usDollarAmount"><sup class="currencySymbol">$</sup><strong
+                                id="currencyOne">49</strong><br></span>
+                        <span class="inrAmount" style="display: none;"><sup
+                                class="currencySymbol">&#x20B9;</sup><strong
+                                id="currencyOne">3,999</strong><br></span>
+                        <span>/month, billed annually</span> <br>
+                        <span class="usDollarAmount"><span class="currencySymbol"
+                                style="font-size: 18px;">$</span><strong id="" style="font-size: 18px;">64
+                            </strong>/month, billed monthly</span>
+                        <span class="inrAmount" style="display: none;"><span class="currencySymbol"
+                                style="font-size: 18px;">&#x20B9;</span><strong id=""
+                                style="font-size: 18px;">5,299 </strong>/month, billed monthly</span>
+                    </div>
+                    <ul style=" margin: 0px 20px;">
+                        <li><i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+                            <strong style="color: #646464">75 Trainers</strong>
+                        </li>
+                        <li><i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+                            <strong style="color: #646464">20 Staff</strong>
+                        </li>                        
+                        <li><i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+                            <span style="color: #646464">1,500 students per year included</span>
+                        </li>
+                        <li><i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+                            <span style="color: #646464">
+                                <span class="usDollarAmount"><span class="currencySymbol">$</span>6 for every 100
+                                    extra students</span>
+                                <span class="inrAmount" style="display: none;"><span
+                                        class="currencySymbol">&#x20B9;</span>499 for every 100 extra students</span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div style="text-align:center;padding:12px 15px 0 15px;">
+                    <button class="btn btn-outline" style="margin-top:20px;margin-bottom:4px;"
+                        onclick="window.location='contact'">Contact</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p style="margin-top: 10px;">* Minimum 6 months subscription required.</p>
+
+    <div class="row my-5 pb-5 px-5" style="box-shadow: 0 0 30px rgb(0 0 0 / 14%);">
+        <div class="col-12 my-5">
+            <h2 style="font-size: 30px !important" class="text-center">All Plans Include</h2>
+        </div>
+        <div class="col-md-4">
+            <ul class="list-unstyled">
+                <li><i class="fa fa-check"></i> Leads </li>
+                <li><i class="fa fa-check"></i> Students</li>
+                <li><i class="fa fa-check"></i> Batch Management</li>
+                <li><i class="fa fa-check"></i> Fees</li>
+                <li><i class="fa fa-check"></i> Course Management</li>
+                <li><i class="fa fa-check"></i> Broadcast messages</li>
+                <li><i class="fa fa-check"></i> Student signup</li>
+                <li><i class="fa fa-check"></i> Student Attendance</li>
+                <li><i class="fa fa-check"></i> Exams</li>
+                <li><i class="fa fa-check"></i> Trainers</li>
+                <li><i class="fa fa-check"></i> Support tickets</li>
+                <li><i class="fa fa-check"></i> Invoices</li>
+                <li><i class="fa fa-check"></i> Analytics/Reports</li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <ul class="list-unstyled ">
+                <li><i class="fa fa-check"></i> Lead nurture sequence messages </li>
+                <li><i class="fa fa-check"></i> Online Courses</li>
+                <li><i class="fa fa-check"></i> Student Feedback</li>
+                <li><i class="fa fa-check"></i> Certificate Download</li>
+                <li><i class="fa fa-check"></i> Scheduled messages</li>
+                <li><i class="fa fa-check"></i> Import leads, students</li>
+                <li><i class="fa fa-check"></i> Trainer-Student messaging
+                </li>
+                <li><i class="fa fa-check"></i> Document sharing
+                </li>
+                <li><i class="fa fa-check"></i> Activity log</li>
+                <li><i class="fa fa-check"></i> Staff notifications/reminders
+                </li>
+                <li><i class="fa fa-check"></i> Pending follow-up widgets</li>
+                <li><i class="fa fa-check"></i> Branch office management</li>
+                <li><i class="fa fa-check"></i> Staff roles management</li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <ul class="list-unstyled">
+                <li><i class="fa fa-check"></i> Organization hierarchy</li>
+                <li><i class="fa fa-check"></i> Digital Shop
+                </li>
+                <li><i class="fa fa-check"></i> Email, sms, whatsapp tempaltes</li>
+                <li><i class="fa fa-check"></i> Outbound call integration</li>
+                <li><i class="fa fa-check"></i> Whatsapp integration</li>
+                <li><i class="fa fa-check"></i> SMS integration</li>
+                <li><i class="fa fa-check"></i> Bulk email smtp integration</li>
+                <li><i class="fa fa-check"></i> Lead Create APIs, Zapier, Pabbly </li>
+                <li><i class="fa fa-check"></i> Export data</li>
+                <li><i class="fa fa-check"></i> Webinar registration</li>
+                <li><i class="fa fa-check"></i> Web to Lead form builder</li>
+                <li><i class="fa fa-check"></i> Content Management
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row text-left mt-5 pt-5 mb-3">
+        <div class="col section-heading" style="margin-bottom: 20px;">
+            <h2 style="font-size: 30px !important">
+                Looking for a <span>On-premise</span> version?
+                <small>One time purchase, Self Hosted Version</small>
+            </h2>
+        </div>
+    </div>
+    <div class="row" style="box-shadow: 0 0 30px rgb(0 0 0 / 14%);">
+        <div class="col-12 py-4 d-md-flex mt-3 pl-5">
+            <h3 style="font-size: 22px !important;" class="mr-4">Hosted on your server</h3>
+            
+        </div>
+        <div class="col-12">
+            <div class="row mx-sm-5" style="border: 1px solid rgb(189, 189, 189); border-radius: 10px;">
+                <div class="col-sm-12 col-md-4 d-md-flex justify-content-between align-items-center">
+                    <div class="tw-price-box ">
+                        <div class="pricing-feaures">
+                            <div class="pricing-price usDollarAmount">
+                                <sup class="currencySymbolOneTime"
+                                    style="font-size: 20px; top: -10px !important">$</sup><strong
+                                    id="currency_twozero" style="font-size: 24px;">499</strong>
+                                <br>
+                                <span class="text-muted" style="font-size: 14px; font-weight: 600;">One-time</span>
+                            </div>
+                            <div class="pricing-price inrAmount" style=" display: none;">
+                                <sup class="currencySymbolOneTime"
+                                    style="font-size: 20px; top: -10px !important;">&#x20B9;</sup><strong
+                                    id="currency_twozero" style="font-size: 24px;">39,999</strong>
+                                <br>
+                                <span class="text-muted" style="font-size: 14px; font-weight: 600;">One-time</span>
+                            </div>
+                            <h5 style="text-align:center; font-size:16px;">20 Trainers</h5>
+                            <h5 style="text-align:center; font-size:16px;">10 Staff</h5>
+                            <ul style=" margin: 0px 20px;">
+                                <li class="text-center"><i class="fa fa-check" aria-hidden="true" style="color: green;"></i> Unlimited
+                                    Students, Leads</li>
+                            </ul>
+                        </div>
+                        <div class="usDollarAmount">
+                            <p style="margin-bottom:0;padding:12px 15px 0 15px;font-size:12px;color:#565656;">6 Months
+                                Free support, $60 per year thereafter</p>
+                        </div>
+                        <div class="inrAmount" style=" display: none;">
+                            <p style="margin-bottom:0;padding:12px 15px 0 15px;font-size:12px;color:#565656;">6 Months
+                                Free support, &#x20B9;5000 per year thereafter</p>
+                        </div>
+                    </div>
+                    <div class="d-none d-md-block "
+                        style="border: 1px solid rgb(218, 218, 218); height: 90% !important"></div>
+                    <div class="d-block d-md-none "
+                        style="border: 1px solid rgb(218, 218, 218); width: 100% !important"></div>
+                </div>
+                <!-- COl end -->
+                <div class="col-sm-12 col-md-4 d-md-flex justify-content-between align-items-center">
+                    <div class="tw-price-box ">
+                        <div class="pricing-feaures">
+                            <div class="pricing-price usDollarAmount">
+                                <sup class="currencySymbolOneTime"
+                                    style="font-size: 20px; top: -10px !important">$</sup><strong
+                                    id="currency_twozero" style="font-size: 24px;">699</strong>
+                                <br>
+                                <span class="text-muted" style="font-size: 14px; font-weight: 600;">One-time</span>
+                            </div>
+                            <div class="pricing-price inrAmount" style=" display: none;">
+                                <sup class="currencySymbolOneTime"
+                                    style="font-size: 20px; top: -10px !important;">&#x20B9;</sup><strong
+                                    id="currency_twozero" style="font-size: 24px;">59,999</strong>
+                                <br>
+                                <span class="text-muted" style="font-size: 14px; font-weight: 600;">One-time</span>
+                            </div>
+                            <h5 style="text-align:center; font-size:16px;">40 Trainers</h5>
+                            <h5 style="text-align:center; font-size:16px;">20 Staff</h5>
+                            <ul style=" margin: 0px 20px;">
+                                <li class="text-center"><i class="fa fa-check" aria-hidden="true" style="color: green;"></i> Unlimited
+                                    Students, Leads</li>
+                            </ul>
+                        </div>
+                        <div class="usDollarAmount">
+                            <p style="margin-bottom:0;padding:12px 15px 0 15px;font-size:12px;color:#565656;">6 Months
+                                Free support, $60 per year thereafter</p>
+                        </div>
+                        <div class="inrAmount" style=" display: none;">
+                            <p style="margin-bottom:0;padding:12px 15px 0 15px;font-size:12px;color:#565656;">6 Months
+                                Free support, &#x20B9;5000 per year thereafter</p>
+                        </div>
+                    </div>
+                    <div class="d-none d-md-block"
+                        style="border: 1px solid rgb(218, 218, 218); height: 90% !important"></div>
+                    <div class="d-block d-md-none "
+                        style="border: 1px solid rgb(218, 218, 218); width: 100% !important"></div>
+                </div>
+
+                <div class="col-sm-12 col-md-4 d-md-flex justify-content-between align-items-center">
+                    <div class="tw-price-box ">
+                        <div class="pricing-feaures">
+                            <div class="pricing-price usDollarAmount">
+                                <sup class="currencySymbolOneTime"
+                                    style="font-size: 20px; top: -10px !important">$</sup><strong
+                                    id="currency_twozero" style="font-size: 24px;">849</strong>
+                                <br>
+                                <span class="text-muted" style="font-size: 14px; font-weight: 600;">One-time</span>
+                            </div>
+                            <div class="pricing-price inrAmount" style=" display: none;">
+                                <sup class="currencySymbolOneTime"
+                                    style="font-size: 20px; top: -10px !important;">&#x20B9;</sup><strong
+                                    id="currency_twozero" style="font-size: 24px;">89,999</strong>
+                                <br>
+                                <span class="text-muted" style="font-size: 14px; font-weight: 600;">One-time</span>
+                            </div>
+                            <h5 style="text-align:center; font-size:16px;">100 Trainers</h5>
+                            <h5 style="text-align:center; font-size:16px;">30 Staff</h5>
+                            <ul style=" margin: 0px 20px;">
+                                <li class="text-center"><i class="fa fa-check" aria-hidden="true" style="color: green;"></i> Unlimited
+                                    Students, Leads</li>
+                            </ul>
+                        </div>
+                        <div class="usDollarAmount">
+                            <p style="margin-bottom:0;padding:12px 15px 0 15px;font-size:12px;color:#565656;">6 Months
+                                Free support, $60 per year thereafter</p>
+                        </div>
+                        <div class="inrAmount" style=" display: none;">
+                            <p style="margin-bottom:0;padding:12px 15px 0 15px;font-size:12px;color:#565656;">6 Months
+                                Free support, &#x20B9;5000 per year thereafter</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-11 mb-4 mt-5 mx-5">
+            <div class="row mt-4">
+                <div class="col-md-6">
+                </div>
+                <div class="col-md-6">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-end mt-2 pt-2">
+                <p class="text-danger mb-0">*</p>
+                <p class="text-muted ms-1 mb-0">All prices are exclusive of taxes</p>
+            </div>
+
+            <h2 style="font-size: 30px !important " id="faq" class="mt-5 pt-5 text-center mb-3">Frequently Asked
+                Questions <span class=" text-primary">Answered</span></h2>
+            <div class="row mt-5" style="box-shadow: 0 0 30px rgb(0 0 0 / 14%);">
+                <div class="col-lg-12 col-md-12">
+                    <div class="tw-faq-content mt-4">
+                        <div id="accordion" role="tablist">
+                            <div class="card"
+                                style="border: 0px !important; border-bottom: 1px solid rgb(218, 218, 218) !important;">
+                                <div class="card-header" role="tab" id="headingSeven" data-toggle="collapse"
+                                    data-parent="#accordion" href="#collapseSeven" aria-expanded="false"
+                                    aria-controls="collapseSeven">
+                                    <h4>
+                                        <a>
+                                            What are the pre-requisites to use EduCtrl Software?
+                                            
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel"
+                                    aria-labelledby="headingSeven">
+                                    <div class="card-block">
+                                        <li>If you own a domain name, EduCtrl Software can be setup on the sub-domain(ex:
+                                            student.yourwebsite.com) or on the main domain(ex:yourwebsite.com).</li>
+                                        <li>The DNS ('A') record for your domain or subdomain must be added to the IP
+                                            address provided by us.</li>
+                                        <li>You must provide an email account with SMTP details for sending email
+                                            notifications from the software.</li>
+                                        <br />
+                                        <li>If you don't own a domain name, EduCtrl Software can be setup on eductrl.app.
+                                            For ex: if your business name is abcconsultancy, we can setup EduCtrl on
+                                            abcconsultancy.eductrl.app.</li>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card "
+                                style="border: 0px !important; border-bottom: 1px solid rgb(218, 218, 218) !important;">
+                                <div class="card-header" role="tab" id="headingOne" data-toggle="collapse"
+                                    data-parent="#accordion" href="#collapseOne" aria-expanded="false"
+                                    aria-controls="collapseOne">
+                                    <h4>
+                                        <a>
+                                            Do you charge a setup-fee? How much time is required to setup EduCtrl?
+                                            
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel"
+                                    aria-labelledby="headingOne">
+                                    <div class="card-block">
+                                        No, there is no setup fees. Your website will be setup in 1 day.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card "
+                                style="border: 0px !important; border-bottom: 1px solid rgb(218, 218, 218) !important;">
+                                <div class="card-header" role="tab" id="headingtwo" data-toggle="collapse"
+                                    data-parent="#accordion" href="#collapseTwo" aria-expanded="false"
+                                    aria-controls="collapseTwo">
+                                    <h4>
+                                        <a class="collapsed">
+                                            Is there any limit on no. of student registrations?
+                                            
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel"
+                                    aria-labelledby="headingtwo">
+                                    <div class="card-block">
+                                        For EduCtrl Consultancy, there are no limits on student registrations or leads.
+                                        There are limits on the no. of staff users as mentioned in the pricing details. For
+                                        EduCtrl Coaching, there are limits on the no. of students as mentioned in the
+                                        pricing details.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card "
+                                style="border: 0px !important; border-bottom: 1px solid rgb(218, 218, 218) !important;">
+                                <div class="card-header" role="tab" id="heading4" data-toggle="collapse"
+                                    data-parent="#accordion" href="#collapse4" aria-expanded="false"
+                                    aria-controls="collapse4">
+                                    <h4>
+                                        <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                            href="#collapse4" aria-expanded="true" aria-controls="collapse4">
+                                            How secure is my data on your server?
+                                            
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse4" class="panel-collapse collapse" role="tabpanel"
+                                    aria-labelledby="heading4">
+                                    <div class="card-block">
+                                        Data security is an important aspect & we take all measures to secure the server.
+                                        Even in the database, the critical data like phone no, email id are encrypted, so
+                                        that even team members who have access to database cannot view the data.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card "
+                                style="border: 0px !important; border-bottom: 1px solid rgb(218, 218, 218) !important;">
+                                <div class="card-header" role="tab" id="heading5" data-toggle="collapse"
+                                    data-parent="#accordion" href="#collapse5" aria-expanded="false"
+                                    aria-controls="collapse5">
+                                    <h4>
+                                        <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                            href="#collapse5" aria-expanded="true" aria-controls="collapse5">
+                                            How do you provide customer support?
+                                            
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse5" class="panel-collapse collapse" role="tabpanel"
+                                    aria-labelledby="heading5">
+                                    <div class="card-block">
+                                        We provide support through support email & whatsapp chat Monday to Friday 10AM - 6PM
+                                        IST(GMT+530).
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card "
+                                style="border: 0px !important; border-bottom: 1px solid rgb(218, 218, 218) !important;">
+                                <div class="card-header" role="tab" id="heading6" data-toggle="collapse"
+                                    data-parent="#accordion" href="#collapse6" aria-expanded="false"
+                                    aria-controls="collapse6">
+                                    <h4>
+                                        <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                            href="#collapse6" aria-expanded="true" aria-controls="collapse6">
+                                            Can I host the software on my server?
+                                            
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse6" class="panel-collapse collapse" role="tabpanel"
+                                    aria-labelledby="heading6">
+                                    <div class="card-block">
+                                        We provide one-time purchase/self-hosted version which can be setup on your server.
+                                        The license is for single domain. We will do the software setup for you.
+                                        <br />
+                                        <br /><strong>Self-hosted Server Requirements:</strong>
+                                        <ul>
+                                            <li>Cloud Server is preferred. VPS Hosting can also be used</li>
+                                            <li>Ubuntu Linux OS is preferred</li>
+                                            <li>php 8.1 or higher</li>
+                                            <li>MySQL 8</li>
+                                            <li>ssh, composer, cron jobs</li>
+                                            <li>php extensions: ioncube, fileinfo, gd</li>
+                                        </ul>
+                                        <strong>Recommended Hosting:</strong>
+                                        <br />- Digital Ocean Cloud Droplet
+                                        <br /><small>Costs around $18/mth. Choose Droplet with 2GB RAM, 2vCPU, 60GB disk
+                                            space plan or higher. To get free $200 credit<sup>*</sup>, use this invite link:
+                                            <a href="https://m.do.co/c/210b5ac92d2a"
+                                                target="_blank">www.digitalocean.com</a></small>
+                                        <br />- Hostinger Hosting</a>
+                                        <br /><small>Costs around $5/mth for first year & $13/mth from 2nd year. Choose
+                                            'Business' hosting plan. You will get free emails as well. To get 20%
+                                            off<sup>*</sup> on hosting, use this invite link: <a
+                                                href="https://hostinger.in?REFERRALCODE=1SANTOSH923"
+                                                target="_blank">www.hostinger.com</a></small>
+                                        <br />- Use our hosting
+                                        <br /><small>Costs $96 per year. 6GB disk space. Cloud server. Emails not
+                                            included.</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card " style="border: 0px !important;">
+                                <div class="card-header" role="tab" id="heading7" data-toggle="collapse"
+                                    data-parent="#accordion" href="#collapse7" aria-expanded="false"
+                                    aria-controls="collapse7">
+                                    <h4>
+                                        <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                            href="#collapse7" aria-expanded="true" aria-controls="collapse7">
+                                            Can EduCtrl software be customized?
+                                            
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse7" class="panel-collapse collapse" role="tabpanel"
+                                    aria-labelledby="heading7">
+                                    <div class="card-block">
+                                        We provide one-time purchase/self-hosted version in which customization can be done.
+                                        <br />For SaaS based version, you can use the settings to configure the system, but
+                                        customization cannot be done.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row my-5 pb-5 px-2 " style="box-shadow: 0 0 30px rgb(0 0 0 / 14%);">
+                <div class="col-12 my-5">
+                    <h2 style="font-size: 30px !important" class="text-center">All Features</h2>
+                </div>
+                <div class="col-md-3 ">
+                    <ul class="list-unstyled px-4" style="font-size: 13px;">
+                        <li><i class="fa fa-check"></i> Leads </li>
+                        <li><i class="fa fa-check"></i> Students</li>
+                        <li><i class="fa fa-check"></i> University Applications</li>
+                        <li><i class="fa fa-check"></i> Visa/Services Applications</li>
+                        <li><i class="fa fa-check"></i> Course Finder</li>
+                        <li><i class="fa fa-check"></i> Broadcast messages</li>
+                        <li><i class="fa fa-check"></i> Student signup</li>
+                        <li><i class="fa fa-check"></i> Student Course Preferences</li>
+                        <li><i class="fa fa-check"></i> Student document upload</li>
+                        <li><i class="fa fa-check"></i> Agents/Partners</li>
+                        <li><i class="fa fa-check"></i> Support tickets</li>
+                        <li><i class="fa fa-check"></i> Form Builder</li>
+                        <li><i class="fa fa-check"></i> University Invoices</li>
+
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul class="list-unstyled" style="font-size: 13px;">
+                        <li><i class="fa fa-check"></i> Invoices</li>
+                        <li><i class="fa fa-check"></i> Analytics/Reports</li>
+                        <li><i class="fa fa-check"></i> Lead nurture sequence messages
+                            <svg data-toggle="tooltip" data-placement="top"
+                                title="Automate a series of messages(email/whatsapp/sms) to leads based on Lead Age"
+                                xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="18" height="18"
+                                viewBox="0 0 48 48">
+                                <path fill="#2196f3"
+                                    d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z">
+                                </path>
+                                <path fill="#fff"
+                                    d="M22 22h4v11h-4V22zM26.5 16.5c0 1.379-1.121 2.5-2.5 2.5s-2.5-1.121-2.5-2.5S22.621 14 24 14 26.5 15.121 26.5 16.5z">
+                                </path>
+                            </svg>
+                        </li>
+                        <li><i class="fa fa-check"></i> Scheduled messages</li>
+                        <li><i class="fa fa-check"></i> Import leads, students, course data</li>
+                        <li><i class="fa fa-check"></i> Share course suggestions
+                            <svg data-toggle="tooltip" data-placement="top"
+                                title="Search suitable courses in Course Finder & suggest or manually share a course suggestion document."
+                                xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="18" height="18"
+                                viewBox="0 0 48 48">
+                                <path fill="#2196f3"
+                                    d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z">
+                                </path>
+                                <path fill="#fff"
+                                    d="M22 22h4v11h-4V22zM26.5 16.5c0 1.379-1.121 2.5-2.5 2.5s-2.5-1.121-2.5-2.5S22.621 14 24 14 26.5 15.121 26.5 16.5z">
+                                </path>
+                            </svg>
+                        </li>
+                        <li><i class="fa fa-check"></i> Staff-Student messaging
+                            <svg data-toggle="tooltip" data-placement="top"
+                                title="Send message to student from University Application. Student can reply to the message, attach documents."
+                                xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="18" height="18"
+                                viewBox="0 0 48 48">
+                                <path fill="#2196f3"
+                                    d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z">
+                                </path>
+                                <path fill="#fff"
+                                    d="M22 22h4v11h-4V22zM26.5 16.5c0 1.379-1.121 2.5-2.5 2.5s-2.5-1.121-2.5-2.5S22.621 14 24 14 26.5 15.121 26.5 16.5z">
+                                </path>
+                            </svg>
+                        </li>
+                        <li><i class="fa fa-check"></i> Document sharing
+                            <svg data-toggle="tooltip" data-placement="top"
+                                title="Create country information documents and share to specific students or to all students"
+                                xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="18" height="18"
+                                viewBox="0 0 48 48">
+                                <path fill="#2196f3"
+                                    d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z">
+                                </path>
+                                <path fill="#fff"
+                                    d="M22 22h4v11h-4V22zM26.5 16.5c0 1.379-1.121 2.5-2.5 2.5s-2.5-1.121-2.5-2.5S22.621 14 24 14 26.5 15.121 26.5 16.5z">
+                                </path>
+                            </svg>
+                        </li>
+                        <li><i class="fa fa-check"></i> Activity log</li>
+                        <li><i class="fa fa-check"></i> Staff notifications/reminders
+                            <svg data-toggle="tooltip" data-placement="top"
+                                title="Lead/Student follow-up notification emails, follow-up missed emails, lead stage deadline emails"
+                                xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="18" height="18"
+                                viewBox="0 0 48 48">
+                                <path fill="#2196f3"
+                                    d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z">
+                                </path>
+                                <path fill="#fff"
+                                    d="M22 22h4v11h-4V22zM26.5 16.5c0 1.379-1.121 2.5-2.5 2.5s-2.5-1.121-2.5-2.5S22.621 14 24 14 26.5 15.121 26.5 16.5z">
+                                </path>
+                            </svg>
+                        </li>
+                        <li><i class="fa fa-check"></i> Email Sync</li>
+                        <li><i class="fa fa-check"></i> Student Referral</li>
+                        <li><i class="fa fa-check"></i> Content Management
+                            <svg data-toggle="tooltip" data-placement="top" title="Manage home page & other page content"
+                                xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="18" height="18"
+                                viewBox="0 0 48 48">
+                                <path fill="#2196f3"
+                                    d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z">
+                                </path>
+                                <path fill="#fff"
+                                    d="M22 22h4v11h-4V22zM26.5 16.5c0 1.379-1.121 2.5-2.5 2.5s-2.5-1.121-2.5-2.5S22.621 14 24 14 26.5 15.121 26.5 16.5z">
+                                </path>
+                            </svg>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul class="list-unstyled" style="font-size: 13px;">
+                        <li><i class="fa fa-check"></i> Pending follow-up widgets</li>
+                        <li><i class="fa fa-check"></i> Branch office management</li>
+                        <li><i class="fa fa-check"></i> Staff roles management</li>
+                        <li><i class="fa fa-check"></i> Organization hierarchy</li>
+                        <li><i class="fa fa-check"></i> College fees, commission tracking</li>
+                        <li><i class="fa fa-check"></i> Agent payout tracking</li>
+                        <li><i class="fa fa-check"></i> Digital Shop
+                            <svg data-toggle="tooltip" data-placement="top" title="Sell online, order management"
+                                xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="18" height="18"
+                                viewBox="0 0 48 48">
+                                <path fill="#2196f3"
+                                    d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z">
+                                </path>
+                                <path fill="#fff"
+                                    d="M22 22h4v11h-4V22zM26.5 16.5c0 1.379-1.121 2.5-2.5 2.5s-2.5-1.121-2.5-2.5S22.621 14 24 14 26.5 15.121 26.5 16.5z">
+                                </path>
+                            </svg>
+                        </li>
+                        <li><i class="fa fa-check"></i> Email, sms, whatsapp tempaltes</li>
+                        <li><i class="fa fa-check"></i> Outbound call integration</li>
+                        <li><i class="fa fa-check"></i> Whatsapp integration</li>
+                        <li><i class="fa fa-check"></i> SMS integration</li>
+                        <li><i class="fa fa-check"></i> Multiple Business</li>
+                        <li><i class="fa fa-check"></i> Staff Attendance, Leaves</li>
+
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul class="list-unstyled" style="font-size: 13px;">
+
+                        <li><i class="fa fa-check"></i> Bulk email smtp integration</li>
+                        <li><i class="fa fa-check"></i> Lead Create APIs, Zapier, Pabbly
+                            <svg data-toggle="tooltip" data-placement="top"
+                                title="Integrate leads using APIs. Connect with other systems using API or Zapier, Pabbly."
+                                xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="18" height="18"
+                                viewBox="0 0 48 48">
+                                <path fill="#2196f3"
+                                    d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z">
+                                </path>
+                                <path fill="#fff"
+                                    d="M22 22h4v11h-4V22zM26.5 16.5c0 1.379-1.121 2.5-2.5 2.5s-2.5-1.121-2.5-2.5S22.621 14 24 14 26.5 15.121 26.5 16.5z">
+                                </path>
+                            </svg>
+                        </li>
+                        <li><i class="fa fa-check"></i> Export data</li>
+                        <li><i class="fa fa-check"></i> Webinar registration</li>
+                        <li><i class="fa fa-check"></i> Web to Lead form builder</li>
+                        <li><i class="fa fa-check"></i> Custom lead/student attributes</li>
+                        <li><i class="fa fa-check"></i> Custom lead/student/application status</li>
+                        <li><i class="fa fa-check"></i> Custom documents, study levels</li>
+
+
+
+
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- End Container -->
+    </section>
+
+    <section class="work-process bg-light">
+        <div class="container text-center pb-5">
+            <div class="row">
+                <div class="col-md-4 my-3 my-md-0">
+
+                </div>
+                <div class="col-md-4 my-3 my-md-0">
+                    <img style="height:40px;padding-right:90px;" src="https://www.eductrl.com/images/sm/paypal.png" alt="paypal"
+                        class="img-fluid">
+                    
+                </div>
+                <div class="col-md-4 my-3 my-md-0">
+                    <img style="height:40px;" src="https://www.eductrl.com/images/sm/razorpay.png" alt="razorpay"
+                        class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+        <a href="https://wa.me/919242137092?text=Hi, I'm Interested in EduCtrl"
+            className="fixed-bottomRight  whatsappIcon" >
+            <img src="https://www.eductrl.com/images/whatsapp.png" alt="icon" class="fixed-bottomRight whatsappIcon" loading="lazy">
+        </a>
+                    <footer id="tw-footer" class="tw-footer">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-12 col-lg-4">
+            <div class="tw-footer-info-box">
+               <a href="https://www.eductrl.com" class="footer-logo">
+                  <img src="https://www.eductrl.com/images/eductrl-logo.png" alt="EduCtrl" style="width:220px;">
+               </a>
+               <p class="footer-info-text" style="font-size: 14px;line-height: 24px;">
+                  Running an Education Consultancy/ Coaching business involves various activities. You need a good & powerful software system to manage your business more efficiently & provide good services to your students.<br /><br />EduCtrl Software is the perfect, affordable solution for your business.
+               </p>
+               <div class="footer-social-link">
+                  <h3>Follow us</h3>
+                  <ul>
+                     <li><a target="_blank" href="https://fb.me/eductrlcrm"><i class="fa fa-facebook"></i></a></li>
+                     <li><a target="_blank" href="https://x.com/eductrlcrm" aria-label="X (Twitter)"><span class="x-logo-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="1em" height="1em"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></span></a></li>
+                     <!-- <li><a href="#"><i class="fa fa-google-plus"></i></a></li>-->
+                     <li><a target="_blank" href="https://www.linkedin.com/company/eductrl/"><i class="fa fa-linkedin"></i></a></li>
+                     <li><a href="https://www.instagram.com/eductrlcrm"><i class="fa fa-instagram"></i></a></li>
+                  </ul>
+               </div>
+               <!-- End Social link -->
+            </div>
+            <!-- End Footer info -->
+
+         </div>
+         <!-- End Col -->
+         <div class="col-md-12 col-lg-8">
+            <div class="row mt-30">
+               <div class="col-md-6">
+                  <div class="contact-us">
+                     <div class="contact-icon">
+                        <i class="icon icon-envelope3"></i>
+                     </div>
+                     <!-- End contact Icon -->
+                     <div class="contact-info">
+                        <h3>info@eductrl.com</h3>
+                        <p>Mail Us</p>
+                     </div>
+                     <!-- End Contact Info -->
+                  </div>
+                  <!-- End Contact Us -->
+               </div>
+               <!-- End Col -->
+               <div class="col-md-6">
+                  <div class="contact-us contact-us-last">
+                     <div class="contact-icon">
+                        <i class="icon icon-phone3"></i>
+                     </div>
+                     <!-- End contact Icon -->
+                     <div class="contact-info">
+                        <h3 style="display:flex;">+91-9242137092</h3>
+                        <p style="display: flex;">Call or Whatsapp<br>
+                         </p>
+                       <p style="display:flex;justify-content: center;">
+                          <a class="footer-icon"  href="https://wa.me/+919242137092"><i class="fa fa-whatsapp" aria-hidden="true" style="    font-size: 30px;"></i></a> &nbsp;&nbsp;&nbsp;
+                           <a class="footer-icon" href="tel:+919242137092"><i class="fa fa-phone-square" aria-hidden="true" style="    font-size: 30px;"></i></a>
+                       </p>
+                     </div>
+                     <!-- End Contact Info -->
+                  </div>
+                  <!-- End Contact Us -->
+               </div>
+              
+               <!-- End Col -->
+                </div>
+
+               
+            <!-- End Contact Row -->
+            <div class="row">
+               <div class="col-md-12 col-lg-6">
+                  <div class="footer-widget footer-left-widget">
+                     <div class="section-heading">
+                        <h3>Useful Links</h3>
+                        <span class="animate-border border-black"></span>
+                     </div>
+                     <ul>
+                        <li><a href="https://www.eductrl.com/consultancy">Consultancy CRM</a></li>
+                        <li><a href="https://www.eductrl.com/coaching">Coaching CRM</a></li>
+                        <li><a href="https://www.eductrl.com/eductrl-cms">Website Builder</a></li>
+                        <li><a href="https://www.eductrl.com/pricing">Pricing</a></li>
+                        <li><a href="https://www.eductrl.com/faq">FAQ</a></li>
+                     </ul>
+                     <ul>
+                        <li><a href="https://www.eductrl.com/about">About Us</a></li>
+                        <li><a href="https://www.eductrl.com/blog">Blog</a></li>
+                        <li><a href="https://www.eductrl.com/contact">Contact us</a></li>
+                        <li><a href="https://www.eductrl.com/affiliates">Affiliates</a></li>
+                        <li><a href="https://www.eductrl.com/offers">Offers</a></li>
+                     </ul>
+                  </div>
+                  <!-- End Footer Widget -->
+               </div>
+               <!-- End col -->
+               <div class="col-md-12 col-lg-6">
+                  <div class="footer-widget">
+                     <div class="section-heading">
+                        <h3>Subscribe</h3>
+                        <span class="animate-border border-black"></span>
+                     </div>
+                     <p style="">Don't miss to subscribe to our news feeds, kindly fill the form below.</p>
+                     <form action="#" onsubmit="return false;">
+                        <div class="form-row">
+                           <div class="col tw-footer-form">
+                              <input id="newsletter_email" type="email" class="form-control" placeholder="Email Address">
+                              <button id="newsletter-form-btn" type="submit"><i class="fa fa-send"></i></button>
+                           </div>
+                        </div>
+                     </form>
+                     <!-- End form -->
+                  </div>
+                  <!-- End footer widget -->
+               </div>
+               <!-- End Col -->
+               <div class="col-md-12 col-lg-6 mt-4">
+                  <div class="footer-widget footer-left-widget">
+                     <a href="https://www.eductrl.com/study-abroad">Study Abroad</a> | 
+                     <a href="https://www.eductrl.com/education-tech">Education Tech</a>
+                  </div>
+                  <!-- End Footer Widget -->
+               </div>
+            </div>
+            <!-- End Row -->
+         </div>
+         <!-- End Col -->
+      </div>
+      <!-- End Widget Row -->
+   </div>
+   <!-- End Contact Container -->
+
+   <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <span>&copy; 2026, All Right Reserved. SASH INFO SERVICES PVT LTD. GSTN: 29AATCS8855R1ZR</span>
+            </div>
+            <!-- End Col -->
+            <div class="col-md-5">
+                <div class="copyright-menu">
+                    <ul>
+                        <li><a href="https://www.eductrl.com/privacy-policy">Privacy Policy</a></li>
+                        <li><a href="https://www.eductrl.com/refund-policy">Refund Policy</a></li>
+                        <li><a href="https://www.eductrl.com/terms-of-service">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- End col -->
+        </div>
+        <!-- End Row -->
+    </div>
+    <!-- End Copyright Container -->
+</div>
+<!-- End Copyright -->
+
+<!-- Back to top -->
+<div id="back-to-top" class="back-to-top">
+    <button class="btn btn-dark" title="Back to Top">
+        <i class="fa fa-angle-up" style="color:#fff;"></i>
+    </button>
+</div>
+<!-- End Back to top -->
+</footer>
+
+            </div><!-- #app -->
+
+
+    <!-- Scripts -->
+    
+    <script src="https://www.eductrl.com/assets/plugins/jquery/jquery.min.js" defer></script>
+    <script src="https://www.eductrl.com/assets/plugins/bootstrap/js/popper.min.js" defer></script>
+    <script src="https://www.eductrl.com/assets/plugins/bootstrap/js/bootstrap.min.js" defer></script>
+    <script src="https://www.eductrl.com/assets/plugins/sticky-kit-master/dist/sticky-kit.min.js" defer></script>
+    <script src="https://www.eductrl.com/assets/plugins/sparkline/jquery.sparkline.min.js" defer></script>
+    <script src="https://www.eductrl.com/assets/plugins/bootstrap-datepicker/bootstrap-datepicker.min.js" defer></script>
+    <script src="https://www.eductrl.com/assets/plugins/select2/dist/js/select2.full.min.js" defer></script>
+    <script src="https://www.eductrl.com/assets/plugins/raphael/raphael-min.js" defer></script>
+    <script src="https://www.eductrl.com/assets/plugins/morrisjs/morris.min.js" defer></script>
+    <script src="https://www.eductrl.com/assets/plugins/styleswitcher/jQuery.style.switcher.js" defer></script>
+    <script src="https://www.eductrl.com/js/owl-carousel.2.3.0.min.js" defer></script>
+    <script src="https://www.eductrl.com/js/waypoints.min.js" defer></script>
+    <script src="https://www.eductrl.com/js/jquery.counterup.min.js" defer></script>
+    <script src="https://www.eductrl.com/js/jquery.magnific.popup.js" defer></script>
+    <script src="https://www.eductrl.com/js/wow.min.js" defer></script>
+    <script src="https://www.eductrl.com/js/smoothscroll.js" defer></script>
+    <script src="https://www.eductrl.com/js/main.js" defer></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous">
+    </script>
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
+        function changeCurrency() {
+            $('.usDollarAmount').toggle();
+            $('.inrAmount').toggle();
+        }
+
+        function usersClick(n) {
+            switch (n) {
+                case "tenusers":
+                    document.getElementById("userDollarAmountone").innerHTML = "479";
+                    document.getElementById("userinrAmountone").innerHTML = "39,999";
+                    document.getElementById("userDollarAmounttwo").innerHTML = "599";
+                    document.getElementById("userinrAmounttwo").innerHTML = "49,999";
+                    document.getElementById("userDollarAmountthree").innerHTML = "719";
+                    document.getElementById("userinrAmountthree").innerHTML = "59,999";
+                    break;
+                case "twentyusers":
+                    document.getElementById("userDollarAmountone").innerHTML = "659";
+                    document.getElementById("userinrAmountone").innerHTML = "54,999";
+                    document.getElementById("userDollarAmounttwo").innerHTML = "779";
+                    document.getElementById("userinrAmounttwo").innerHTML = "64,999";
+                    document.getElementById("userDollarAmountthree").innerHTML = "899";
+                    document.getElementById("userinrAmountthree").innerHTML = "74,999";
+                    break;
+                default:
+                    document.getElementById("userDollarAmountone").innerHTML = "779";
+                    document.getElementById("userinrAmountone").innerHTML = "64,999";
+                    document.getElementById("userDollarAmounttwo").innerHTML = "899";
+                    document.getElementById("userinrAmounttwo").innerHTML = "74,999";
+                    document.getElementById("userDollarAmountthree").innerHTML = "1,019";
+                    document.getElementById("userinrAmountthree").innerHTML = "84,999";
+                    break
+            }
+        }
+
+        function updateTooltip(elementId, amount, duration) {
+            let tooltipText = \`Total: $\${(amount * duration).toFixed(2)} USD per user for \${duration} months\`;
+
+            $('[data-bs-custom-class="' + elementId + '"]').tooltip("dispose");
+            $('[data-bs-custom-class="' + elementId + '"]').tooltip({
+                title: tooltipText,
+                html: true,
+            });
+        }
+
+        function updateInrTooltip(elementId, amount, duration) {
+            let tooltipText = \`Total: &#x20B9; \${(amount * duration).toFixed(2)} INR per user for \${duration} months\`;
+
+            $('[data-bs-custom-class="' + elementId + '"]').tooltip("dispose");
+            $('[data-bs-custom-class="' + elementId + '"]').tooltip({
+                title: tooltipText,
+                html: true,
+            });
+        }
+
+        function durationClick(m) {
+            let duration, growthAmount, proAmount, enterpriseAmount, inrgrowAmount, inrproAmount, inrenterpriseAmount;
+
+            switch (m) {
+                case "threemonths":
+                    duration = 3;
+                    growthAmount = 12;
+                    proAmount = 17;
+                    enterpriseAmount = 21.60;
+                    inrgrowAmount = 999;
+                    inrproAmount = 1399;
+                    inrenterpriseAmount = 1799;
+                    break;
+                case "sixmonths":
+                    duration = 6;
+                    growthAmount = 9;
+                    proAmount = 12.75;
+                    enterpriseAmount = 16.20;
+                    inrgrowAmount = 749;
+                    inrproAmount = 1049;
+                    inrenterpriseAmount = 1349;
+                    break;
+                case "oneyear":
+                    duration = 12;
+                    growthAmount = 6;
+                    proAmount = 8.50;
+                    enterpriseAmount = 10.80;
+                    inrgrowAmount = 499;
+                    inrproAmount = 699;
+                    inrenterpriseAmount = 899;
+                    break;    
+                default:
+                    duration = 24;
+                    growthAmount = 5;
+                    proAmount = 7.80;
+                    enterpriseAmount = 9.90;
+                    inrgrowAmount = 449;
+                    inrproAmount = 649;
+                    inrenterpriseAmount = 829;
+                    break;
+            }
+
+            // Update values
+            document.getElementById("usDollarAmountone").innerHTML = growthAmount;
+            document.getElementById("inrAmountone").innerHTML = inrgrowAmount;
+            document.getElementById("usDollarAmounttwo").innerHTML = proAmount;
+            document.getElementById("inrAmounttwo").innerHTML = inrproAmount;
+            document.getElementById("usDollarAmountthree").innerHTML = enterpriseAmount;
+            document.getElementById("inrAmountthree").innerHTML = inrenterpriseAmount;
+
+            // Update Tooltips for USD and INR
+            updateTooltip("usdgrowth-tooltip", growthAmount, duration);
+            updateTooltip("usdpro-tooltip", proAmount, duration);
+            updateTooltip("usdenterprise-tooltip", enterpriseAmount, duration);
+
+            updateInrTooltip("inrgrowth-tooltip", inrgrowAmount, duration);
+            updateInrTooltip("inrpro-tooltip", inrproAmount, duration);
+            updateInrTooltip("inrenterprise-tooltip", inrenterpriseAmount, duration);
+        }
+
+        $(function() {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+
+<script src="https://www.google.com/recaptcha/api.js?render=6LdkqroeAAAAABvXU2EphNeoH6QPSheI_ZTPqMmH"></script>
+
+<script>
+    (function initRecaptchaForms() {
+        function run() {
+            if (typeof jQuery === 'undefined') {
+                setTimeout(run, 50);
+                return;
+            }
+            jQuery(document).ready(function() {
+        var sitekey = '6LdkqroeAAAAABvXU2EphNeoH6QPSheI_ZTPqMmH';
+
+        function validateEmail(email) {
+            if (email.length < 6)
+                return false;
+            var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,6})?$/;
+            return emailReg.test(email);
+        }
+
+        $('#contact-form-btn').click(function() {
+
+            grecaptcha.ready(function() {
+                grecaptcha.execute(sitekey, {
+                    action: 'contact_submit'
+                }).then(function(token) {
+
+                    var name = $("#c_name").val();
+                    var email = $("#c_email").val();
+                    var phone = $("#c_phone").val();
+                    var subject = $("#c_subject").val();
+                    var message = $("#c_message").val();
+
+                    $("#returnmessage").empty(); // To empty previous error/success message.
+                    // Checking for blank fields.
+                    if (name == '' || email == '' || phone == '' || message == '') {
+                        alert("Please fill all mandatory fields");
+                    } else {
+                        // Returns successful data submission message when the entered information is stored in database.
+                        $("#contact-form-btn").attr("disabled", true);
+                        $("#contact-form-btn").val('Sending...');
+                        $.post("https://www.eductrl.com/contact/send", {
+                            c_name: name,
+                            c_email: email,
+                            c_phone: phone,
+                            c_subject: subject,
+                            c_message: message,
+                            source: 'contact form',
+                            captcha_token: token,
+                            _token: "uIEfUaYmUr2jPEXzA39gA4gVEOjTrkZKMBty4zVc"
+                        }, function(data) {
+                            $("#contact-form-btn").attr("disabled", false);
+                            $("#contact-form-btn").val('SEND');
+                            if (data == '1') {
+                                $("#contact-form").trigger("reset");
+                                $("#returnmessage").html("<span style='color:#047c12;'>Your message is sent!</span>");
+                            } else {
+                                $("#returnmessage").html("<span style='color:red;'>Error occured. Please use alternative contact method.</span>");
+                            }
+                        });
+                    }
+
+                });
+            });
+        });
+
+        $('#eductrl-cms-form-btn').click(function() {
+            grecaptcha.ready(function() {
+                grecaptcha.execute(sitekey, {
+                    action: 'eductrl_cms_submit'
+                }).then(function(token) { 
+
+                    var name = $("#form_name").val();
+                    var email = $("#form_email").val();
+                    var phone = $("#form_phone").val();
+                    var message = $("#form_message").val();
+
+                    $("#l").empty(); // To empty previous error/success message.
+                    // Checking for blank fields.
+                    if (name == '' || email == '' || phone == '' || message == '') {
+                        alert("Please fill all mandatory fields");
+                    } else {
+                        // Returns successful data submission message when the entered information is stored in database.
+                        $("#eductrl-cms-form-btn").attr("disabled", true);
+                        $("#eductrl-cms-form-btn").val('Sending...');
+                        $.post("https://www.eductrl.com/eductrl-cms/send-message", {
+                            form_name: name,
+                            form_email: email,
+                            form_phone: phone,
+                            form_message: message,
+                            source: 'eductrl_cms_form',
+                            captcha_token: token,
+                            _token: "uIEfUaYmUr2jPEXzA39gA4gVEOjTrkZKMBty4zVc"
+                        }, function(data) {
+                            $("#eductrl-cms-form-btn").attr("disabled", false);
+                            $("#eductrl-cms-form-btn").val('Send Message');
+                            if (data == '1') {
+                                $("#eductrl-form").trigger("reset");
+                                $("#returnmessage1").html("<span style='color:#fff;'>Your message is sent!</span>");
+                            } else {
+                                $("#returnmessage1").html("<span style='color:red;'>Error occured. Please use alternative contact method.</span>");
+                            }
+                        });
+                    }
+
+                });
+            });
+        });
+
+
+
+        $('#enquiry-form-submit').click(function() {
+            const thankYouDiv = document.getElementById('thankYouDiv');
+            const formDiv = document.getElementById('formDiv');
+            grecaptcha.ready(function() {
+                grecaptcha.execute(sitekey, {
+                    action: 'enquiry_submit'
+                }).then(function(token) {
+
+                    var name = $("#name").val();
+                    var email = $("#email").val();
+                    var phone = $("#phone").val();
+                    var business = $("#business").val();
+                    var city = $("#city").val();
+                    var country = $("#country").val();
+                    var interested_in = $("#interested_in").val();
+                    var message = $("#message").val();
+
+                    // Checking for blank fields.
+                    if (name == '' || email == '' || phone == '' || business == '' || city == '' || country == '' || interested_in == '') {
+                        //console.log("Form values:" + name + "|" + email + "|" + phone + "|" + business + "|" + city);
+                        alert('Please fill all required fields');
+                    } else {
+                        // Returns successful data submission message when the entered information is stored in database.
+                        $("#enquiry-form-submit").attr("disabled", true);
+                        $("enquiry-form-submit").val('Sending...');
+                        $.post("https://www.eductrl.com/send-enquiry", {
+                            c_name: name,
+                            c_email: email,
+                            c_phone: phone,
+                            c_business: business,
+                            c_city: city,
+                            c_country: country,
+                            c_interested_in: interested_in,
+                            c_message: message,
+                            source: 'enquiry form',
+                            captcha_token: token,
+                            _token: "uIEfUaYmUr2jPEXzA39gA4gVEOjTrkZKMBty4zVc",
+                        }, function(data) {
+                            if (data == '1') {
+                                $("#enquiry-form").trigger("reset"); // To reset form fields on success.
+                                // formDiv.style.display = 'none';
+                                // thankYouDiv.style.display = 'block';
+
+                                // ✅ Redirect to a success page after short delay (optional)
+                                window.location.href = "https://www.eductrl.com/thank-you-req-demo";
+                            } else {
+                                $("#enquiry-form").trigger("reset"); // To reset form fields on success.
+                                $('#enquiryModal').modal('toggle');
+                                alert("Error occured. Please use alternative contact method.");
+                            }
+                        });
+                    }
+
+                });
+            });
+        });
+
+
+
+        $('#newsletter-form-btn').click(function() {
+
+            grecaptcha.ready(function() {
+                grecaptcha.execute(sitekey, {
+                    action: 'newsletter_submit'
+                }).then(function(token) {
+
+                    var email = $("#newsletter_email").val();
+
+                    // Checking for blank fields.
+                    if (email == '') {
+                        alert("Please enter email id");
+                    } else if (!validateEmail(email)) {
+                        alert("Please enter valid email id");
+                    } else {
+                        // Returns successful data submission message when the entered information is stored in database.
+                        $.post("https://www.eductrl.com/newsletter-subscribe", {
+                            c_email: email,
+                            source: 'newsletter form',
+                            captcha_token: token,
+                            _token: "uIEfUaYmUr2jPEXzA39gA4gVEOjTrkZKMBty4zVc"
+                        }, function(data) {
+                            if (data == '1') {
+                                $("#newsletter-form").trigger("reset");
+                                alert("Thanks! You have subscribed!");
+                            } else {
+                                alert("Oops! Something went wrong.");
+                            }
+                        });
+                    }
+
+                });
+            });
+        });
+
+
+
+            });
+        }
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', run);
+        } else {
+            run();
+        }
+    })();
+</script>
+
+            <!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M85SFMLP"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '607839048127874');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=607839048127874&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+	<script type="text/javascript">
+	_linkedin_partner_id = "7318036";
+	window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+	window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+	</script><script type="text/javascript">
+	(function(l) {
+	if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
+	window.lintrk.q=[]}
+	var s = document.getElementsByTagName("script")[0];
+	var b = document.createElement("script");
+	b.type = "text/javascript";b.async = true;
+	b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+	s.parentNode.insertBefore(b, s);})(window.lintrk);
+	</script>
+	<noscript>
+	<img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=7318036&fmt=gif" />
+	</noscript>
+
+	<script type="text/javascript">
+	var sc_project=12775076; 
+	var sc_invisible=1; 
+	var sc_security="9e105de8"; 
+	</script>
+	<script type="text/javascript"
+	src="https://www.statcounter.com/counter/counter.js"
+	async></script>
+	<noscript><div class="statcounter"><a title="web counter"
+	href="https://statcounter.com/" target="_blank"><img
+	class="statcounter"
+	src="https://c.statcounter.com/12775076/0/9e105de8/1/"
+	alt="web counter"
+	referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+
+
+	
+`;
+
+export function PricingCloneContent() {
+  return <div className="eductrl-clone-page" dangerouslySetInnerHTML={{ __html: normalizeCloneHtml(rawHtml) }} />;
+}

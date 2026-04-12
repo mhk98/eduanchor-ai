@@ -131,6 +131,10 @@ body.clone-drawer-open {
   margin-top: 16px;
 }
 
+.img-fluid {
+  width: 140px;
+  height: 60px;
+}
 @media (max-width: 640px) {
   .clone-demo-modal {
     width: min(94vw, 500px);
@@ -1428,6 +1432,44 @@ h4 {
   border-top: 1px solid #f1f5f9;
 }
 
+.home-clients-section {
+  padding: 34px 0 40px;
+  background: #ffffff;
+}
+
+.home-clients-shell {
+  text-align: center;
+}
+
+.home-clients-title {
+  margin: 0 0 28px;
+  color: #1b2d4f;
+  font-size: clamp(1.6rem, 2.2vw, 2.15rem);
+  font-weight: 700;
+}
+
+.home-clients-logos {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 26px;
+  align-items: center;
+}
+
+.home-client-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 84px;
+  padding: 12px 8px;
+}
+
+.home-client-logo img {
+  max-width: 100%;
+  max-height: 56px;
+  object-fit: contain;
+  filter: saturate(0.98);
+}
+
 .clients-row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1496,6 +1538,10 @@ h4 {
     grid-template-columns: 1fr 1fr;
   }
 
+  .home-clients-logos {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .classic-card-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1522,6 +1568,24 @@ h4 {
   .clients-row,
   .wave-band-grid {
     grid-template-columns: 1fr;
+  }
+
+  .home-clients-section {
+    padding: 28px 0 32px;
+  }
+
+  .home-clients-logos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .home-client-logo {
+    min-height: 70px;
+    padding: 10px 6px;
+  }
+
+  .home-client-logo img {
+    max-height: 48px;
   }
 
   .classic-hero-copy {
