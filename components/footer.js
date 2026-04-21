@@ -7,7 +7,11 @@ export function Footer() {
       <div className="container footer-grid">
         <div>
           <Link href="/" className="brand brand-footer">
-            <span className="brand-mark">EC</span>
+            <img
+              className="brand-logo"
+              src="/images/logo.png"
+              alt="EduAnchor"
+            />
             <span>
               <strong>EduAnchor</strong>
               <small>Affordable CRM for education teams</small>
@@ -34,7 +38,7 @@ export function Footer() {
         <div>
           <h4>Contact</h4>
           <div className="footer-contact">
-            <p>info@eductrl.com</p>
+            <p>info@eduanchor.ai</p>
             <p>+91-9242137092</p>
             <p>Bengaluru, Karnataka, India</p>
           </div>

@@ -11,7 +11,7 @@ export function Header() {
     <header className="site-header">
       <div className="container header-inner">
         <Link href="/" className="brand">
-          <span className="brand-mark">EC</span>
+          <img className="brand-logo" src="/images/logo.png" alt="EduAnchor" />
           <span>
             <strong>EduAnchor</strong>
             <small>Study Abroad Consultant CRM</small>

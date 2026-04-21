@@ -42,7 +42,7 @@ const rawHtml = String.raw`
                                        </div>
                                        <!-- End contact Icon -->
                                        <div class="contact-info">
-                                           <h3>info@eductrl.com</h3>
+                                           <h3>info@eduanchor.ai</h3>
                                            <p style="color:#000;">Drop us email</p>
                                        </div>
                                        <!-- End Contact Info -->
@@ -439,7 +439,7 @@ const rawHtml = String.raw`
             <div class="col-md-8 text-left">
                <div class="top-contact-info">                 
                   <span><i class="icon icon-phone3"></i>+91-924-213-7092</span>
-                <span><i class="icon icon-envelope"></i>info@eductrl.com</span>
+                <span><i class="icon icon-envelope"></i>info@eduanchor.ai</span>
                </div>
             </div>
             <!-- Col End -->
@@ -553,8 +553,8 @@ const rawHtml = String.raw`
                                     <a href="tel:+919242137092" class="mx-1 p-1 text-dark" title="Call">
                                         <b class="fa fa-phone"></b> +91-9242137092
                                     </a>
-                                    <a href="mailto:info@eductrl.com" class="text-dark p-1 mx-1" title="Email">
-                                        <b class="fa fa-envelope"></b> info@eductrl.com
+                                    <a href="mailto:info@eduanchor.ai" class="text-dark p-1 mx-1" title="Email">
+                                        <b class="fa fa-envelope"></b> info@eduanchor.ai
                                     </a>
                                 </div>
                             </div>
@@ -1101,7 +1101,7 @@ const rawHtml = String.raw`
                      </div>
                      <!-- End contact Icon -->
                      <div class="contact-info">
-                        <h3>info@eductrl.com</h3>
+                        <h3>info@eduanchor.ai</h3>
                         <p>Mail Us</p>
                      </div>
                      <!-- End Contact Info -->
@@ -1530,5 +1530,10 @@ const rawHtml = String.raw`
 `;
 
 export function ConsultancyCloneContent() {
-  return <div className="eductrl-clone-page" dangerouslySetInnerHTML={{ __html: normalizeCloneHtml(rawHtml) }} />;
+  return (
+    <div
+      className="eductrl-clone-page"
+      dangerouslySetInnerHTML={{ __html: normalizeCloneHtml(rawHtml) }}
+    />
+  );
 }

@@ -42,7 +42,7 @@ const rawHtml = String.raw`
                                        </div>
                                        <!-- End contact Icon -->
                                        <div class="contact-info">
-                                           <h3>info@eductrl.com</h3>
+                                           <h3>info@eduanchor.ai</h3>
                                            <p style="color:#000;">Drop us email</p>
                                        </div>
                                        <!-- End Contact Info -->
@@ -439,7 +439,7 @@ const rawHtml = String.raw`
             <div class="col-md-8 text-left">
                <div class="top-contact-info">                 
                   <span><i class="icon icon-phone3"></i>+91-924-213-7092</span>
-                <span><i class="icon icon-envelope"></i>info@eductrl.com</span>
+                <span><i class="icon icon-envelope"></i>info@eduanchor.ai</span>
                </div>
             </div>
             <!-- Col End -->
@@ -553,8 +553,8 @@ const rawHtml = String.raw`
                                     <a href="tel:+919242137092" class="mx-1 p-1 text-dark" title="Call">
                                         <b class="fa fa-phone"></b> +91-9242137092
                                     </a>
-                                    <a href="mailto:info@eductrl.com" class="text-dark p-1 mx-1" title="Email">
-                                        <b class="fa fa-envelope"></b> info@eductrl.com
+                                    <a href="mailto:info@eduanchor.ai" class="text-dark p-1 mx-1" title="Email">
+                                        <b class="fa fa-envelope"></b> info@eduanchor.ai
                                     </a>
                                 </div>
                             </div>
@@ -655,7 +655,7 @@ const rawHtml = String.raw`
                   <div class="tw-contact-box" style="    margin-top:30px;">
                      <div class="contact-heading" style="margin-bottom: 8px;">
                         
-                        <h3 style="font-size:23px;"><i class="fa fa-map-marker" style="    color: #007eff;"></i> Our Location</h3>
+                        <h3 style="font-size:23px;"><i class="fa fa-map-marker" style="    color: #7b2ff7;"></i> Our Location</h3>
                      </div>
                      <!-- End Content Heading -->
                      <div class="contact-info-box-content">
@@ -674,7 +674,7 @@ const rawHtml = String.raw`
                   <div class="tw-contact-box">
                      <div class="contact-heading" style="margin-bottom: 8px;">
                         
-                        <h3 style="font-size:23px;"><i class="fa fa-phone" style="color: #007eff;"></i> Phone/Whatsapp</h3>
+                        <h3 style="font-size:23px;"><i class="fa fa-phone" style="color: #7b2ff7;"></i> Phone/Whatsapp</h3>
                      </div>
                      <!-- End Content Heading -->
                      <div class="contact-info-box-content">
@@ -693,11 +693,11 @@ const rawHtml = String.raw`
                   <div class="tw-contact-box">
                      <div class="contact-heading" style="margin-bottom: 8px;">
                         
-                        <h3 style="font-size:23px;"> <i class="fa fa-envelope" style="    color: #007eff;"></i> Email</h3>
+                        <h3 style="font-size:23px;"> <i class="fa fa-envelope" style="    color: #7b2ff7;"></i> Email</h3>
                      </div>
                      <!-- End Content Heading -->
                      <div class="contact-info-box-content">
-                        <p>info@eductrl.com</p>
+                        <p>info@eduanchor.ai</p>
                      </div>
                      <!-- End content info box -->
                   </div>
@@ -1109,5 +1109,10 @@ const rawHtml = String.raw`
 `;
 
 export function ContactCloneContent() {
-  return <div className="eductrl-clone-page" dangerouslySetInnerHTML={{ __html: normalizeCloneHtml(rawHtml) }} />;
+  return (
+    <div
+      className="eductrl-clone-page"
+      dangerouslySetInnerHTML={{ __html: normalizeCloneHtml(rawHtml) }}
+    />
+  );
 }
