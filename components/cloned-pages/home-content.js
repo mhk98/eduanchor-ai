@@ -27,7 +27,7 @@ const rawHtml = String.raw`
                                        </div>
                                        <!-- End contact Icon -->
                                        <div class="contact-info">
-                                           <h3>+91-924-213-7092</h3>
+                                           <h3>+8801518301098</h3>
                                            <p style="color:#000;">Give us a call</p>
                                        </div>
                                        <!-- End Contact Info -->
@@ -438,7 +438,7 @@ const rawHtml = String.raw`
          <div class="row">
             <div class="col-md-8 text-left">
                <div class="top-contact-info">                 
-                  <span><i class="icon icon-phone3"></i>+91-924-213-7092</span>
+                  <span><i class="icon icon-phone3"></i>+8801518301098</span>
                 <span><i class="icon icon-envelope"></i>info@eduanchor.ai</span>
                </div>
             </div>
@@ -550,8 +550,8 @@ const rawHtml = String.raw`
                             <hr>
                             <div class="d-flex flex-column align-items-center">
                                 <div class="contact-buttons justify-content-center mb-2 nav-link">
-                                    <a href="tel:+919242137092" class="mx-1 p-1 text-dark" title="Call">
-                                        <b class="fa fa-phone"></b> +91-9242137092
+                                    <a href="tel:+8801518301098" class="mx-1 p-1 text-dark" title="Call">
+                                        <b class="fa fa-phone"></b> +8801518301098
                                     </a>
                                     <a href="mailto:info@eduanchor.ai" class="text-dark p-1 mx-1" title="Email">
                                         <b class="fa fa-envelope"></b> info@eduanchor.ai
@@ -1358,7 +1358,7 @@ const rawHtml = String.raw`
     <!-- End container -->
 </section>
 
-        <a href="https://wa.me/919242137092?text=Hi, I'm Interested in EduCtrl"
+        <a href="https://wa.me/8801518301098?text=Hi, I'm Interested in EduCtrl"
             className="fixed-bottomRight  whatsappIcon" >
             <img src="https://www.eductrl.com/images/whatsapp.png" alt="icon" class="fixed-bottomRight whatsappIcon" loading="lazy">
         </a>
@@ -1413,12 +1413,12 @@ const rawHtml = String.raw`
                      </div>
                      <!-- End contact Icon -->
                      <div class="contact-info">
-                        <h3 style="display:flex;">+91-9242137092</h3>
+                        <h3 style="display:flex;">+8801518301098</h3>
                         <p style="display: flex;">Call or Whatsapp<br>
                          </p>
                        <p style="display:flex;justify-content: center;">
-                          <a class="footer-icon"  href="https://wa.me/+919242137092"><i class="fa fa-whatsapp" aria-hidden="true" style="    font-size: 30px;"></i></a> &nbsp;&nbsp;&nbsp;
-                           <a class="footer-icon" href="tel:+919242137092"><i class="fa fa-phone-square" aria-hidden="true" style="    font-size: 30px;"></i></a>
+                          <a class="footer-icon"  href="https://wa.me/+8801518301098"><i class="fa fa-whatsapp" aria-hidden="true" style="    font-size: 30px;"></i></a> &nbsp;&nbsp;&nbsp;
+                           <a class="footer-icon" href="tel:+8801518301098"><i class="fa fa-phone-square" aria-hidden="true" style="    font-size: 30px;"></i></a>
                        </p>
                      </div>
                      <!-- End Contact Info -->

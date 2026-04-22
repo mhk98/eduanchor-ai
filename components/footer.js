@@ -39,7 +39,7 @@ export function Footer() {
           <h4>Contact</h4>
           <div className="footer-contact">
             <p>info@eduanchor.ai</p>
-            <p>+91-9242137092</p>
+            <p>+8801518301098</p>
             <p>Bengaluru, Karnataka, India</p>
           </div>
         </div>
