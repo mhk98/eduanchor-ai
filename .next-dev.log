@@ -81,3 +81,8 @@
  GET /_next/static/chunks/app/consultancy/page.js 404 in 281ms
  GET /_next/static/chunks/main-app.js?v=1776796679825 404 in 285ms
  GET /_next/static/chunks/app-pages-internals.js 404 in 280ms
+ ✓ Compiled in 1974ms (509 modules)
+ ✓ Compiled in 5.2s (1086 modules)
+ ○ Compiling / ...
+ ✓ Compiled / in 101.5s (512 modules)
+ GET / 200 in 114984ms
