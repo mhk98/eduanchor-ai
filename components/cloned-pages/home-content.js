@@ -631,8 +631,9 @@ const rawHtml = String.raw`
                     <div class="row justify-content-center align-items-center">
                         <div class="col-md-7 mt-3">
                             <div class="slider-content">
-                                <h1><span>All-in-One CRM</span> for Study Abroad Consultants</h1>
-                                <p>Manage leads, track student applications, automate follow-ups, and streamline your entire admission workflow — all in one powerful platform designed for study abroad consultancies.</p>
+                                <h1><span>All-in-One CRM</span> for Study Abroad Agencies</h1>
+                                <p>Easily manage your leads, student applications, and follow-ups in one place. Our system helps you handle the full admission process smoothly and save time.
+</p>
                                 <a href="https://www.eductrl.com/consultancy" class="btn btn-dark" style="margin-top: 10px;">See Features</a>
                                 <a href="#" class="btn btn-outline" data-toggle="modal" data-target="#enquiryModal" style="margin-top: 10px;">Request Demo</a>
                             </div>
@@ -674,10 +675,9 @@ const rawHtml = String.raw`
         <div class="row text-center">
             <div class="col section-heading">
                 <h2 class="wow fadeInUp" data-wow-duration="0.6s" data-wow-delay=".1s">
-                    <span>Study Abroad</span> CRM
-                    <small>EduCtrl is a feature-rich <strong>CRM for Higher Education Consultants</strong> to manage every aspect
-                        of Overseas Education Consultancy Business - from managing leads and tracking applications to providing personalized support and automating follow-ups. Now spend less time managing your business. Run your business
-                        efficiently, increase sales, Grow your Business with EduCtrl Software.</small>
+                    <span>Smart CRM for Study Abroad</span>
+                    <small>This CRM is built for education consultants to manage their daily tasks more easily.
+From handling leads to tracking applications and supporting students, everything is in one system. Work faster, stay organized, and grow your business.</small>
                 </h2>
                 <span class="animate-border ml-auto mr-auto tw-mt-20"></span>
             </div>
@@ -695,8 +695,7 @@ const rawHtml = String.raw`
                     <!-- Service icon end -->
                     <div class="service-content">
                         <h3>Student Management</h3>
-                        <p>Track student registrations, View student details, View overseas course preferences,
-                            Documents, University applications</p>
+                        <p>Keep all student information in one place. Track profiles, course interests, documents, and application progress.</p>
                         <!--   <a href="#" class="tw-readmore">Read More
                                  <i class="fa fa-angle-right"></i>
                               </a> -->
@@ -716,9 +715,8 @@ const rawHtml = String.raw`
                     </div>
                     <!-- Service Icon end-->
                     <div class="service-content">
-                        <h3>Student Documents</h3>
-                        <p>Self Service Portal for students to upload certificates and documents. 1-Click Download
-                            option for Admin/staff members.</p>
+                        <h3>Documents</h3>
+                        <p>Allow students to upload documents easily. Staff can view and download files anytime with just one click.</p>
                         <!--   <a href="#" class="tw-readmore">Read More
                                  <i class="fa fa-angle-right"></i>
                               </a> -->
@@ -739,8 +737,8 @@ const rawHtml = String.raw`
                     <!-- Service Icon End -->
                     <div class="service-content">
                         <h3>University Applications</h3>
-                        <p>Create & manage University applications as per student course, intake preferences. Messaging,
-                            workflow/status tracking.</p>
+                        <p>Create and manage applications based on student choices. Track status, communicate, and control the full workflow.
+</p>
                         <!--   <a href="#" class="tw-readmore">Read More
                                  <i class="fa fa-angle-right"></i>
                               </a> -->
@@ -761,8 +759,8 @@ const rawHtml = String.raw`
                     <!-- Service icon end -->
                     <div class="service-content">
                         <h3>Lead Management</h3>
-                        <p>Our Education Software comes with features to Track leads, status, staff assignment. Track
-                            followups, next followup date. Broadcast message.</p>
+                        <p>Track new leads, assign tasks, and follow up on time. Send updates and manage communication easily.
+</p>
                         <!--   <a href="#" class="tw-readmore">Read More
                                  <i class="fa fa-angle-right"></i>
                               </a> -->
@@ -782,9 +780,8 @@ const rawHtml = String.raw`
                     </div>
                     <!-- Service icon end -->
                     <div class="service-content">
-                        <h3>Agents</h3>
-                        <p>Your agents can add students for Study abroad, upload documents. Agent management, commission
-                            tracking, commission payout.</p>
+                        <h3>Agents Management</h3>
+                        <p>Manage your agents and their activities. Track student entries, documents, and commission details.</p>
                         <!--   <a href="#" class="tw-readmore">Read More
                                  <i class="fa fa-angle-right"></i>
                               </a> -->
@@ -805,8 +802,7 @@ const rawHtml = String.raw`
                     <!-- Service icon end -->
                     <div class="service-content">
                         <h3>Course Finder</h3>
-                        <p>Manage University data, Course categories. Create, manage course details for overseas
-                            studies. Import course data. Search courses.</p>
+                        <p>Organize university courses and categories. Search, add, and manage course data quickly.</p>
                         <!--   <a href="#" class="tw-readmore">Read More
                                  <i class="fa fa-angle-right"></i>
                               </a> -->
@@ -826,8 +822,9 @@ const rawHtml = String.raw`
                     </div>
                     <!-- Service icon end -->
                     <div class="service-content">
-                        <h3>Invoices</h3>
-                        <p>Create Invoices for Universities, students, registration fee or ad-hoc invoice. Email, share invoices. Track payments.</p>
+                        <h3>Invoice System</h3>
+                        <p>Students can update their profile, upload documents, and check their application status anytime.
+</p>
                         <!--   <a href="#" class="tw-readmore">Read More
                                  <i class="fa fa-angle-right"></i>
                               </a> -->
@@ -848,9 +845,8 @@ const rawHtml = String.raw`
                     </div>
                     <!-- Service icon end -->
                     <div class="service-content">
-                        <h3>Self Service Portal</h3>
-                        <p>Students can manage profile, education qualification details, study abroad preferences, documents, application status.
-                        </p>
+                        <h3>Student Portal</h3>
+                        <p>Students can update their profile, upload documents, and check their application status anytime.</p>
                         <!--   <a href="#" class="tw-readmore">Read More
                                  <i class="fa fa-angle-right"></i>
                               </a> -->
@@ -871,7 +867,7 @@ const rawHtml = String.raw`
                     <!-- Service icon end -->
                     <div class="service-content">
                         <h3>Form Builder</h3>
-                        <p>Create web forms and share form links / embed form code on websites or display QR code to collect leads.</p>
+                        <p>Create custom forms and collect leads from your website. Share links or embed forms easily.</p>
                         <!--   <a href="#" class="tw-readmore">Read More
                                  <i class="fa fa-angle-right"></i>
                               </a> -->
@@ -891,7 +887,7 @@ const rawHtml = String.raw`
                     <!-- Service icon end -->
                     <div class="service-content">
                         <h3>Notifications</h3>
-                        <p>EduCtrl Overseas Consultancy Software sends Automated status update notifications by Email/ sms/ Whatsapp to students & staff</p>
+                        <p>Send automatic updates via email, SMS, or WhatsApp to keep students and staff informed.</p>
                         <!--   <a href="#" class="tw-readmore">Read More
                                  <i class="fa fa-angle-right"></i>
                               </a> -->
@@ -911,8 +907,8 @@ const rawHtml = String.raw`
                     </div>
                     <!-- Service Icon End -->
                     <div class="service-content">
-                        <h3>Chat</h3>
-                        <p>Team member chat, chat with students, and chat with AI agents. Keep everyone connected and collaborate in real time.</p>
+                        <h3>Chat System</h3>
+                        <p>Chat with team members and students in real-time. Improve communication and teamwork.</p>
                         <!--   <a href="#" class="tw-readmore">Read More
                                  <i class="fa fa-angle-right"></i>
                               </a> -->
@@ -932,8 +928,8 @@ const rawHtml = String.raw`
                     </div>
                     <!-- Service Icon End -->
                     <div class="service-content">
-                        <h3>Import Data</h3>
-                        <p>Import Leads & Students data from your existing software system. Export your data to csv files & import it.</p>
+                        <h3>Data Import</h3>
+                        <p>Import your old data easily into the system. Export data anytime when needed.</p>
                         <!--   <a href="#" class="tw-readmore">Read More
                                  <i class="fa fa-angle-right"></i>
                               </a> -->
@@ -964,7 +960,8 @@ const rawHtml = String.raw`
             <div class="col section-heading">
                 <h2 class="wow fadeInUp" data-wow-duration="0.6s" data-wow-delay=".1s">
                     <span>Coaching Management</span> Software
-                    <small>Take control of your Coaching Business. Manage your students' fees, online assessments, and coaching batches with ease. Spend less time managing your business. Run your business efficiently, increase sales, Grow your Coaching/Training Business with EduCtrl Software.</small>
+                    <small>Manage your coaching center easily. Handle student fees, classes, and online exams without hassle. Save time and grow your training business faster.
+</small>
                 </h2>
                 <span class="animate-border ml-auto mr-auto tw-mt-20"></span>
             </div>
@@ -982,9 +979,29 @@ const rawHtml = String.raw`
                     </div>
                     <!-- Service icon end -->
                     <div class="service-content">
+                        <h3>Training Institute CRM</h3>
+                        <p>Run your coaching business with ease. Manage student fees, online exams, and batch schedules from one platform. Save time, stay organized, and grow your training institute more efficiently.
+ </p>
+                        <!--   <a href="#" class="tw-readmore">Read More
+                                 <i class="fa fa-angle-right"></i>
+                              </a> -->
+                    </div>
+                    <!-- Service content end -->
+                </div>
+                <!-- Service box End -->
+            </div>
+            <div class="col-md-4 text-center wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".1s">
+                <div class="tw-service-box features-box" style="padding: 32px 30px 62px;margin-bottom:22px;">
+                    <div class="service-icon service-icon-bg-2 d-table">
+                        <div class="service-icon-inner d-table-cell">
+                            <img src="https://www.eductrl.com/images/icon/02.png" alt="" class="img-fluid" loading="lazy">
+                        </div>
+                    </div>
+                    <!-- Service icon end -->
+                    <div class="service-content">
                         <h3>Coaching Batch Management</h3>
-                        <p>Create batches, Configure course, branch/online/offline, class timings, dates, exams, assign
-                            trainer. Assign students to batch. </p>
+                        <p>Create and manage batches easily. Set class type (online/offline), schedule, and assign trainers. Add students to batches without hassle.
+</p>
                         <!--   <a href="#" class="tw-readmore">Read More
                                  <i class="fa fa-angle-right"></i>
                               </a> -->
@@ -1006,7 +1023,7 @@ const rawHtml = String.raw`
                     <!-- Service icon end -->
                     <div class="service-content">
                         <h3>Student Fees</h3>
-                        <p>Track student course fees, record fee received. Share fee invoice, download/share fee receipt invoice pdf.</p>
+                        <p>Manage student payments in one place. Track fees, record payments, and generate invoices. Download or share receipts anytime.</p>
                         <!--   <a href="#" class="tw-readmore">Read More
                              <i class="fa fa-angle-right"></i>
                           </a> -->
@@ -1027,7 +1044,8 @@ const rawHtml = String.raw`
                     <!-- Service Icon end-->
                     <div class="service-content">
                         <h3>Student Attendance</h3>
-                        <p>Trainer panel to update student attendance. Staff can view attendance. Absence reminder to students.</p>
+                        <p>Update and monitor student attendance easily. Trainers can mark attendance, and staff can review records. Send alerts for absences when needed.
+</p>
                         <!--   <a href="#" class="tw-readmore">Read More
                              <i class="fa fa-angle-right"></i>
                           </a> -->
@@ -1048,7 +1066,8 @@ const rawHtml = String.raw`
                     <!-- Service Icon End -->
                     <div class="service-content">
                         <h3>Student Panel</h3>
-                        <p>Self service portal for students to track course completion, rate trainer, take online assessment exams, view score.</p>
+                        <p>Students get their own dashboard to manage everything. Check progress, attend online exams, and view results anytime.
+</p>
                         <!--   <a href="#" class="tw-readmore">Read More
                              <i class="fa fa-angle-right"></i>
                           </a> -->
@@ -1069,7 +1088,7 @@ const rawHtml = String.raw`
                     <!-- Service icon end -->
                     <div class="service-content">
                         <h3>Trainer Panel</h3>
-                        <p>Track course progress. Update student attendance. Chat/message to batch students, group chat, individual chat.</p>
+                        <p>Trainers can track student progress and attendance. Communicate with students through chat or messages - group or individual.</p>
                         <!--   <a href="#" class="tw-readmore">Read More
                              <i class="fa fa-angle-right"></i>
                           </a> -->
@@ -1090,7 +1109,7 @@ const rawHtml = String.raw`
                     <!-- Service icon end -->
                     <div class="service-content">
                         <h3>Online Courses</h3>
-                        <p>Students can watch recorded courses associated with batch. Buy online courses and watch course videos.</p>
+                        <p>Provide access to recorded courses for students. Students can purchase and watch lessons anytime, from anywhere.</p>
                         <!--   <a href="#" class="tw-readmore">Read More
                              <i class="fa fa-angle-right"></i>
                           </a> -->
@@ -1133,9 +1152,10 @@ const rawHtml = String.raw`
             <div class="col text-center">
                 <div class="section-heading">
                     <h2>
-                        CRM For Education, EduCtrl Software <span>Use Cases</span>
+                        CRM Solutions for Education <span>Businesses</span>
                     </h2>
-                    <p>Find out how EduCtrl Education Information Management System can help your business grow</p>
+                    <p>Discover how our smart CRM system can help you manage and grow your education business more effectively.
+</p>
                     <span class="animate-border ml-auto mr-auto tw-mt-20 tw-mb-40"></span>
                 </div>
                 <!-- Heading End -->
@@ -1155,9 +1175,7 @@ const rawHtml = String.raw`
                             <h3 class="post-title">Study Abroad Consultancy CRM</h3>
                             <div class="entry-content">
                                 <p>
-                                    A sophisticated Education Consultancy CRM software is essential for running Overseas
-                                    education consultancy. It must reduce the effort involved in document management,
-                                    application management etc.
+                                    A complete solution for overseas education consultants. Manage student applications, documents, and communication in one place. Reduce manual work and improve efficiency.
                                 </p>
                                 <a href="https://www.eductrl.com/blog/study-abroad-consultancy-crm-eductrl" class="tw-readmore">Read More <i class="fa fa-angle-right"></i></a>
                             </div>
@@ -1181,9 +1199,7 @@ const rawHtml = String.raw`
                             <h3 class="post-title">Training/Coaching Institute CRM</h3>
                             <div class="entry-content">
                                 <p>
-                                    Do you run a Coaching Institute? If yes, then you would be glad to know that EduCtrl
-                                    software is here to help your business become more productive, efficient, and
-                                    well-organized.
+                                    Designed for coaching centers and training institutes. Manage students, classes, and daily operations with ease. Stay organized and improve your overall performance.
                                 </p>
                                 <a href="https://www.eductrl.com/blog/training-coaching-institute-crm-eductrl" class="tw-readmore">Read More <i class="fa fa-angle-right"></i></a>
                             </div>
@@ -1210,7 +1226,7 @@ const rawHtml = String.raw`
             <div class="col text-center">
                 <div class="section-heading wow fadeInUp" data-wow-duration="1.1s" data-wow-delay=".3s" style="visibility: visible; animation-duration: 1.1s; animation-delay: 0.3s; animation-name: fadeInUp;">
                     <h2 style="font-size:40px;">
-                        Everything you need, to run Education Consultancy Business
+                        Everything You Need to Run Your Education Consultancy
                     </h2>
                     <span class="animate-border ml-auto mr-auto tw-mt-20 tw-mb-40"></span>
                 </div>
@@ -1227,9 +1243,10 @@ const rawHtml = String.raw`
                     <h2 class="column-title" style=" font-weight: 600;font-size: 31px;">Student Management System</h2>
                     <span class="animate-border tw-mb-40 tw-mt-20"></span>
                     <h4>Handle End-to-End Student Journeys</h4>
-                    <p>A CRM system that gives you multi-channel communication, student support and student record access rolled into one. Easily onboard new students, coordinate better with registered students and retrieve essential documentation on demand for 360-degree student profile management.</p>
+                    <p>Manage the complete student journey from start to finish. Communicate with students easily, store all records in one place, and onboard new students without hassle. Keep everything organized with a full 360° student profile.
+</p>
                     <h4>Overseas Education Support</h4>
-                    <p>Aid students in making the best choice for overseas education by providing personalized course recommendations through an all-in-one student university application management platform, taking into account student course preferences and feedback.</p>
+                    <p>Help students choose the right study destination by offering personalized guidance. Track their preferences and manage applications smoothly through one system.</p>
                 </div>
                 <!-- About Bin End -->
             </div>
@@ -1250,11 +1267,12 @@ const rawHtml = String.raw`
                 <div class="tw-about-bin">
                     <h2 class="column-title" style=" font-weight: 600;font-size: 31px;">University Application Management</h2>
                     <span class="animate-border tw-mb-40 tw-mt-20"></span>
-                    <p>Leverage the extensive power of Eductrl CRM's Application Workflow Management to ensure a hassle-free application process.</p>
-                    <h4>Simplified and Customized Application Search</h4>
-                    <p>Our CRM makes it a breeze to view and manage overseas university applications using several custom filters like application id, student name, study country, course or application status.</p>
-                    <h4>Real-time Application Updates & Communication</h4>
-                    <p>Keep students informed about the latest actions required by updating applications easily based on the processing stage, helping you ensure a glitch-free and transparent university application process.</p>
+                    <h4>Smart & Easy Application Search</h4>
+                    <p>Quickly find any application using filters like student name, country, course, or status.
+Save time and manage data more efficiently.
+</p>
+                    <h4>Live Updates & Communication</h4>
+                    <p>Keep students informed at every step of the process. Update application status in real-time and ensure a clear, hassle-free experience.</p>
                 </div>
                 <!-- About Bin End -->
             </div>
@@ -1268,8 +1286,11 @@ const rawHtml = String.raw`
                 <div class="tw-about-bin">
                     <h2 class="column-title" style=" font-weight: 600;font-size: 31px;">Easy-to-Use Student Self-Service Portal</h2>
                     <span class="animate-border tw-mb-40 tw-mt-20"></span>
-                    <p>Our all-inclusive CRM is built with a suite of user-friendly features for both staff and students. EduControl is a unified platform for students who can view information about your services, along with student signup.</p>
-                    <p>As part of the self-service features, the CRM allows for simplified registration, update student profile details, 10th, 12th, graduation score & details, GRE/GMAT scores, English test scores, professional work experience details, Allows uploading related documents easily, Use course finder to search courses, View course recommendations, add study abroad program preferences, Track University application status.</p>
+                    <p>Our CRM comes with a simple and user-friendly portal for both students and staff. Students can access important information and manage their activities from one place.</p>
+                    <p>Students can easily create accounts, update their personal and academic details, and upload required documents without any hassle.
+</p>
+<p>They can also check test scores, add study preferences, and explore suitable courses. The system allows them to track their university application status anytime.
+
                 </div>
                 <!-- About Bin End -->
             </div>
@@ -1325,9 +1346,8 @@ const rawHtml = String.raw`
         <div class="row justify-content-center">
             <div class="col-sm-12 col-md-10 text-center wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
                 <h2 class="column-title">
-                    Interested in EduCtrl Software?
-                    <p style="margin-top:20px;color:#fff;">Contact us today to get a demo of our software. Our team
-                        will get back to you to discuss about your requirements.</p>
+Ready to Try Our Software?
+                    <p style="margin-top:20px;color:#fff;">Get in touch with us today and request a free demo. Our team will guide you and understand your needs.</p>
                 </h2>
                 <div class="row justify-content-center">
                     <div class="col-lg-4 col-md-12 no-padding">
@@ -1339,14 +1359,8 @@ const rawHtml = String.raw`
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-md-12">
-                        EduCtrl is a Management Software/Platform that focuses in solving the challenges faced by the
-                        Education Industry. It is a <strong>Education CRM as well as ERP Software</strong>. It is Cloud
-                        based, easy to manage software that empowers all stakeholders with centralized, insightful data.
-                        If you are looking for Overseas education consultant software, Institute management software or
-                        Coaching Center Management Software, Overseas Education Agent CRM, Study Abroad Consultant
-                        Software, Software for student management system, Online student management system, Education
-                        Agent management system, Immigration software, Visa Management Software, EduControl CRM is the best
-                        choice for you.
+                      <p>Our platform is designed to solve common challenges in the education industry. It works as both a CRM and management system to help you run your business smoothly. The system is cloud-based, easy to use, and gives you clear insights with all your data in one place. Whether you run a study abroad consultancy, coaching center, or training institute, this solution helps you manage everything efficiently.
+</p>
                     </div>
                 </div>
 
