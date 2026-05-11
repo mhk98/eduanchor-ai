@@ -689,7 +689,7 @@ From handling leads to tracking applications and supporting students, everything
                 <div class="tw-service-box features-box" style="padding: 32px 30px 62px;margin-bottom:22px;">
                     <div class="service-icon service-icon-bg-1 d-table">
                         <div class="service-icon-inner d-table-cell">
-                            <img src="https://www.eductrl.com/images/icon/01.png" alt="" class="img-fluid" loading="lazy">
+                            <img src="/images/Student%20Management.png" alt="" class="img-fluid" loading="lazy">
                         </div>
                     </div>
                     <!-- Service icon end -->
@@ -710,7 +710,7 @@ From handling leads to tracking applications and supporting students, everything
                 <div class="tw-service-box features-box" style="padding: 32px 44px 60px;">
                     <div class="service-icon service-icon-bg-6 d-table">
                         <div class="service-icon-inner d-table-cell">
-                            <img src="https://www.eductrl.com/images/icon/06.png" alt="" class="img-fluid" loading="lazy">
+                            <img src="/images/Student%20Documents.png" alt="" class="img-fluid" loading="lazy">
                         </div>
                     </div>
                     <!-- Service Icon end-->
@@ -731,7 +731,7 @@ From handling leads to tracking applications and supporting students, everything
                 <div class="tw-service-box features-box" style="padding: 32px 30px 62px;margin-bottom:22px;">
                     <div class="service-icon service-icon-bg-3 d-table">
                         <div class="service-icon-inner d-table-cell">
-                            <img src="https://www.eductrl.com/images/icon/03.png" alt="" class="img-fluid" loading="lazy">
+                            <img src="/images/University%20Applications.png" alt="" class="img-fluid" loading="lazy">
                         </div>
                     </div>
                     <!-- Service Icon End -->
@@ -753,7 +753,7 @@ From handling leads to tracking applications and supporting students, everything
                 <div class="tw-service-box features-box" style="padding: 32px 30px 62px;margin-bottom:22px;">
                     <div class="service-icon service-icon-bg-1 d-table">
                         <div class="service-icon-inner d-table-cell">
-                            <img src="https://www.eductrl.com/images/icon/leads.png" alt="" class="img-fluid" loading="lazy">
+                            <img src="/images/Lead%20Management.png" alt="" class="img-fluid" loading="lazy">
                         </div>
                     </div>
                     <!-- Service icon end -->
@@ -775,7 +775,7 @@ From handling leads to tracking applications and supporting students, everything
                 <div class="tw-service-box features-box" style="padding: 32px 30px 62px;margin-bottom:22px;">
                     <div class="service-icon service-icon-bg-1 d-table">
                         <div class="service-icon-inner d-table-cell">
-                            <img src="https://www.eductrl.com/images/icon/agents.png" alt="" class="img-fluid" loading="lazy">
+                            <img src="/images/Agents.png" alt="" class="img-fluid" loading="lazy">
                         </div>
                     </div>
                     <!-- Service icon end -->
@@ -796,7 +796,7 @@ From handling leads to tracking applications and supporting students, everything
                 <div class="tw-service-box features-box" style="padding: 32px 30px 62px;margin-bottom:22px;">
                     <div class="service-icon service-icon-bg-1 d-table">
                         <div class="service-icon-inner d-table-cell">
-                            <img src="https://www.eductrl.com/images/icon/courses.png" alt="" class="img-fluid" loading="lazy">
+                            <img src="/images/Course%20Finder.png" alt="" class="img-fluid" loading="lazy">
                         </div>
                     </div>
                     <!-- Service icon end -->
@@ -817,7 +817,7 @@ From handling leads to tracking applications and supporting students, everything
                 <div class="tw-service-box features-box" style="padding: 32px 30px 62px;margin-bottom:22px;">
                     <div class="service-icon service-icon-bg-1 d-table">
                         <div class="service-icon-inner d-table-cell">
-                            <img src="https://www.eductrl.com/images/icon/courses.png" alt="" class="img-fluid" loading="lazy">
+                            <img src="/images/Invoices.png" alt="" class="img-fluid" loading="lazy">
                         </div>
                     </div>
                     <!-- Service icon end -->
@@ -840,7 +840,7 @@ From handling leads to tracking applications and supporting students, everything
                 <div class="tw-service-box features-box" style="padding: 32px 30px 62px;margin-bottom:22px;">
                     <div class="service-icon service-icon-bg-4 d-table">
                         <div class="service-icon-inner d-table-cell">
-                            <img src="https://www.eductrl.com/images/icon/04.png" alt="" class="img-fluid" loading="lazy">
+                            <img src="/images/Self%20Service%20Portal.png" alt="" class="img-fluid" loading="lazy">
                         </div>
                     </div>
                     <!-- Service icon end -->
@@ -861,7 +861,7 @@ From handling leads to tracking applications and supporting students, everything
                 <div class="tw-service-box features-box" style="padding: 32px 30px 62px;margin-bottom:22px;">
                     <div class="service-icon service-icon-bg-5 d-table">
                         <div class="service-icon-inner d-table-cell">
-                            <img src="https://www.eductrl.com/images/icon/05.png" alt="" class="img-fluid" loading="lazy">
+                            <img src="/images/Form%20Builder.png" alt="" class="img-fluid" loading="lazy">
                         </div>
                     </div>
                     <!-- Service icon end -->
@@ -881,7 +881,7 @@ From handling leads to tracking applications and supporting students, everything
                 <div class="tw-service-box features-box" style="padding: 32px 30px 62px;margin-bottom:22px;">
                     <div class="service-icon service-icon-bg-2 d-table">
                         <div class="service-icon-inner d-table-cell">
-                            <img src="https://www.eductrl.com/images/icon/08.png" alt="" class="img-fluid" loading="lazy">
+                            <img src="/images/Notifications.png" alt="" class="img-fluid" loading="lazy">
                         </div>
                     </div>
                     <!-- Service icon end -->
@@ -902,7 +902,7 @@ From handling leads to tracking applications and supporting students, everything
                 <div class="tw-service-box features-box" style="padding: 32px 30px 62px;margin-bottom:22px;">
                     <div class="service-icon service-icon-bg-3 d-table">
                         <div class="service-icon-inner d-table-cell">
-                            <img src="https://www.eductrl.com/images/icon/chat.png" alt="" class="img-fluid" loading="lazy">
+                            <img src="/images/Chat.png" alt="" class="img-fluid" loading="lazy">
                         </div>
                     </div>
                     <!-- Service Icon End -->
@@ -923,7 +923,7 @@ From handling leads to tracking applications and supporting students, everything
                 <div class="tw-service-box features-box" style="padding: 32px 30px 62px;margin-bottom:22px;">
                     <div class="service-icon service-icon-bg-3 d-table">
                         <div class="service-icon-inner d-table-cell">
-                            <img src="https://www.eductrl.com/images/icon/import.png" alt="" class="img-fluid" loading="lazy">
+                            <img src="/images/Import%20Data.png" alt="" class="img-fluid" loading="lazy">
                         </div>
                     </div>
                     <!-- Service Icon End -->
@@ -974,7 +974,7 @@ From handling leads to tracking applications and supporting students, everything
                 <div class="tw-service-box features-box" style="padding: 32px 30px 62px;margin-bottom:22px;">
                     <div class="service-icon service-icon-bg-2 d-table">
                         <div class="service-icon-inner d-table-cell">
-                            <img src="https://www.eductrl.com/images/icon/02.png" alt="" class="img-fluid" loading="lazy">
+                            <img src="/images/Coaching%20Batch%20Management.png" alt="" class="img-fluid" loading="lazy">
                         </div>
                     </div>
                     <!-- Service icon end -->
@@ -994,7 +994,7 @@ From handling leads to tracking applications and supporting students, everything
                 <div class="tw-service-box features-box" style="padding: 32px 30px 62px;margin-bottom:22px;">
                     <div class="service-icon service-icon-bg-2 d-table">
                         <div class="service-icon-inner d-table-cell">
-                            <img src="https://www.eductrl.com/images/icon/02.png" alt="" class="img-fluid" loading="lazy">
+                            <img src="/images/Coaching%20Batch%20Management.png" alt="" class="img-fluid" loading="lazy">
                         </div>
                     </div>
                     <!-- Service icon end -->
@@ -1017,7 +1017,7 @@ From handling leads to tracking applications and supporting students, everything
                 <div class="tw-service-box features-box" style="padding: 32px 30px 62px;margin-bottom:22px;">
                     <div class="service-icon service-icon-bg-1 d-table">
                         <div class="service-icon-inner d-table-cell">
-                            <img src="https://www.eductrl.com/images/icon/fees.png" alt="" class="img-fluid" loading="lazy">
+                            <img src="/images/Student%20Fees.png" alt="" class="img-fluid" loading="lazy">
                         </div>
                     </div>
                     <!-- Service icon end -->
@@ -1038,7 +1038,7 @@ From handling leads to tracking applications and supporting students, everything
                 <div class="tw-service-box features-box" style="padding: 32px 44px 60px;">
                     <div class="service-icon service-icon-bg-6 d-table">
                         <div class="service-icon-inner d-table-cell">
-                            <img src="https://www.eductrl.com/images/icon/attendance.png" alt="" class="img-fluid" loading="lazy">
+                            <img src="/images/Student%20Attendance.png" alt="" class="img-fluid" loading="lazy">
                         </div>
                     </div>
                     <!-- Service Icon end-->
@@ -1060,7 +1060,7 @@ From handling leads to tracking applications and supporting students, everything
                 <div class="tw-service-box features-box" style="padding: 32px 30px 62px;margin-bottom:22px;">
                     <div class="service-icon service-icon-bg-3 d-table">
                         <div class="service-icon-inner d-table-cell">
-                            <img src="https://www.eductrl.com/images/icon/03.png" alt="" class="img-fluid" loading="lazy">
+                            <img src="/images/Student%20Panel.png" alt="" class="img-fluid" loading="lazy">
                         </div>
                     </div>
                     <!-- Service Icon End -->
@@ -1082,7 +1082,7 @@ From handling leads to tracking applications and supporting students, everything
                 <div class="tw-service-box features-box" style="padding: 32px 30px 62px;margin-bottom:22px;">
                     <div class="service-icon service-icon-bg-1 d-table">
                         <div class="service-icon-inner d-table-cell">
-                            <img src="https://www.eductrl.com/images/icon/trainer.png" alt="" class="img-fluid" loading="lazy">
+                            <img src="/images/Trainer%20Panel.png" alt="" class="img-fluid" loading="lazy">
                         </div>
                     </div>
                     <!-- Service icon end -->
@@ -1103,7 +1103,7 @@ From handling leads to tracking applications and supporting students, everything
                 <div class="tw-service-box features-box" style="padding: 32px 30px 62px;margin-bottom:22px;">
                     <div class="service-icon service-icon-bg-1 d-table">
                         <div class="service-icon-inner d-table-cell">
-                            <img src="https://www.eductrl.com/images/icon/online-learning.png" alt="" class="img-fluid" loading="lazy">
+                            <img src="/images/Online%20Courses.png" alt="" class="img-fluid" loading="lazy">
                         </div>
                     </div>
                     <!-- Service icon end -->
@@ -1138,7 +1138,7 @@ From handling leads to tracking applications and supporting students, everything
             <div class="col text-center">
                 <div class="section-heading">
                     <h2 style="margin-bottom:30px;">
-                        EduCtrl CRM Overview
+                        EduAnchor CRM Overview
                     </h2>
                     <p>
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/_UgL2qG-W1U?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
